@@ -7,7 +7,7 @@ Static site, no framework. English at `/`, Lithuanian at `/lt/`.
   - `index.html` (EN), `lt/index.html` (LT) — generated, do not edit by hand
   - `assets/style.css` — all styling; colour/typography tokens at the top
   - `assets/main.js` — mobile menu + SevenRooms widget
-  - `vercel.json` — clean URLs + caching
+  (`vercel.json` in the repo root serves `site/` with clean URLs + caching)
 - `build/build.py` — all page text (EN + LT) and settings. Edit text here, then run `python3 build/build.py`.
 
 ## Before launch
