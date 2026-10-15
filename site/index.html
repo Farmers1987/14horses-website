@@ -198,12 +198,15 @@
         <a href="#contact">Contact</a>
         <a href="https://www.instagram.com/14horses_restaurant/" rel="noopener" target="_blank">Instagram</a>
     </nav>
-    <form class="newsletter" action="#" onsubmit="return false">
-      <label for="nl">Seasonal letter — new menus and harvest dinners</label>
+    <form class="newsletter" action="https://static.mailerlite.com/webforms/submit/h8a6e9" method="post" target="_blank" data-ok="Thank you for signing up!" data-err="Please enter a valid email address.">
+      <label for="nl">Stories from our restaurants, kitchens and farm — every other week</label>
       <div class="newsletter__row">
-        <input id="nl" type="email" autocomplete="email" placeholder="Your email">
+        <input id="nl" type="email" name="fields[email]" required autocomplete="email" placeholder="Your email">
         <button class="btn" type="submit">Sign up</button>
       </div>
+      <input type="hidden" name="ml-submit" value="1">
+      <p class="newsletter__note">Newsletter from Senatorių Pasažas. By signing up you accept our <a href="#privacy">privacy policy</a>.</p>
+      <p class="newsletter__status" role="status" aria-live="polite" hidden></p>
     </form>
   </div>
   <div class="wrap">

@@ -23,6 +23,9 @@ PHOTOS = {
 }
 PHOTO_CREDIT = "G. Rozmanaite"
 
+# MailerLite web form (Senatorių Pasažas newsletter, form code h8a6e9)
+MAILERLITE_URL = "https://static.mailerlite.com/webforms/submit/h8a6e9"
+
 # Official MICHELIN Bib Gourmand 2026 logo file (from the restaurant's Michelin award kit). Empty = placeholder.
 BIB_LOGO = "/assets/michelin-2026.png"
 
@@ -101,8 +104,11 @@ EN = {
         ("Gift vouchers", 'Gift vouchers for 14horses are sold online by Senatorių Pasažas, in any amount from €20 to €1,000: <a href="https://www.senatoriupasazas.lt/#vouchers" rel="noopener" target="_blank">buy a gift voucher</a>. Vouchers are valid for 12 months from purchase, can be used in all our shops and restaurants in Senatorių Pasažas, and cannot be exchanged for cash.'),
     ],
     "f_nav": ["About us", "Menu", "Farmers Circle", "Reservations", "Restaurant policy", "Contact", "Instagram"],
-    "nl_label": "Seasonal letter — new menus and harvest dinners",
+    "nl_label": "Stories from our restaurants, kitchens and farm — every other week",
     "nl_ph": "Your email", "nl_btn": "Sign up",
+    "nl_note": 'Newsletter from Senatorių Pasažas. By signing up you accept our <a href="#privacy">privacy policy</a>.',
+    "nl_ok": "Thank you for signing up!",
+    "nl_err": "Please enter a valid email address.",
     "privacy": "Privacy policy",
     "service": "A 10% service charge is added to the final bill.",
     "lang_label": "Language",
@@ -172,8 +178,11 @@ LT = {
         ("Dovanų kuponai", '14horses dovanų kuponus internetu parduoda Senatorių pasažas – bet kokiai sumai nuo 20 iki 1 000 €: <a href="https://www.senatoriupasazas.lt/#vouchers" rel="noopener" target="_blank">pirkti dovanų kuponą</a>. Kuponas galioja 12 mėn. nuo įsigijimo, juo galima atsiskaityti visose mūsų parduotuvėse ir restoranuose Senatorių pasaže, tačiau jo negalima iškeisti į pinigus.'),
     ],
     "f_nav": ["Apie mus", "Meniu", "Farmers Circle", "Rezervacijos", "Restorano taisyklės", "Kontaktai", "Instagram"],
-    "nl_label": "Sezoninis laiškas – nauji meniu ir derliaus vakarienės",
+    "nl_label": "Istorijos iš mūsų restoranų, virtuvių ir ūkio – kas dvi savaites",
     "nl_ph": "Jūsų el. paštas", "nl_btn": "Prenumeruoti",
+    "nl_note": 'Senatorių pasažo naujienlaiškis. Prenumeruodami sutinkate su mūsų <a href="#privacy">privatumo politika</a>.',
+    "nl_ok": "Ačiū, kad užsiprenumeravote!",
+    "nl_err": "Įveskite teisingą el. pašto adresą.",
     "privacy": "Privatumo politika",
     "service": "Prie galutinės sąskaitos pridedamas 10 % aptarnavimo mokestis.",
     "lang_label": "Kalba",
@@ -400,12 +409,15 @@ def page(t: dict) -> str:
     <nav aria-label="Footer">
 {f_nav}
     </nav>
-    <form class="newsletter" action="#" onsubmit="return false">
+    <form class="newsletter" action="{MAILERLITE_URL}" method="post" target="_blank" data-ok="{t['nl_ok']}" data-err="{t['nl_err']}">
       <label for="nl">{t['nl_label']}</label>
       <div class="newsletter__row">
-        <input id="nl" type="email" autocomplete="email" placeholder="{t['nl_ph']}">
+        <input id="nl" type="email" name="fields[email]" required autocomplete="email" placeholder="{t['nl_ph']}">
         <button class="btn" type="submit">{t['nl_btn']}</button>
       </div>
+      <input type="hidden" name="ml-submit" value="1">
+      <p class="newsletter__note">{t['nl_note']}</p>
+      <p class="newsletter__status" role="status" aria-live="polite" hidden></p>
     </form>
   </div>
   <div class="wrap">
@@ -471,7 +483,7 @@ def _artifact_body(t: dict, logo_uri: str) -> str:
     b = b.replace(f'class="nav__logo" href="{t["home"]}"', 'class="nav__logo" href="#top"')
     b = re.sub(r'<a href="/lt/" hreflang="lt" lang="lt"', '<a href="#" data-setlang="lt" hreflang="lt" lang="lt"', b)
     b = re.sub(r'<a href="/" hreflang="en" lang="en"', '<a href="#" data-setlang="en" hreflang="en" lang="en"', b)
-    b = b.replace('<form class="newsletter" action="#" onsubmit="return false">', '<form class="newsletter">')
+    b = re.sub(r'<form class="newsletter" action="[^"]*" method="post" target="_blank"', '<form class="newsletter"', b)
     if t["lang"] == "lt":  # keep ids unique when both languages share one page
         b = re.sub(r'\bid="([\w-]+)"', r'id="lt-\1"', b)
         b = re.sub(r'href="#(?!")([\w-]+)"', r'href="#lt-\1"', b)
@@ -514,7 +526,14 @@ ARTIFACT_JS = r"""
   });
 
   document.querySelectorAll('form.newsletter').forEach(function (f) {
-    f.addEventListener('submit', function (e) { e.preventDefault(); });
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var st = f.querySelector('.newsletter__status');
+      st.hidden = false;
+      st.textContent = document.documentElement.lang === 'lt'
+        ? 'Juodraštis: prenumerata veiks tikroje svetainėje.'
+        : 'Draft preview: sign-up works on the live site.';
+    });
   });
   document.querySelectorAll('[data-year]').forEach(function (y) { y.textContent = new Date().getFullYear(); });
 })();

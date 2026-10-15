@@ -288,3 +288,9 @@ footer { border-top: 1px solid var(--line); }
   #contact { padding-bottom: 56px; }
   .footer { padding-top: 40px; }
 }
+
+/* Newsletter (MailerLite) */
+.newsletter__note { font-size: 12px; line-height: 1.5; color: var(--ash); }
+.newsletter__note a { color: var(--ash); text-decoration: underline; }
+.newsletter__status { font-size: 14px; color: var(--moss); }
+.newsletter__status.is-error { color: #8A3B2A; }
