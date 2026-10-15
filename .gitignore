@@ -1,0 +1,4 @@
+__pycache__/
+build/artifact/
+.DS_Store
+.vercel
