@@ -11,6 +11,7 @@ Static site, no framework. English at `/`, Lithuanian at `/lt/`.
 - `build/build.py` — all page text (EN + LT) and settings. Edit text here, then run `python3 build/build.py`.
 
 ## Before launch
+0. **Remove the `X-Robots-Tag: noindex` header** from `vercel.json` when the site moves to 14horses.com (it keeps the test version out of Google).
 1. **SevenRooms**: set `VENUE_ID` (and `CLIENT_TOKEN` if used) in `assets/main.js`.
 2. **Placeholders**: everything shown as `[...]` with a dashed underline. Fill in `build/build.py`:
    prices, dishes, email, phone, Instagram handle + URL, group size, policy texts,
