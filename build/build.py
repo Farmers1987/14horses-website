@@ -42,11 +42,12 @@ CONTACT = {
 }
 
 EN = {
+    "res_box_h": "Booking",
     "lang": "en", "home": "/", "other_home": "/lt/",
-    "title": "14Horses",
+    "title": "14Horses - Contemporary Baltic - Scandinavian restaurant in Vilnius",
     "desc": "The historic walls of Vainai Palace, a renewed creative energy and an ambition for bold flavours. Today, 14Horses opens a new chapter with Chef Aleksandras Fedorovičius, a new team and contemporary Baltic - Scandinavian cuisine.",
     "skip": "Skip to content",
-    "nav": ["About us", "Menu", "Farmers Circle", "Booking", "Restaurant policy", "Contacts"],
+    "nav": ["About us", "Menu", "Farmers Circle", "Events", "Booking", "Policy", "Contacts"],
     "reserve": "Reserve a table",
     "menu_open": "Open menu",
     "menu_btn": "Menu",
@@ -97,7 +98,7 @@ EN = {
     "gift_h3": "Give an evening",
     "gift_body": "A gift voucher for 14Horses in any amount from €20 to €1,000. Valid for 12 months in all our restaurants and shops in Senatorių Pasažas.",
     "gift_link": "Buy a gift voucher",
-    "res_h2": "Booking",
+    "res_h2": "Join us at the table.",
     "res_when": "Tuesday - Saturday from 17:00 · Dominikonų g. 11, Vilnius",
     "res_groups": 'Groups of 8 or more are arranged individually - please contact us. Read our <a href="#policy">restaurant policy</a> before booking.',
     "res_deposit": "A deposit of €20 per person is required to confirm a reservation. This amount will be credited towards the final bill.",
@@ -105,7 +106,7 @@ EN = {
     "res_note": "Reservations by SevenRooms",
     "contact_h2": "Contacts",
     "c_hours": "Opening hours", "c_hours_v": "Tuesday-Thursday 17:00-22:00<br>Friday-Saturday 17:00-23:00",
-    "c_phone": "Phone number", "c_email": "Email", "c_social": "Social media",
+    "c_phone": "Phone number", "c_email": "Email", "c_social": "Social media", "c_closed": "Sunday-Monday closed",
     "c_write": "Write or call", "c_addr": "Address", "c_follow": "Follow the season",
     "policy_h2": "Restaurant policy", "policy_sub": "Restaurant Rules and Reservation Terms",
     "policy": [
@@ -124,7 +125,7 @@ EN = {
     "f_nav": ["About us", "Menu", "Farmers Circle", "Booking", "Restaurant policy", "Contacts", "Instagram"],
     "nl_label": "Sign up for biweekly stories from our restaurants, kitchens, farm and food outlets!",
     "nl_ph": "Your email", "nl_btn": "Sign up",
-    "nl_note": 'Newsletter from Senatorių Pasažas. By signing up you accept our <a href="#privacy">privacy policy</a>.',
+    "nl_note": "Newsletter from Senatorių Pasažas.",
     "nl_ok": "Thank you! You have successfully subscribed to the newsletter.",
     "nl_err": "Please enter a valid email address.",
     "privacy": "Privacy policy",
@@ -133,11 +134,12 @@ EN = {
 }
 
 LT = {
+    "res_box_h": "Rezervacijos",
     "lang": "lt", "home": "/lt/", "other_home": "/",
-    "title": "14Horses",
+    "title": "14Horses - šiuolaikinės baltiškos - skandinaviškos virtuvės restoranas Vilniuje",
     "desc": "Istorinės Vainų rūmų sienos, nauja kūrybinė energija ir ryškaus skonio ambicija. Šiandien 14Horses atsiveria su šefu Aleksandru Fedorovičiumi, nauja komanda ir šiuolaikine baltiška - skandinaviška virtuve.",
     "skip": "Pereiti prie turinio",
-    "nav": ["Apie mus", "Meniu", "Farmers Circle", "Rezervacijos", "Restorano politika", "Kontaktai"],
+    "nav": ["Apie mus", "Meniu", "Farmers Circle", "Renginiai", "Rezervacijos", "Politika", "Kontaktai"],
     "reserve": "Rezervuoti staliuką",
     "menu_open": "Atidaryti meniu",
     "menu_btn": "Meniu",
@@ -188,7 +190,7 @@ LT = {
     "gift_h3": "Padovanokite vakarą",
     "gift_body": "14Horses dovanų kuponas bet kokiai sumai nuo 20 iki 1 000 €. Galioja 12 mėn. visuose mūsų restoranuose ir parduotuvėse Senatorių pasaže.",
     "gift_link": "Pirkti dovanų kuponą",
-    "res_h2": "Rezervacijos",
+    "res_h2": "Lauksime prie stalo.",
     "res_when": "Antradieniais - šeštadieniais nuo 17:00 · Dominikonų g. 11, Vilnius",
     "res_groups": '8 ir daugiau asmenų grupių rezervacijos derinamos individualiai - susisiekite su mumis. Prieš rezervuodami susipažinkite su <a href="#policy">restorano taisyklėmis</a>.',
     "res_deposit": "Rezervacijai patvirtinti taikomas 20 Eur išankstinis mokėjimas kiekvienam asmeniui. Sumokėta suma įskaitoma į galutinę apsilankymo sąskaitą.",
@@ -196,7 +198,7 @@ LT = {
     "res_note": "Rezervacijos per SevenRooms",
     "contact_h2": "Kontaktai",
     "c_hours": "Darbo valandos", "c_hours_v": "Antradienis - ketvirtadienis 17:00-22:00<br>Penktadienis - šeštadienis 17:00-23:00",
-    "c_phone": "Tel. nr.", "c_email": "El. paštas", "c_social": "Social media",
+    "c_phone": "Tel. nr.", "c_email": "El. paštas", "c_social": "Social media", "c_closed": "Sekmadienį-pirmadienį nedirbame",
     "c_write": "Rašykite ar skambinkite", "c_addr": "Adresas", "c_follow": "Sekite sezoną",
     "policy_h2": "Restorano politika", "policy_sub": "Restorano taisyklės ir rezervavimo sąlygos",
     "policy": [
@@ -215,7 +217,7 @@ LT = {
     "f_nav": ["Apie mus", "Meniu", "Farmers Circle", "Rezervacijos", "Restorano politika", "Kontaktai", "Instagram"],
     "nl_label": "Naujienlaiškis",
     "nl_ph": "Jūsų el. paštas", "nl_btn": "Prenumeruoti",
-    "nl_note": 'Senatorių pasažo naujienlaiškis. Prenumeruodami sutinkate su mūsų <a href="#privacy">privatumo politika</a>.',
+    "nl_note": "Senatorių pasažo naujienlaiškis.",
     "nl_ok": "Ačiū!",
     "nl_err": "Įveskite teisingą el. pašto adresą.",
     "privacy": "Privatumo politika",
@@ -235,7 +237,7 @@ def ph(s: str) -> str:
 
 
 def page(t: dict) -> str:
-    nav_ids = ["about", "menu", "farmers-circle", "reserve", "policy", "contact"]
+    nav_ids = ["about", "menu", "farmers-circle", "events", "reserve", "policy", "contact"]
     nav = "\n".join(f'          <a href="#{i}">{l}</a>' for i, l in zip(nav_ids, t["nav"]))
     en_cur = 'aria-current="true"' if t["lang"] == "en" else ""
     lt_cur = 'aria-current="true"' if t["lang"] == "lt" else ""
@@ -316,10 +318,12 @@ def page(t: dict) -> str:
 <main id="main">
   <section class="wrap hero">
     <div class="hero__text">
+      <p class="overline">{t['hero_over']}</p>
       <h1>{t['hero_h1']}</h1>
       <p class="hero__lead">{t['hero_lead']}</p>
       <div class="hero__ctas">
         <a class="btn" href="#reserve">{t['reserve']}</a>
+        <a class="link" href="#menu">{t['hero_menu']}</a>
       </div>
     </div>
     <div class="hero__images">
@@ -387,14 +391,29 @@ def page(t: dict) -> str:
 {gal}
   </section>
 
+  <section class="wrap cards">
+    <div id="events" class="card">
+      <h3>{t['events_h3']}</h3>
+      <p class="muted">{t['events_body']}</p>
+      <a class="link" href="#contact">{t['events_link']}</a>
+    </div>
+    <div class="card">
+      <h3>{t['gift_h3']}</h3>
+      <p class="muted">{t['gift_body']}</p>
+      <a class="link" href="https://www.senatoriupasazas.lt/#vouchers" rel="noopener" target="_blank">{t['gift_link']}</a>
+    </div>
+  </section>
+
   <section id="reserve" class="reserve">
     <div class="wrap">
       <div class="reserve__text">
         <h2>{t['res_h2']}</h2>
-        <p>{t['res_deposit']}</p>
       </div>
-      <div class="reserve__action">
-        <a id="sevenrooms-trigger" class="btn btn--lg btn--light" href="{SEVENROOMS_URL}" rel="noopener" target="_blank">{t['reserve']}</a>
+      <div class="reserve__box r1">
+        <h3 style="font-size:28px">{t['res_box_h']}</h3>
+        <p class="muted" style="font-size:15px">{t['res_deposit']}</p>
+        <a id="sevenrooms-trigger" class="btn btn--lg" href="{SEVENROOMS_URL}" rel="noopener" target="_blank">{t['reserve']}</a>
+        <p class="reserve__note">{t['res_note']}</p>
       </div>
     </div>
   </section>
@@ -416,7 +435,7 @@ def page(t: dict) -> str:
     <div class="split__main contact-grid">
       <div><span class="label">{t['c_phone']}</span><a href="{tel}">{phone}</a></div>
       <div><span class="label">{t['c_email']}</span><a href="mailto:{mail}">{mail}</a></div>
-      <div><span class="label">{t['c_hours']}</span><span>{t['c_hours_v']}</span></div>
+      <div><span class="label">{t['c_hours']}</span><span>{t['c_hours_v']}</span><span class="muted">{t['c_closed']}</span></div>
       <div><span class="label">{t['c_social']}</span><a class="ig" href="{CONTACT['instagram_url']}" rel="noopener" target="_blank">{IG_SVG}<span>{CONTACT['instagram_handle']}</span></a></div>
       <div><span class="label">{t['c_addr']}</span><a href="{CONTACT['maps']}" rel="noopener" target="_blank">{CONTACT['address']}<br>Senatorių pasažas</a></div>
     </div>
@@ -441,6 +460,7 @@ def page(t: dict) -> str:
         <button class="btn" type="submit">{t['nl_btn']}</button>
       </div>
       <input type="hidden" name="ml-submit" value="1">
+      <p class="newsletter__note">{t['nl_note']}</p>
       <p class="newsletter__status" role="status" aria-live="polite" hidden></p>
     </form>
   </div>
