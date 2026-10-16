@@ -330,3 +330,8 @@ footer { border-top: 1px solid var(--line); }
   .farm-split { padding-top: 36px; }
 }
 .prose .motto { text-wrap: wrap; }
+
+/* Booking: text + one button */
+.reserve__action { display: flex; align-items: center; }
+.reserve__action .btn { width: 100%; }
+@media (max-width: 960px) { .reserve__action .btn { width: auto; } }

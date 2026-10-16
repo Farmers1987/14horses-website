@@ -43,10 +43,10 @@ CONTACT = {
 
 EN = {
     "lang": "en", "home": "/", "other_home": "/lt/",
-    "title": "14Horses - Contemporary Baltic - Scandinavian restaurant in Vilnius",
-    "desc": "Contemporary Baltic - Scandinavian cuisine by Chef Aleksandras Fedorovičius in the historic Vainai Palace, Senatorių Pasažas, Vilnius - rooted in our own organic farm, Farmers Circle.",
+    "title": "14Horses",
+    "desc": "The historic walls of Vainai Palace, a renewed creative energy and an ambition for bold flavours. Today, 14Horses opens a new chapter with Chef Aleksandras Fedorovičius, a new team and contemporary Baltic - Scandinavian cuisine.",
     "skip": "Skip to content",
-    "nav": ["About", "Menu", "Farmers Circle", "Events", "Policy", "Contact"],
+    "nav": ["About us", "Menu", "Farmers Circle", "Booking", "Restaurant policy", "Contacts"],
     "reserve": "Reserve a table",
     "menu_open": "Open menu",
     "menu_btn": "Menu",
@@ -56,7 +56,7 @@ EN = {
     "hero_menu": "See the menu",
     "alt_hero_a": "A table set for dinner at 14Horses",
     "alt_hero_b": "Old stone wall in Senatorių Pasažas",
-    "strip": [("Opening hours", "Tue-Thu 17:00&nbsp;-&nbsp;22:00<br>Fri-Sat 17:00&nbsp;-&nbsp;23:00"), ("Find us", "Dominikonų g. 11, Vilnius"), ("MICHELIN Guide 2026", "Bib Gourmand")],
+    "strip": [("Opening hours", "Tuesday-Thursday 17:00-22:00<br>Friday-Saturday 17:00-23:00"), ("Address", "Dominikonų g. 11, Vilnius"), ("MICHELIN Guide 2026", "Bib Gourmand")],
     "about_over": "About us",
     "about_statement": "The historic walls of Vainai Palace, a renewed creative energy and an ambition for bold flavours. Today, 14Horses opens a new chapter with Chef Aleksandras Fedorovičius, a new team and contemporary Baltic - Scandinavian cuisine.",
     "about_body": [
@@ -66,12 +66,12 @@ EN = {
         "We find beauty in the natural: organic forms, textures and the traces left by time. An appreciation of imperfection, close to the philosophy of wabi-sabi, allows our historic setting and contemporary gastronomy to speak the same language.",
         "!At our table, this language becomes flavour - bold, distinctive and memorable.",
     ],
-    "menu_h2": "The menu",
+    "menu_h2": "Menu",
     "menu_intro": "Seasonal, local produce meets unexpected combinations, adventurous techniques and bold flavours. The menu follows what the season brings to Farmers Circle.",
     "steps": [("Step 1", "Snacks"), ("Step 2", "Starter"), ("Step 3", "Main course"), ("Step 4", "Dessert")],
-    "dish": "[[The current menu will be published here soon.]]",
+    "dish": "[[MENU]]",
     "menu_full": "Read the full menu",
-    "farm_over": "Farmers Circle · Radiškis",
+    "farm_over": "Farmers Circle",
     "farm_h2": "At Farmers Circle, everything begins with living soil.",
     "farm_body": "Founded in 2018 by Danish entrepreneur Niels Peter Pretzmann, this organic farm in Radiškis, Ukmergė district, nurtures the connection between soil, plants, animals and people. From the outset, it has grown around the belief that good food begins with a responsible relationship with nature. Here, the seasons set the pace, and every decision considers both the harvest to come and the land that will sustain it.",
     "farm_link": "Visit Farmers Circle",
@@ -97,34 +97,35 @@ EN = {
     "gift_h3": "Give an evening",
     "gift_body": "A gift voucher for 14Horses in any amount from €20 to €1,000. Valid for 12 months in all our restaurants and shops in Senatorių Pasažas.",
     "gift_link": "Buy a gift voucher",
-    "res_h2": "Join us at the table.",
+    "res_h2": "Booking",
     "res_when": "Tuesday - Saturday from 17:00 · Dominikonų g. 11, Vilnius",
     "res_groups": 'Groups of 8 or more are arranged individually - please contact us. Read our <a href="#policy">restaurant policy</a> before booking.',
-    "res_box_h": "Book online",
+    "res_deposit": "A deposit of €20 per person is required to confirm a reservation. This amount will be credited towards the final bill.",
     "res_box_p": "Choose a date, time and number of guests. A €20 per person deposit confirms your table and is credited to your bill.",
     "res_note": "Reservations by SevenRooms",
-    "contact_h2": "Contact",
-    "c_hours": "Opening hours", "c_hours_v": "Tuesday-Thursday 17:00&nbsp;-&nbsp;22:00<br>Friday-Saturday 17:00&nbsp;-&nbsp;23:00", "c_closed": "Sunday-Monday closed",
+    "contact_h2": "Contacts",
+    "c_hours": "Opening hours", "c_hours_v": "Tuesday-Thursday 17:00-22:00<br>Friday-Saturday 17:00-23:00",
+    "c_phone": "Phone number", "c_email": "Email", "c_social": "Social media",
     "c_write": "Write or call", "c_addr": "Address", "c_follow": "Follow the season",
-    "policy_h2": "Restaurant policy", "policy_sub": "Restaurant rules and reservation terms.",
+    "policy_h2": "Restaurant policy", "policy_sub": "Restaurant Rules and Reservation Terms",
     "policy": [
-        ("Reservations and dining duration", "Tables are reserved for 2 hours. Longer visits must be arranged in advance. Reserved tables are held for 15 minutes after the reservation time. Please inform the restaurant team if you are running late. Reservations will be cancelled if guests arrive more than 15 minutes late without prior notice."),
-        ("Reservation deposit and cancellation", "A deposit of €20 per person is required to confirm a reservation. This amount will be credited towards the final bill. For cancellations made at least 24 hours before the reservation time, the deposit will be refunded. For later cancellations or no-shows, the deposit is non-refundable. The same cancellation and refund terms apply to prepaid tasting events."),
-        ("Group reservations", "Reservations for groups of 8 or more guests are arranged individually. Groups may choose dishes from the current restaurant menu or a pre-agreed event menu."),
+        ("Reservations and Dining Duration", "Tables are reserved for 2 hours. Longer visits must be arranged in advance. Reserved tables are held for 15 minutes after the reservation time. Please inform the restaurant team if you are running late. Reservations will be cancelled if guests arrive more than 15 minutes late without prior notice."),
+        ("Reservation Deposit and Cancellation Terms", "A deposit of €20 per person is required to confirm a reservation. This amount will be credited towards the final bill. For cancellations made at least 24 hours before the reservation time, the deposit will be refunded. For later cancellations or no-shows, the deposit is non-refundable. The same cancellation and refund terms apply to prepaid tasting events."),
+        ("Group Reservations", "Reservations for groups of 8 or more guests are arranged individually. Groups may choose dishes from the current restaurant menu or a pre-agreed event menu."),
         ("Children", "Children are welcome at the restaurant. High chairs are available. We do not offer a separate children’s menu."),
         ("Pets", "Pets are welcome both inside the restaurant and on the terrace. The accompanying guest is responsible for their pet’s care and behaviour. Pets must not disturb other guests or interfere with restaurant operations."),
-        ("Allergies and dietary requirements", "Please notify the restaurant of any allergies, food intolerances or specific dietary requirements at least 3 days before your visit. Menu adaptations and specific adjustments are agreed individually with the restaurant team."),
-        ("Kitchen opening hours", "The kitchen is open until 21:00 Tuesday-Thursday and until 22:00 on Fridays and Saturdays."),
-        ("Bringing your own cake or wine", "Guests may bring their own cake or wine only by prior arrangement with the restaurant team. Additional charges apply and will be communicated when arrangements are made."),
-        ("Dress code", "The recommended dress code is smart casual."),
-        ("Payment and service charge", "The restaurant accepts card payments only. Cash is not accepted. A service charge applies. The amount and applicable terms are stated on the restaurant menu."),
+        ("Allergies and Dietary Requirements", "Please notify the restaurant of any allergies, food intolerances or specific dietary requirements at least 3 days before your visit. Menu adaptations and specific adjustments are agreed individually with the restaurant team."),
+        ("Kitchen Opening Hours", "The kitchen is open until 21:00 Tuesday-Thursday and until 22:00 on Fridays and Saturdays."),
+        ("Bringing Your Own Cake or Wine", "Guests may bring their own cake or wine only by prior arrangement with the restaurant team. Additional charges apply and will be communicated when arrangements are made."),
+        ("Dress Code", "The recommended dress code is smart casual."),
+        ("Payment and Service Charge", "The restaurant accepts card payments only. Cash is not accepted. A service charge applies. The amount and applicable terms are stated on the restaurant menu."),
         ("Accessibility", "The restaurant is accessible to guests using wheelchairs and those with pushchairs. Please inform us before your visit if you require additional assistance."),
     ],
-    "f_nav": ["About us", "Menu", "Farmers Circle", "Reservations", "Restaurant policy", "Contact", "Instagram"],
-    "nl_label": "Stories from our restaurants, kitchens and farm - every other week",
+    "f_nav": ["About us", "Menu", "Farmers Circle", "Booking", "Restaurant policy", "Contacts", "Instagram"],
+    "nl_label": "Sign up for biweekly stories from our restaurants, kitchens, farm and food outlets!",
     "nl_ph": "Your email", "nl_btn": "Sign up",
     "nl_note": 'Newsletter from Senatorių Pasažas. By signing up you accept our <a href="#privacy">privacy policy</a>.',
-    "nl_ok": "Thank you for signing up!",
+    "nl_ok": "Thank you! You have successfully subscribed to the newsletter.",
     "nl_err": "Please enter a valid email address.",
     "privacy": "Privacy policy",
     "service": "A 10% service charge is added to the final bill.",
@@ -133,10 +134,10 @@ EN = {
 
 LT = {
     "lang": "lt", "home": "/lt/", "other_home": "/",
-    "title": "14Horses - šiuolaikinės baltiškos - skandinaviškos virtuvės restoranas Vilniuje",
-    "desc": "Šiuolaikinė baltiška - skandinaviška šefo Aleksandro Fedorovičiaus virtuvė istoriniuose Vainų rūmuose, Senatorių pasaže, Vilniuje. Mūsų pradžia - ekologiškame ūkyje „Farmers Circle“.",
+    "title": "14Horses",
+    "desc": "Istorinės Vainų rūmų sienos, nauja kūrybinė energija ir ryškaus skonio ambicija. Šiandien 14Horses atsiveria su šefu Aleksandru Fedorovičiumi, nauja komanda ir šiuolaikine baltiška - skandinaviška virtuve.",
     "skip": "Pereiti prie turinio",
-    "nav": ["Apie mus", "Meniu", "Farmers Circle", "Renginiai", "Taisyklės", "Kontaktai"],
+    "nav": ["Apie mus", "Meniu", "Farmers Circle", "Rezervacijos", "Restorano politika", "Kontaktai"],
     "reserve": "Rezervuoti staliuką",
     "menu_open": "Atidaryti meniu",
     "menu_btn": "Meniu",
@@ -146,7 +147,7 @@ LT = {
     "hero_menu": "Meniu",
     "alt_hero_a": "Vakarienei serviruotas stalas 14Horses",
     "alt_hero_b": "Sena akmeninė siena Senatorių pasaže",
-    "strip": [("Darbo laikas", "Antr.-ketv. 17:00&nbsp;-&nbsp;22:00<br>Penkt.-šešt. 17:00&nbsp;-&nbsp;23:00"), ("Adresas", "Dominikonų g. 11, Vilnius"), ("MICHELIN gidas 2026", "Bib Gourmand")],
+    "strip": [("Darbo valandos", "Antradienis - ketvirtadienis 17:00-22:00<br>Penktadienis - šeštadienis 17:00-23:00"), ("Adresas", "Dominikonų g. 11, Vilnius"), ("MICHELIN gidas 2026", "Bib Gourmand")],
     "about_over": "Apie mus",
     "about_statement": "Istorinės Vainų rūmų sienos, nauja kūrybinė energija ir ryškaus skonio ambicija. Šiandien 14Horses atsiveria su šefu Aleksandru Fedorovičiumi, nauja komanda ir šiuolaikine baltiška - skandinaviška virtuve.",
     "about_body": [
@@ -159,9 +160,9 @@ LT = {
     "menu_h2": "Meniu",
     "menu_intro": "Sezoniškumas ir vietiniai produktai susitinka su netikėtais deriniais, drąsiomis technikomis ir ryškiais skoniais. Meniu seka tai, ką sezonas atneša į „Farmers Circle“ ūkį.",
     "steps": [("1 žingsnis", "Užkandžiai"), ("2 žingsnis", "Pirmasis patiekalas"), ("3 žingsnis", "Pagrindinis patiekalas"), ("4 žingsnis", "Desertas")],
-    "dish": "[[Aktualus meniu netrukus bus paskelbtas čia.]]",
+    "dish": "[[MENIU]]",
     "menu_full": "Visas meniu",
-    "farm_over": "Farmers Circle · Radiškis",
+    "farm_over": "Farmers Circle",
     "farm_h2": "„Farmers Circle“ viskas prasideda nuo gyvos žemės.",
     "farm_body": "2018 metais danų verslininko Niels Peter Pretzmann įkurtas ekologinis ūkis Radiškio kaime, Ukmergės rajone, puoselėja ryšį tarp dirvožemio, augalų, gyvūnų ir žmogaus. Nuo pat pradžių jį augina įsitikinimas, kad geras maistas prasideda nuo atsakingo santykio su gamta. Čia metų laikai diktuoja darbų ritmą, o kiekvienas sprendimas priimamas galvojant ir apie būsimą derlių, ir apie žemę, kurioje jis užaugs.",
     "farm_link": "Aplankykite Farmers Circle",
@@ -187,16 +188,17 @@ LT = {
     "gift_h3": "Padovanokite vakarą",
     "gift_body": "14Horses dovanų kuponas bet kokiai sumai nuo 20 iki 1 000 €. Galioja 12 mėn. visuose mūsų restoranuose ir parduotuvėse Senatorių pasaže.",
     "gift_link": "Pirkti dovanų kuponą",
-    "res_h2": "Lauksime prie stalo.",
+    "res_h2": "Rezervacijos",
     "res_when": "Antradieniais - šeštadieniais nuo 17:00 · Dominikonų g. 11, Vilnius",
     "res_groups": '8 ir daugiau asmenų grupių rezervacijos derinamos individualiai - susisiekite su mumis. Prieš rezervuodami susipažinkite su <a href="#policy">restorano taisyklėmis</a>.',
-    "res_box_h": "Rezervuokite internetu",
+    "res_deposit": "Rezervacijai patvirtinti taikomas 20 Eur išankstinis mokėjimas kiekvienam asmeniui. Sumokėta suma įskaitoma į galutinę apsilankymo sąskaitą.",
     "res_box_p": "Pasirinkite datą, laiką ir svečių skaičių. Rezervaciją patvirtina 20 € išankstinis mokėjimas asmeniui, kuris įskaitomas į galutinę sąskaitą.",
     "res_note": "Rezervacijos per SevenRooms",
     "contact_h2": "Kontaktai",
-    "c_hours": "Darbo laikas", "c_hours_v": "Antradienis-ketvirtadienis 17:00&nbsp;-&nbsp;22:00<br>Penktadienis-šeštadienis 17:00&nbsp;-&nbsp;23:00", "c_closed": "Sekmadienį-pirmadienį nedirbame",
+    "c_hours": "Darbo valandos", "c_hours_v": "Antradienis - ketvirtadienis 17:00-22:00<br>Penktadienis - šeštadienis 17:00-23:00",
+    "c_phone": "Tel. nr.", "c_email": "El. paštas", "c_social": "Social media",
     "c_write": "Rašykite ar skambinkite", "c_addr": "Adresas", "c_follow": "Sekite sezoną",
-    "policy_h2": "Restorano taisyklės", "policy_sub": "Restorano taisyklės ir rezervavimo sąlygos.",
+    "policy_h2": "Restorano politika", "policy_sub": "Restorano taisyklės ir rezervavimo sąlygos",
     "policy": [
         ("Rezervacijos ir apsilankymo trukmė", "Staliukas rezervuojamas 2 valandoms. Ilgesnė apsilankymo trukmė derinama iš anksto. Rezervuotas staliukas laikomas 15 minučių nuo rezervacijos pradžios. Apie vėlavimą prašome informuoti restorano komandą. Vėluojant ilgiau nei 15 minučių ir apie tai nepranešus, rezervacija atšaukiama."),
         ("Rezervacijos mokestis ir atšaukimo sąlygos", "Rezervacijai patvirtinti taikomas 20 Eur išankstinis mokėjimas kiekvienam asmeniui. Sumokėta suma įskaitoma į galutinę apsilankymo sąskaitą. Rezervaciją atšaukus likus ne mažiau kaip 24 valandoms iki rezervacijos pradžios, išankstinis mokėjimas grąžinamas. Atšaukus vėliau arba neatvykus, sumokėta suma negrąžinama. Tokia pati atšaukimo ir pinigų grąžinimo tvarka taikoma iš anksto apmokėtoms degustacijoms."),
@@ -210,11 +212,11 @@ LT = {
         ("Atsiskaitymas ir aptarnavimo mokestis", "Restorane atsiskaitoma tik mokėjimo kortelėmis. Grynieji pinigai nepriimami. Taikomas aptarnavimo mokestis. Jo dydis ir taikymo sąlygos nurodomi restorano meniu."),
         ("Prieinamumas", "Restorano patalpos prieinamos svečiams su judėjimo ir vaikiškais vežimėliais. Apie papildomos pagalbos poreikį prašome informuoti prieš apsilankymą."),
     ],
-    "f_nav": ["Apie mus", "Meniu", "Farmers Circle", "Rezervacijos", "Restorano taisyklės", "Kontaktai", "Instagram"],
-    "nl_label": "Istorijos iš mūsų restoranų, virtuvių ir ūkio - kas dvi savaites",
+    "f_nav": ["Apie mus", "Meniu", "Farmers Circle", "Rezervacijos", "Restorano politika", "Kontaktai", "Instagram"],
+    "nl_label": "Naujienlaiškis",
     "nl_ph": "Jūsų el. paštas", "nl_btn": "Prenumeruoti",
     "nl_note": 'Senatorių pasažo naujienlaiškis. Prenumeruodami sutinkate su mūsų <a href="#privacy">privatumo politika</a>.',
-    "nl_ok": "Ačiū, kad užsiprenumeravote!",
+    "nl_ok": "Ačiū!",
     "nl_err": "Įveskite teisingą el. pašto adresą.",
     "privacy": "Privatumo politika",
     "service": "Prie galutinės sąskaitos pridedamas 10 % aptarnavimo mokestis.",
@@ -233,7 +235,7 @@ def ph(s: str) -> str:
 
 
 def page(t: dict) -> str:
-    nav_ids = ["about", "menu", "farmers-circle", "events", "policy", "contact"]
+    nav_ids = ["about", "menu", "farmers-circle", "reserve", "policy", "contact"]
     nav = "\n".join(f'          <a href="#{i}">{l}</a>' for i, l in zip(nav_ids, t["nav"]))
     en_cur = 'aria-current="true"' if t["lang"] == "en" else ""
     lt_cur = 'aria-current="true"' if t["lang"] == "lt" else ""
@@ -314,12 +316,10 @@ def page(t: dict) -> str:
 <main id="main">
   <section class="wrap hero">
     <div class="hero__text">
-      <p class="overline">{t['hero_over']}</p>
       <h1>{t['hero_h1']}</h1>
       <p class="hero__lead">{t['hero_lead']}</p>
       <div class="hero__ctas">
         <a class="btn" href="#reserve">{t['reserve']}</a>
-        <a class="link" href="#menu">{t['hero_menu']}</a>
       </div>
     </div>
     <div class="hero__images">
@@ -352,7 +352,6 @@ def page(t: dict) -> str:
     <div class="wrap">
       <div class="menu__head">
         <h2>{t['menu_h2']}</h2>
-        <p class="menu__intro">{ph(t['menu_intro'])}</p>
       </div>
       <p class="menu__soon">{ph(t['dish'])}</p>
     </div>
@@ -388,31 +387,14 @@ def page(t: dict) -> str:
 {gal}
   </section>
 
-  <section class="wrap cards">
-    <div id="events" class="card">
-      <h3>{t['events_h3']}</h3>
-      <p class="muted">{t['events_body']}</p>
-      <a class="link" href="#contact">{t['events_link']}</a>
-    </div>
-    <div class="card">
-      <h3>{t['gift_h3']}</h3>
-      <p class="muted">{t['gift_body']}</p>
-      <a class="link" href="https://www.senatoriupasazas.lt/#vouchers" rel="noopener" target="_blank">{t['gift_link']}</a>
-    </div>
-  </section>
-
   <section id="reserve" class="reserve">
     <div class="wrap">
       <div class="reserve__text">
         <h2>{t['res_h2']}</h2>
-        <p>{t['res_when']}</p>
-        <p style="font-size:15px">{ph(t['res_groups'])}</p>
+        <p>{t['res_deposit']}</p>
       </div>
-      <div class="reserve__box r1">
-        <h3 style="font-size:28px">{t['res_box_h']}</h3>
-        <p class="muted" style="font-size:15px">{t['res_box_p']}</p>
-        <a id="sevenrooms-trigger" class="btn btn--lg" href="{SEVENROOMS_URL}" rel="noopener" target="_blank">{t['reserve']}</a>
-        <p class="reserve__note">{t['res_note']}</p>
+      <div class="reserve__action">
+        <a id="sevenrooms-trigger" class="btn btn--lg btn--light" href="{SEVENROOMS_URL}" rel="noopener" target="_blank">{t['reserve']}</a>
       </div>
     </div>
   </section>
@@ -432,10 +414,11 @@ def page(t: dict) -> str:
   <section id="contact" class="wrap split">
     <div class="split__aside"><h2 class="section-title">{t['contact_h2']}</h2></div>
     <div class="split__main contact-grid">
-      <div><span class="label">{t['c_hours']}</span><span>{t['c_hours_v']}</span><span class="muted">{t['c_closed']}</span></div>
-      <div><span class="label">{t['c_write']}</span><a href="mailto:{mail}">{ph(mail)}</a><a href="{tel}">{ph(phone)}</a></div>
+      <div><span class="label">{t['c_phone']}</span><a href="{tel}">{phone}</a></div>
+      <div><span class="label">{t['c_email']}</span><a href="mailto:{mail}">{mail}</a></div>
+      <div><span class="label">{t['c_hours']}</span><span>{t['c_hours_v']}</span></div>
+      <div><span class="label">{t['c_social']}</span><a class="ig" href="{CONTACT['instagram_url']}" rel="noopener" target="_blank">{IG_SVG}<span>{CONTACT['instagram_handle']}</span></a></div>
       <div><span class="label">{t['c_addr']}</span><a href="{CONTACT['maps']}" rel="noopener" target="_blank">{CONTACT['address']}<br>Senatorių pasažas</a></div>
-      <div><span class="label">{t['c_follow']}</span><a class="ig" href="{CONTACT['instagram_url']}" rel="noopener" target="_blank">{IG_SVG}<span>Instagram · {ph(CONTACT['instagram_handle'])}</span></a></div>
     </div>
   </section>
 
@@ -458,7 +441,6 @@ def page(t: dict) -> str:
         <button class="btn" type="submit">{t['nl_btn']}</button>
       </div>
       <input type="hidden" name="ml-submit" value="1">
-      <p class="newsletter__note">{t['nl_note']}</p>
       <p class="newsletter__status" role="status" aria-live="polite" hidden></p>
     </form>
   </div>
@@ -466,7 +448,6 @@ def page(t: dict) -> str:
     <div class="footer__bottom">
     <span>© <span data-year>2026</span> 14Horses · {t['credit']}: {PHOTO_CREDIT}</span>
     <span>{t['service']}</span>
-    <a href="#privacy">{t['privacy']}</a>
     </div>
   </div>
 </footer>
