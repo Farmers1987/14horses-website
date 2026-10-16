@@ -12,13 +12,12 @@ Static site, no framework. English at `/`, Lithuanian at `/lt/`.
 
 ## Before launch
 0. **Remove the `X-Robots-Tag: noindex` header** from `vercel.json` when the site moves to 14horses.com (it keeps the test version out of Google).
-1. **SevenRooms**: set `VENUE_ID` (and `CLIENT_TOKEN` if used) in `assets/main.js`.
-2. **Placeholders**: everything shown as `[...]` with a dashed underline. Fill in `build/build.py`:
-   prices, dishes, email, phone, Instagram handle + URL, group size, policy texts,
-   optional `farmers_circle_url`.
-3. **Photos**: shoot photos by G. Rozmanaite are in `site/assets/img/` (credited in the footer). Still missing: portraits of the head chef and restaurant manager.
-4. **Logo**: `assets/logo.png` is made from a PNG. Replace with the original vector logo (SVG) if available.
-5. **Newsletter + privacy policy**: the sign-up form is not wired to a mailing service yet; `#privacy` needs a page.
+1. **Menu**: the menu section shows a placeholder until the chef's menu is ready (`dish` text in `build/build.py`).
+2. **Team portraits**: the three portrait frames are empty until photos arrive.
+3. **Privacy policy**: the `#privacy` links need a real page or URL.
+4. **SevenRooms**: the "Reserve a table" button links to the 14Horses SevenRooms booking page
+   (`SEVENROOMS_URL` in `build/build.py`). The embedded widget in `assets/main.js` stays off unless `VENUE_ID` is set.
+5. **Newsletter**: the footer form posts to MailerLite form `h8a6e9` (Senatorių Pasažas list).
 
 ## Draft preview (artifact)
 `python3 build/build.py artifact` writes `build/artifact/14horses.html`: one self-contained page with an EN/LT switch,

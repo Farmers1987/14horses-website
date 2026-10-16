@@ -24,14 +24,15 @@ PHOTOS = {
 PHOTO_CREDIT = "G. Rozmanaite"
 
 # MailerLite web form (Senatorių Pasažas newsletter, form code h8a6e9)
+SEVENROOMS_URL = "https://www.sevenrooms.com/explore/14horses/reservations/create/search/"
 MAILERLITE_URL = "https://static.mailerlite.com/webforms/submit/h8a6e9"
 
 # Official MICHELIN Bib Gourmand 2026 logo file (from the restaurant's Michelin award kit). Empty = placeholder.
 BIB_LOGO = "/assets/michelin-2026.png"
 
 CONTACT = {
-    "email": "[[EMAIL]]",
-    "phone": "[[PHONE]]",
+    "email": "14horses@bfr.lt",
+    "phone": "+370 612 50845",
     "instagram_handle": "@14horses_restaurant",
     "instagram_url": "https://www.instagram.com/14horses_restaurant/",
     "address": "Dominikonų g. 11, Vilnius",
@@ -42,8 +43,8 @@ CONTACT = {
 
 EN = {
     "lang": "en", "home": "/", "other_home": "/lt/",
-    "title": "14horses — Farm-to-table restaurant in Vilnius Old Town",
-    "desc": "Farm-to-table restaurant in a restored historic mansion in Senatorių Pasažas, Vilnius. Seasonal four-step menu built on Lithuanian produce from our regenerative farm, Farmers Circle.",
+    "title": "14Horses — Contemporary Baltic–Scandinavian restaurant in Vilnius",
+    "desc": "Contemporary Baltic–Scandinavian cuisine by Chef Aleksandras Fedorovičius in the historic Vainai Palace, Senatorių Pasažas, Vilnius — rooted in our own organic farm, Farmers Circle.",
     "skip": "Skip to content",
     "nav": ["About", "Menu", "Farmers Circle", "Events", "Policy", "Contact"],
     "reserve": "Reserve a table",
@@ -51,57 +52,73 @@ EN = {
     "menu_btn": "Menu",
     "hero_over": "Senatorių Pasažas · Vilnius Old Town",
     "hero_h1": "Lithuanian produce, served at the pace of the seasons.",
-    "hero_lead": "A farm-to-table kitchen in a restored historic mansion. Four courses, chosen freely, built on what our farm and our neighbours harvest this week.",
-    "hero_menu": "See this season’s menu",
-    "alt_hero_a": "A table set for dinner at 14horses",
+    "hero_lead": "Contemporary Baltic–Scandinavian cuisine within the historic walls of Vainai Palace, rooted in our own farm, Farmers Circle.",
+    "hero_menu": "See the menu",
+    "alt_hero_a": "A table set for dinner at 14Horses",
     "alt_hero_b": "Old stone wall in Senatorių Pasažas",
-    "strip": [("Dinner", "Tuesday – Saturday, 17:00&nbsp;–&nbsp;23:00"), ("Find us", "Dominikonų g. 11, Vilnius"), ("MICHELIN Guide 2026", "Bib Gourmand")],
+    "strip": [("Opening hours", "Tue–Thu 17:00&nbsp;–&nbsp;22:00<br>Fri–Sat 17:00&nbsp;–&nbsp;23:00"), ("Find us", "Dominikonų g. 11, Vilnius"), ("MICHELIN Guide 2026", "Bib Gourmand")],
     "about_over": "About us",
-    "about_statement": "We sometimes call 14horses a travelling restaurant. This is our third home — and this time, we have reined in our horses and settled in Senatorių Pasažas for good.",
+    "about_statement": "The historic walls of Vainai Palace, a renewed creative energy and an ambition for bold flavours. Today, 14Horses opens a new chapter with Chef Aleksandras Fedorovičius, a new team and contemporary Baltic–Scandinavian cuisine.",
     "about_body": [
-        "What has never changed is the thread: Lithuanian produce reaches the plate in the rhythm nature sets. Our own regenerative farm, Farmers Circle, and the farmers we work with all year keep us honest about the season.",
-        "The whole dinner is packed into a four-step, fixed-price menu you choose freely — snacks, starter, main course and dessert — that shows the full picture of the 14horses philosophy, rooted in local cooking.",
+        "Our roots lie in the soil. At Farmers Circle in the village of Radiškis, the seasons set the rhythm and inspire ideas for the menu to come. 14Horses is part of this farm. From the soil to the creativity of the kitchen and the conversation at the table, an unbroken journey of discovery unfolds. Knowledge of what we grow, how we prepare it and why we choose it passes through our team to our guests, giving flavour its context and the experience its depth.",
+        "!Nose to tail. Root to leaf.",
+        "This is how we understand respect for an ingredient: knowing its origins, revealing its character and finding value in every part. In our kitchen, seasonal, local produce meets unexpected combinations, adventurous techniques and bold flavours.",
+        "We find beauty in the natural: organic forms, textures and the traces left by time. An appreciation of imperfection, close to the philosophy of wabi-sabi, allows our historic setting and contemporary gastronomy to speak the same language.",
+        "!At our table, this language becomes flavour — bold, distinctive and memorable.",
     ],
-    "menu_h2": "Four steps,<br>freely chosen.",
-    "menu_intro": "One fixed price. You pick each course from a short, seasonal list. [[PRICE]] per guest · wine pairing [[PRICE]].",
+    "menu_h2": "The menu",
+    "menu_intro": "Seasonal, local produce meets unexpected combinations, adventurous techniques and bold flavours. The menu follows what the season brings to Farmers Circle.",
     "steps": [("Step 1", "Snacks"), ("Step 2", "Starter"), ("Step 3", "Main course"), ("Step 4", "Dessert")],
-    "dish": "[[Dishes from the chef]]",
+    "dish": "[[The current menu will be published here soon.]]",
     "menu_full": "Read the full menu",
-    "farm_over": "Farmers Circle · 70 km from the table",
-    "farm_h2": "Our farm sets the menu.",
-    "farm_body": "Farmers Circle is our regenerative farm, just 70 km from Vilnius. Together with partner farms, it decides what arrives in the kitchen each week — and so what you eat tonight.",
+    "farm_over": "Farmers Circle · Radiškis",
+    "farm_h2": "At Farmers Circle, everything begins with living soil.",
+    "farm_body": "Founded in 2018 by Danish entrepreneur Niels Peter Pretzmann, this organic farm in Radiškis, Ukmergė district, nurtures the connection between soil, plants, animals and people. From the outset, it has grown around the belief that good food begins with a responsible relationship with nature. Here, the seasons set the pace, and every decision considers both the harvest to come and the land that will sustain it.",
     "farm_link": "Visit Farmers Circle",
+    "farm_more": [
+        "Grains grow in the fields, seasonal vegetables and culinary herbs fill the gardens, and Angus cattle graze the pastures. The farm’s produce also includes organic eggs and poultry, buckwheat, oats and flour. This diversity creates an interconnected system in which crop cultivation, market gardening and livestock farming support one another.",
+        "Part of the harvest takes on a new form right here, in the farm’s own production kitchen. Vegetables are fermented and made into sauces, spreads and condiments, while the flavours of the seasons are preserved in jams, syrups and vinegars. The short distance between garden and kitchen allows freshly harvested produce to be processed promptly, preserving its character and finding value even in ingredients with an imperfect appearance.",
+        "Care for the soil connects every aspect of the farm. Regenerative practices — reduced tillage, crop rotation, cover cropping, rotational grazing and composting — help restore soil vitality and support biodiversity. Organic matter returns to the soil through compost, nourishing future harvests. The end of one season becomes the beginning of the next.",
+        "Farmers Circle is also a place for gathering and discovery. Its very name invites growers, chefs, like-minded people and curious guests into a shared circle, united by a desire to understand where their food comes from. Farm tours, educational activities and cooking experiences open a window onto everyday farming and the work behind each ingredient.",
+        "This journey continues at Red Brick, the farm’s restaurant, where the harvest becomes a seasonal gastronomic experience. Event and meeting spaces, accommodation and a farm shop invite guests to stay a little longer — to observe, taste and settle into the rhythm of the place.",
+    ],
+    "farm_close": "From soil to harvest. From experience to knowledge shared. This is how the Farmers Circle turns.",
     "alt_farm": "Lambs grazing at Farmers Circle, our regenerative farm",
     "farm_photo_todo": "Photo: Farmers Circle farm",
-    "team_over": "Holding the reins",
-    "team": [("[[Name]]", "Head chef"), ("[[Name]]", "Restaurant manager")],
+    "team_over": "At the reins of 14Horses",
+    "team": [("Aleksandras Fedorovičius", "Head Chef"), ("Ela Žoromskė", "Restaurant Manager"), ("Matas Simaitis", "Restaurant Manager")],
     "gallery_label": "Gallery",
     "alt_gallery": ["Wine glasses by the window", "Tables by the wine wall", "A glass of wine on a set table", "A quiet corner of the dining room"],
-    "alt_room": "The dining room at 14horses",
+    "alt_room": "The dining room at 14Horses",
     "credit": "Photos",
     "events_h3": "Events &amp; private dining",
     "events_body": "Harvest dinners, guest chefs and the whole room for your own occasion.",
     "events_link": "Ask about events",
     "gift_h3": "Give an evening",
-    "gift_body": "A gift voucher for 14horses in any amount from €20 to €1,000, bought online at Senatorių Pasažas.",
+    "gift_body": "A gift voucher for 14Horses in any amount from €20 to €1,000. Valid for 12 months in all our restaurants and shops in Senatorių Pasažas.",
     "gift_link": "Buy a gift voucher",
     "res_h2": "Join us at the table.",
     "res_when": "Tuesday – Saturday from 17:00 · Dominikonų g. 11, Vilnius",
-    "res_groups": 'Groups of 8+ — please write to us. See our <a href="#policy">restaurant policy</a> before booking.',
+    "res_groups": 'Groups of 8 or more are arranged individually — please contact us. Read our <a href="#policy">restaurant policy</a> before booking.',
     "res_box_h": "Book online",
-    "res_box_p": "Choose a date, time and number of guests. You will receive a confirmation by email.",
+    "res_box_p": "Choose a date, time and number of guests. A €20 per person deposit confirms your table and is credited to your bill.",
     "res_note": "Reservations by SevenRooms",
     "contact_h2": "Contact",
-    "c_hours": "Opening hours", "c_hours_v": "Tuesday – Saturday<br>17:00&nbsp;–&nbsp;23:00", "c_closed": "Sunday – Monday closed",
+    "c_hours": "Opening hours", "c_hours_v": "Tuesday–Thursday 17:00&nbsp;–&nbsp;22:00<br>Friday–Saturday 17:00&nbsp;–&nbsp;23:00", "c_closed": "Sunday–Monday closed",
     "c_write": "Write or call", "c_addr": "Address", "c_follow": "Follow the season",
-    "policy_h2": "Restaurant policy", "policy_sub": "Good to know before you visit.",
+    "policy_h2": "Restaurant policy", "policy_sub": "Restaurant rules and reservation terms.",
     "policy": [
-        ("Reservations &amp; cancellation", "We recommend booking a table, but walk-ins are always welcome when we have room. If your plans change, please cancel or move your booking at least 24 hours in advance, using the link in your confirmation email or by contacting us. For no-shows and late cancellations we may charge €30 per guest. We hold your table for 15 minutes after the booked time."),
-        ("Allergies &amp; dietary needs", "Please tell us about allergies or dietary needs when you book, so the kitchen can prepare. The menu follows the season and what the farm delivers, so most courses can be adapted for vegetarian guests and common allergies. Our kitchen handles all common allergens, so we cannot guarantee a completely allergen-free meal."),
-        ("Children", "Children are welcome. There is no separate children’s menu, but the kitchen is happy to prepare smaller portions. High chairs are available on request."),
-        ("Groups &amp; private dining", "For groups of 8 or more, please contact us directly. Larger groups are served a set menu, and we may ask for a deposit to confirm the booking. The whole restaurant can be booked for private events."),
-        ("Payment &amp; service charge", "A 10% service charge is added to the final bill. We accept all major payment cards. Please note that we do not accept cash."),
-        ("Gift vouchers", 'Gift vouchers for 14horses are sold online by Senatorių Pasažas, in any amount from €20 to €1,000: <a href="https://www.senatoriupasazas.lt/#vouchers" rel="noopener" target="_blank">buy a gift voucher</a>. Vouchers are valid for 12 months from purchase, can be used in all our shops and restaurants in Senatorių Pasažas, and cannot be exchanged for cash.'),
+        ("Reservations and dining duration", "Tables are reserved for 2 hours. Longer visits must be arranged in advance. Reserved tables are held for 15 minutes after the reservation time. Please inform the restaurant team if you are running late. Reservations will be cancelled if guests arrive more than 15 minutes late without prior notice."),
+        ("Reservation deposit and cancellation", "A deposit of €20 per person is required to confirm a reservation. This amount will be credited towards the final bill. For cancellations made at least 24 hours before the reservation time, the deposit will be refunded. For later cancellations or no-shows, the deposit is non-refundable. The same cancellation and refund terms apply to prepaid tasting events."),
+        ("Group reservations", "Reservations for groups of 8 or more guests are arranged individually. Groups may choose dishes from the current restaurant menu or a pre-agreed event menu."),
+        ("Children", "Children are welcome at the restaurant. High chairs are available. We do not offer a separate children’s menu."),
+        ("Pets", "Pets are welcome both inside the restaurant and on the terrace. The accompanying guest is responsible for their pet’s care and behaviour. Pets must not disturb other guests or interfere with restaurant operations."),
+        ("Allergies and dietary requirements", "Please notify the restaurant of any allergies, food intolerances or specific dietary requirements at least 3 days before your visit. Menu adaptations and specific adjustments are agreed individually with the restaurant team."),
+        ("Kitchen opening hours", "The kitchen is open until 21:00 Tuesday–Thursday and until 22:00 on Fridays and Saturdays."),
+        ("Bringing your own cake or wine", "Guests may bring their own cake or wine only by prior arrangement with the restaurant team. Additional charges apply and will be communicated when arrangements are made."),
+        ("Dress code", "The recommended dress code is smart casual."),
+        ("Payment and service charge", "The restaurant accepts card payments only. Cash is not accepted. A service charge applies. The amount and applicable terms are stated on the restaurant menu."),
+        ("Accessibility", "The restaurant is accessible to guests using wheelchairs and those with pushchairs. Please inform us before your visit if you require additional assistance."),
     ],
     "f_nav": ["About us", "Menu", "Farmers Circle", "Reservations", "Restaurant policy", "Contact", "Instagram"],
     "nl_label": "Stories from our restaurants, kitchens and farm — every other week",
@@ -116,8 +133,8 @@ EN = {
 
 LT = {
     "lang": "lt", "home": "/lt/", "other_home": "/",
-    "title": "14horses — „nuo ūkio iki stalo“ restoranas Vilniaus senamiestyje",
-    "desc": "„Nuo ūkio iki stalo“ restoranas restauruotame istoriniame dvare Senatorių pasaže, Vilniuje. Sezoninis keturių žingsnių meniu iš lietuviškų produktų, užaugintų mūsų regeneraciniame ūkyje Farmers Circle.",
+    "title": "14Horses — šiuolaikinės baltiškos-skandinaviškos virtuvės restoranas Vilniuje",
+    "desc": "Šiuolaikinė baltiška-skandinaviška šefo Aleksandro Fedorovičiaus virtuvė istoriniuose Vainų rūmuose, Senatorių pasaže, Vilniuje. Mūsų pradžia – ekologiškame ūkyje „Farmers Circle“.",
     "skip": "Pereiti prie turinio",
     "nav": ["Apie mus", "Meniu", "Farmers Circle", "Renginiai", "Taisyklės", "Kontaktai"],
     "reserve": "Rezervuoti staliuką",
@@ -125,57 +142,73 @@ LT = {
     "menu_btn": "Meniu",
     "hero_over": "Senatorių pasažas · Vilniaus senamiestis",
     "hero_h1": "Lietuviški produktai – metų laikų ritmu.",
-    "hero_lead": "„Nuo ūkio iki stalo“ virtuvė restauruotame istoriniame dvare. Keturi laisvai pasirenkami patiekalai iš to, ką šią savaitę užaugino mūsų ūkis ir kaimynai.",
-    "hero_menu": "Šio sezono meniu",
-    "alt_hero_a": "Vakarienei serviruotas stalas 14horses",
+    "hero_lead": "Šiuolaikinė baltiška-skandinaviška virtuvė istorinėse Vainų rūmų sienose. Mūsų pradžia – ūkyje „Farmers Circle“.",
+    "hero_menu": "Meniu",
+    "alt_hero_a": "Vakarienei serviruotas stalas 14Horses",
     "alt_hero_b": "Sena akmeninė siena Senatorių pasaže",
-    "strip": [("Vakarienės", "Antradieniais – šeštadieniais 17:00&nbsp;–&nbsp;23:00"), ("Adresas", "Dominikonų g. 11, Vilnius"), ("MICHELIN gidas 2026", "Bib Gourmand")],
+    "strip": [("Darbo laikas", "Antr.–ketv. 17:00&nbsp;–&nbsp;22:00<br>Penkt.–šešt. 17:00&nbsp;–&nbsp;23:00"), ("Adresas", "Dominikonų g. 11, Vilnius"), ("MICHELIN gidas 2026", "Bib Gourmand")],
     "about_over": "Apie mus",
-    "about_statement": "Kartais pavadiname 14horses keliaujančiu restoranu. Tai jau trečioji mūsų lokacija – tačiau šįkart pažabojome savus žirgus ir apsistojome Senatorių pasaže ilgam.",
+    "about_statement": "Istorinės Vainų rūmų sienos, nauja kūrybinė energija ir ryškaus skonio ambicija. Šiandien 14Horses atsiveria su šefu Aleksandru Fedorovičiumi, nauja komanda ir šiuolaikine baltiška-skandinaviška virtuve.",
     "about_body": [
-        "Esminė pasakojimo linija nepasikeitė – lietuviški produktai nugula lėkštėse gamtos padiktuotu ritmu, o metų laikų kaitos nepamesti padeda mūsų regeneracinis ūkis Farmers Circle bei ūkininkai, su kuriais bendradarbiaujame ištisus metus.",
-        "Visą vakarienę supakavome į keturių žingsnių laisvo pasirinkimo fiksuotos kainos meniu – užkandžiai, pirmasis patiekalas, pagrindinis patiekalas ir desertas atskleidžia pilną 14horses filosofijos, pagrįstos vietinės virtuvės principais, vaizdą.",
+        "Mūsų pradžia – žemėje. Radiškių kaime įsikūrusiame „Farmers Circle“ ūkyje, kur metų laikai diktuoja ritmą ir augina būsimo meniu idėjas. „14Horses“ yra šio ūkio dalis. Nuo dirvos iki kūrybos virtuvėje ir pokalbio prie stalo tęsiasi vientisa pažinimo kelionė. Žinios apie tai, ką auginame, kaip ruošiame ir kodėl renkamės, nuosekliai keliauja per mūsų komandą iki svečio, suteikdamos skoniui kontekstą, o patirčiai – gylį.",
+        "!Nuo galvos iki uodegos. Nuo šaknų iki lapelių.",
+        "Taip suprantame pagarbą ingredientui: pažinti jo kilmę, atskleisti charakterį ir atrasti vertę kiekvienoje jo dalyje. Sezoniškumas ir vietiniai produktai mūsų virtuvėje susitinka su netikėtais deriniais, drąsiomis technikomis ir ryškiais skoniais.",
+        "Estetiką atrandame natūralume – organiškose formose, tekstūrose, laiko paliktuose pėdsakuose. „Wabi-sabi“ artimas gebėjimas įžvelgti grožį netobulume leidžia istorinei aplinkai ir šiuolaikinei gastronomijai kalbėti viena kalba.",
+        "!Prie mūsų stalo ši kalba įgauna skonį – ryškų, savitą, įsimenantį.",
     ],
-    "menu_h2": "Keturi žingsniai,<br>laisvas pasirinkimas.",
-    "menu_intro": "Viena fiksuota kaina. Kiekvieną patiekalą renkatės iš trumpo sezoninio sąrašo. [[KAINA]] asmeniui · vynų derinimas [[KAINA]].",
+    "menu_h2": "Meniu",
+    "menu_intro": "Sezoniškumas ir vietiniai produktai susitinka su netikėtais deriniais, drąsiomis technikomis ir ryškiais skoniais. Meniu seka tai, ką sezonas atneša į „Farmers Circle“ ūkį.",
     "steps": [("1 žingsnis", "Užkandžiai"), ("2 žingsnis", "Pirmasis patiekalas"), ("3 žingsnis", "Pagrindinis patiekalas"), ("4 žingsnis", "Desertas")],
-    "dish": "[[Šefo patiekalai]]",
+    "dish": "[[Aktualus meniu netrukus bus paskelbtas čia.]]",
     "menu_full": "Visas meniu",
-    "farm_over": "Farmers Circle · 70 km nuo stalo",
-    "farm_h2": "Meniu sudaro mūsų ūkis.",
-    "farm_body": "Farmers Circle – mūsų regeneracinis ūkis, vos 70 km nuo Vilniaus. Kartu su partneriais ūkininkais jis lemia, kas kiekvieną savaitę atkeliauja į virtuvę – ir ką ragausite šįvakar.",
+    "farm_over": "Farmers Circle · Radiškis",
+    "farm_h2": "„Farmers Circle“ viskas prasideda nuo gyvos žemės.",
+    "farm_body": "2018 metais danų verslininko Niels Peter Pretzmann įkurtas ekologinis ūkis Radiškio kaime, Ukmergės rajone, puoselėja ryšį tarp dirvožemio, augalų, gyvūnų ir žmogaus. Nuo pat pradžių jį augina įsitikinimas, kad geras maistas prasideda nuo atsakingo santykio su gamta. Čia metų laikai diktuoja darbų ritmą, o kiekvienas sprendimas priimamas galvojant ir apie būsimą derlių, ir apie žemę, kurioje jis užaugs.",
     "farm_link": "Aplankykite Farmers Circle",
+    "farm_more": [
+        "Ūkio laukuose auginami grūdai, daržuose – sezoninės daržovės ir prieskoninės žolelės, ganyklose ganosi angusų veislės galvijai. Ūkio produkciją papildo ekologiški kiaušiniai ir paukštiena, grikiai, avižos bei miltai. Ši įvairovė kuria tarpusavyje susijusią sistemą, kurioje augalininkystė, daržininkystė ir gyvulininkystė papildo viena kitą.",
+        "Dalis derliaus savo kitą pavidalą atranda čia pat, ūkio perdirbimo virtuvėje. Daržovės fermentuojamos, iš jų gaminami padažai, užtepėlės ir pagardai, o sezonų skoniai išsaugomi džemuose, sirupuose bei actuose. Nedidelis atstumas tarp daržo ir gamybos leidžia apdoroti šviežią derlių, išsaugoti jo savitumą ir atrasti vertę net išvaizda netobuluose produktuose.",
+        "Rūpestis dirvožemiu jungia visas ūkio veiklas. Regeneracinio ūkininkavimo praktikos – mažesnis žemės dirbimas, sėjomaina, tarpiniai pasėliai, rotacinis ganymas ir kompostavimas – padeda atkurti jo gyvybingumą ir palaikyti biologinę įvairovę. Organinės liekanos per kompostą sugrįžta į dirvą, maitindamos būsimą derlių. Taip vieno sezono pabaiga tampa kito pradžia.",
+        "„Farmers Circle“ – ir susitikimų bei pažinimo vieta. Pats pavadinimas kviečia į bendrą ratą: augintojus, šefus, bendraminčius ir svečius, norinčius suprasti, iš kur atkeliauja jų maistas. Ekskursijos po ūkį, edukacijos ir maisto gaminimo patirtys atveria kasdienį ūkininkavimo pasaulį bei leidžia pažinti darbą, slypintį už kiekvieno ingrediento.",
+        "Šį pažinimą pratęsia ūkyje įsikūręs restoranas „Red Brick“, kuriame derlius tampa sezonine gastronomine patirtimi. Renginių ir susitikimų erdvės, nakvynės vieta bei ūkio parduotuvė kviečia pasilikti ilgiau – stebėti, ragauti ir pajusti vietos ritmą.",
+    ],
+    "farm_close": "Nuo dirvos iki derliaus. Nuo patirties iki žinių, kuriomis dalijamės. Taip sukasi „Farmers Circle“ ratas.",
     "alt_farm": "Ėriukai ganosi Farmers Circle, mūsų regeneraciniame ūkyje",
     "farm_photo_todo": "Nuotrauka: Farmers Circle ūkis",
-    "team_over": "Prie vadžių",
-    "team": [("[[Vardas Pavardė]]", "Virtuvės vadovas"), ("[[Vardas Pavardė]]", "Restorano vadovas")],
+    "team_over": "Už 14Horses vadžių stovi",
+    "team": [("Aleksandras Fedorovičius", "Virtuvės vadovas"), ("Ela Žoromskė", "Restorano vadovė"), ("Matas Simaitis", "Restorano vadovas")],
     "gallery_label": "Galerija",
     "alt_gallery": ["Taurės prie lango", "Staliukai prie vyno sienos", "Vyno taurė ant serviruoto stalo", "Jaukus salės kampelis"],
-    "alt_room": "14horses salė",
+    "alt_room": "14Horses salė",
     "credit": "Nuotraukos",
     "events_h3": "Renginiai ir privatūs vakarai",
     "events_body": "Derliaus vakarienės, kviestiniai šefai ir visa salė jūsų progai.",
     "events_link": "Teiraukitės dėl renginių",
     "gift_h3": "Padovanokite vakarą",
-    "gift_body": "14horses dovanų kuponas bet kokiai sumai nuo 20 iki 1 000 € – įsigykite internetu Senatorių pasaže.",
+    "gift_body": "14Horses dovanų kuponas bet kokiai sumai nuo 20 iki 1 000 €. Galioja 12 mėn. visuose mūsų restoranuose ir parduotuvėse Senatorių pasaže.",
     "gift_link": "Pirkti dovanų kuponą",
     "res_h2": "Lauksime prie stalo.",
     "res_when": "Antradieniais – šeštadieniais nuo 17:00 · Dominikonų g. 11, Vilnius",
-    "res_groups": 'Grupėms nuo 8 asmenų – parašykite mums. Prieš rezervuodami susipažinkite su <a href="#policy">restorano taisyklėmis</a>.',
+    "res_groups": '8 ir daugiau asmenų grupių rezervacijos derinamos individualiai – susisiekite su mumis. Prieš rezervuodami susipažinkite su <a href="#policy">restorano taisyklėmis</a>.',
     "res_box_h": "Rezervuokite internetu",
-    "res_box_p": "Pasirinkite datą, laiką ir svečių skaičių. Patvirtinimą gausite el. paštu.",
+    "res_box_p": "Pasirinkite datą, laiką ir svečių skaičių. Rezervaciją patvirtina 20 € išankstinis mokėjimas asmeniui, kuris įskaitomas į galutinę sąskaitą.",
     "res_note": "Rezervacijos per SevenRooms",
     "contact_h2": "Kontaktai",
-    "c_hours": "Darbo laikas", "c_hours_v": "Antradieniais – šeštadieniais<br>17:00&nbsp;–&nbsp;23:00", "c_closed": "Sekmadienį – pirmadienį nedirbame",
+    "c_hours": "Darbo laikas", "c_hours_v": "Antradienis–ketvirtadienis 17:00&nbsp;–&nbsp;22:00<br>Penktadienis–šeštadienis 17:00&nbsp;–&nbsp;23:00", "c_closed": "Sekmadienį–pirmadienį nedirbame",
     "c_write": "Rašykite ar skambinkite", "c_addr": "Adresas", "c_follow": "Sekite sezoną",
-    "policy_h2": "Restorano taisyklės", "policy_sub": "Naudinga žinoti prieš apsilankant.",
+    "policy_h2": "Restorano taisyklės", "policy_sub": "Restorano taisyklės ir rezervavimo sąlygos.",
     "policy": [
-        ("Rezervacijos ir atšaukimas", "Rekomenduojame staliuką rezervuoti iš anksto, tačiau visada laukiame ir užsukusių be rezervacijos, jei turime vietos. Jei planai pasikeitė, rezervaciją atšaukite ar pakeiskite likus ne mažiau kaip 24 val. – per nuorodą patvirtinimo laiške arba susisiekę su mumis. Neatvykus ar atšaukus per vėlai, galime taikyti 30 € mokestį asmeniui. Staliuką laikome 15 min. po rezervuoto laiko."),
-        ("Alergijos ir mitybos poreikiai", "Apie alergijas ar mitybos poreikius praneškite rezervuodami, kad virtuvė galėtų pasiruošti. Meniu keičiasi pagal sezoną ir ūkio derlių, todėl daugumą patiekalų galime pritaikyti vegetarams ir esant dažniausioms alergijoms. Mūsų virtuvėje naudojami visi dažniausi alergenai, todėl negalime garantuoti, kad patiekalas bus visiškai be alergenų."),
-        ("Vaikai", "Vaikai laukiami. Atskiro vaikų meniu neturime, tačiau virtuvė mielai paruoš mažesnes porcijas. Paprašius suteiksime aukštą kėdutę."),
-        ("Grupės ir privatūs vakarai", "Grupėms nuo 8 asmenų prašome susisiekti tiesiogiai. Didesnėms grupėms patiekiamas fiksuotas meniu, o rezervacijai patvirtinti galime paprašyti užstato. Visą restoraną galima užsisakyti privačiam renginiui."),
-        ("Mokėjimas ir aptarnavimo mokestis", "Prie galutinės sąskaitos pridedamas 10 % aptarnavimo mokestis. Priimame visas pagrindines mokėjimo korteles. Atkreipiame dėmesį, kad grynųjų pinigų nepriimame."),
-        ("Dovanų kuponai", '14horses dovanų kuponus internetu parduoda Senatorių pasažas – bet kokiai sumai nuo 20 iki 1 000 €: <a href="https://www.senatoriupasazas.lt/#vouchers" rel="noopener" target="_blank">pirkti dovanų kuponą</a>. Kuponas galioja 12 mėn. nuo įsigijimo, juo galima atsiskaityti visose mūsų parduotuvėse ir restoranuose Senatorių pasaže, tačiau jo negalima iškeisti į pinigus.'),
+        ("Rezervacijos ir apsilankymo trukmė", "Staliukas rezervuojamas 2 valandoms. Ilgesnė apsilankymo trukmė derinama iš anksto. Rezervuotas staliukas laikomas 15 minučių nuo rezervacijos pradžios. Apie vėlavimą prašome informuoti restorano komandą. Vėluojant ilgiau nei 15 minučių ir apie tai nepranešus, rezervacija atšaukiama."),
+        ("Rezervacijos mokestis ir atšaukimo sąlygos", "Rezervacijai patvirtinti taikomas 20 Eur išankstinis mokėjimas kiekvienam asmeniui. Sumokėta suma įskaitoma į galutinę apsilankymo sąskaitą. Rezervaciją atšaukus likus ne mažiau kaip 24 valandoms iki rezervacijos pradžios, išankstinis mokėjimas grąžinamas. Atšaukus vėliau arba neatvykus, sumokėta suma negrąžinama. Tokia pati atšaukimo ir pinigų grąžinimo tvarka taikoma iš anksto apmokėtoms degustacijoms."),
+        ("Grupių rezervacijos", "8 ir daugiau asmenų grupių rezervacijos derinamos individualiai. Grupėms siūloma rinktis patiekalus iš esamo restorano meniu arba iš anksto suderinto renginių meniu."),
+        ("Apsilankymas su vaikais", "Restorane priimami svečiai su vaikais. Suteikiamos vaikiškos kėdutės. Atskiro vaikams skirto meniu nėra."),
+        ("Apsilankymas su augintiniais", "Augintiniai priimami restorano vidaus patalpose ir terasoje. Už augintinio priežiūrą ir elgesį atsako jį lydintis asmuo. Augintinis neturi trukdyti kitų svečių patogumui ar restorano darbui."),
+        ("Alergijos ir specialūs mitybos poreikiai", "Apie alergijas, maisto netoleravimą ir specialius mitybos poreikius būtina informuoti ne vėliau kaip prieš 3 dienas iki apsilankymo. Meniu pritaikymo galimybės ir konkretūs pakeitimai derinami individualiai su restorano komanda."),
+        ("Virtuvės darbo laikas", "Antradieniais–ketvirtadieniais virtuvė dirba iki 21.00 val., penktadieniais ir šeštadieniais – iki 22.00 val."),
+        ("Atsineštas tortas ir vynas", "Atsinešti savo tortą ar vyną galima tik iš anksto suderinus su restorano komanda. Taikomi papildomi mokesčiai, apie kuriuos svečiai informuojami derinant apsilankymo sąlygas."),
+        ("Aprangos rekomendacija", "Rekomenduojamas aprangos stilius – „smart casual“ (laisvalaikio elegancija)."),
+        ("Atsiskaitymas ir aptarnavimo mokestis", "Restorane atsiskaitoma tik mokėjimo kortelėmis. Grynieji pinigai nepriimami. Taikomas aptarnavimo mokestis. Jo dydis ir taikymo sąlygos nurodomi restorano meniu."),
+        ("Prieinamumas", "Restorano patalpos prieinamos svečiams su judėjimo ir vaikiškais vežimėliais. Apie papildomos pagalbos poreikį prašome informuoti prieš apsilankymą."),
     ],
     "f_nav": ["Apie mus", "Meniu", "Farmers Circle", "Rezervacijos", "Restorano taisyklės", "Kontaktai", "Instagram"],
     "nl_label": "Istorijos iš mūsų restoranų, virtuvių ir ūkio – kas dvi savaites",
@@ -209,7 +242,10 @@ def page(t: dict) -> str:
     bib = (f'<img class="bib" src="{BIB_LOGO}" alt="MICHELIN Guide 2026" width="56" height="56">' if BIB_LOGO
            else '<span class="bib bib--todo" role="img" aria-label="MICHELIN Bib Gourmand 2026"><span class="todo">[Bib Gourmand logo]</span></span>')
     strip += f'\n        <div class="strip__award">{bib}<div><dt>{a3}</dt><dd>{b3}</dd></div></div>'
-    about_body = "\n".join(f"          <p>{p}</p>" for p in t["about_body"])
+    about_body = "\n".join(
+        (f'          <p class="motto">{p[1:]}</p>' if p.startswith("!") else f"          <p>{p}</p>") for p in t["about_body"])
+    farm_more = "\n".join(f"        <p>{p}</p>" for p in t["farm_more"])
+    tel = "tel:" + CONTACT["phone"].replace(" ", "")
     steps = "\n".join(
         f'        <li><span class="num" aria-hidden="true">{n}</span><span class="lbl">{a}</span><span class="name">{b}</span><span class="dish">{ph(t["dish"])}</span></li>'
         for n, (a, b) in zip(NUMS, t["steps"]))
@@ -257,7 +293,7 @@ def page(t: dict) -> str:
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"Restaurant","name":"14horses","url":"{SITE_URL}/","image":"{SITE_URL}{PHOTOS['hero_a']}","servesCuisine":"Lithuanian, farm-to-table","address":{{"@type":"PostalAddress","streetAddress":"Dominikonų g. 11","addressLocality":"Vilnius","addressCountry":"LT"}},"openingHoursSpecification":[{{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"17:00","closes":"23:00"}}],"acceptsReservations":"True"}}
+{{"@context":"https://schema.org","@type":"Restaurant","name":"14Horses","url":"{SITE_URL}/","image":"{SITE_URL}{PHOTOS['hero_a']}","address":{{"@type":"PostalAddress","streetAddress":"Dominikonų g. 11","addressLocality":"Vilnius","addressCountry":"LT"}},"telephone":"+37061250845","email":"14horses@bfr.lt","openingHoursSpecification":[{{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"17:00","closes":"22:00"}},{{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"17:00","closes":"23:00"}}],"servesCuisine":"Baltic, Scandinavian","acceptsReservations":"True"}}
 </script>
 </head>
 <body>
@@ -265,7 +301,7 @@ def page(t: dict) -> str:
 
 <header class="site-header">
   <nav class="wrap nav" aria-label="Main">
-    <a class="nav__logo" href="{t['home']}"><img src="/assets/logo.png" alt="14horses" width="140" height="171"></a>
+    <a class="nav__logo" href="{t['home']}"><img src="/assets/logo.png" alt="14Horses" width="140" height="171"></a>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="{t['menu_open']}">{MENU_SVG}<span aria-hidden="true">{t['menu_btn']}</span></button>
     <div class="nav__links" id="nav-links">
 {nav}
@@ -318,9 +354,7 @@ def page(t: dict) -> str:
         <h2>{t['menu_h2']}</h2>
         <p class="menu__intro">{ph(t['menu_intro'])}</p>
       </div>
-      <ol class="steps">
-{steps}
-      </ol>
+      <p class="menu__soon">{ph(t['dish'])}</p>
     </div>
   </section>
 
@@ -331,6 +365,10 @@ def page(t: dict) -> str:
       <h2>{t['farm_h2']}</h2>
       <p class="muted">{t['farm_body']}</p>
 {farm_link}    </div>
+    <p class="farm__close">{t['farm_close']}</p>
+    <div class="farm__more prose">
+{farm_more}
+    </div>
   </section>
 
   <section class="team" aria-labelledby="team-h">
@@ -369,7 +407,7 @@ def page(t: dict) -> str:
       <div class="reserve__box r1">
         <h3 style="font-size:28px">{t['res_box_h']}</h3>
         <p class="muted" style="font-size:15px">{t['res_box_p']}</p>
-        <a id="sevenrooms-trigger" class="btn btn--lg" href="#contact">{t['reserve']}</a>
+        <a id="sevenrooms-trigger" class="btn btn--lg" href="{SEVENROOMS_URL}" rel="noopener" target="_blank">{t['reserve']}</a>
         <p class="reserve__note">{t['res_note']}</p>
       </div>
     </div>
@@ -391,7 +429,7 @@ def page(t: dict) -> str:
     <div class="split__aside"><h2 class="section-title">{t['contact_h2']}</h2></div>
     <div class="split__main contact-grid">
       <div><span class="label">{t['c_hours']}</span><span>{t['c_hours_v']}</span><span class="muted">{t['c_closed']}</span></div>
-      <div><span class="label">{t['c_write']}</span><a href="mailto:{mail}">{ph(mail)}</a><a href="tel:{phone}">{ph(phone)}</a></div>
+      <div><span class="label">{t['c_write']}</span><a href="mailto:{mail}">{ph(mail)}</a><a href="{tel}">{ph(phone)}</a></div>
       <div><span class="label">{t['c_addr']}</span><a href="{CONTACT['maps']}" rel="noopener" target="_blank">{CONTACT['address']}<br>Senatorių pasažas</a></div>
       <div><span class="label">{t['c_follow']}</span><a class="ig" href="{CONTACT['instagram_url']}" rel="noopener" target="_blank">{IG_SVG}<span>Instagram · {ph(CONTACT['instagram_handle'])}</span></a></div>
     </div>
@@ -402,7 +440,7 @@ def page(t: dict) -> str:
 <footer>
   <div class="wrap footer">
     <address>
-      <span class="footer__name">14horses</span>
+      <span class="footer__name">14Horses</span>
       <span>{CONTACT['address']}</span>
       <span>Senatorių pasažas</span>
     </address>
@@ -422,7 +460,7 @@ def page(t: dict) -> str:
   </div>
   <div class="wrap">
     <div class="footer__bottom">
-    <span>© <span data-year>2026</span> 14horses · {t['credit']}: {PHOTO_CREDIT}</span>
+    <span>© <span data-year>2026</span> 14Horses · {t['credit']}: {PHOTO_CREDIT}</span>
     <span>{t['service']}</span>
     <a href="#privacy">{t['privacy']}</a>
     </div>
