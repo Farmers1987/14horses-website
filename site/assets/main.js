@@ -1,4 +1,4 @@
-/* 14horses — site behaviour */
+/* 14horses - site behaviour */
 (function () {
   // ----- SevenRooms -----
   // Set VENUE_ID to the venue slug from SevenRooms (Manager > Widget settings).

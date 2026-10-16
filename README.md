@@ -1,14 +1,14 @@
-# 14horses.com — new website (Wabi Sabi)
+# 14horses.com - new website (Wabi Sabi)
 
 Static site, no framework. English at `/`, Lithuanian at `/lt/`.
 
 ## Structure
-- `site/` — the deployable site (point hosting/Vercel at this folder)
-  - `index.html` (EN), `lt/index.html` (LT) — generated, do not edit by hand
-  - `assets/style.css` — all styling; colour/typography tokens at the top
-  - `assets/main.js` — mobile menu + SevenRooms widget
+- `site/` - the deployable site (point hosting/Vercel at this folder)
+  - `index.html` (EN), `lt/index.html` (LT) - generated, do not edit by hand
+  - `assets/style.css` - all styling; colour/typography tokens at the top
+  - `assets/main.js` - mobile menu + SevenRooms widget
   (`vercel.json` in the repo root serves `site/` with clean URLs + caching)
-- `build/build.py` — all page text (EN + LT) and settings. Edit text here, then run `python3 build/build.py`.
+- `build/build.py` - all page text (EN + LT) and settings. Edit text here, then run `python3 build/build.py`.
 
 ## Before launch
 0. **Remove the `X-Robots-Tag: noindex` header** from `vercel.json` when the site moves to 14horses.com (it keeps the test version out of Google).

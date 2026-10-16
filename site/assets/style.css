@@ -1,4 +1,4 @@
-/* 14horses — Wabi Sabi theme */
+/* 14horses - Wabi Sabi theme */
 :root {
   --washi: #EFEAE2;
   --clay: #E5DFD5;
@@ -320,3 +320,13 @@ footer { border-top: 1px solid var(--line); }
 }
 .person { align-items: flex-start; }
 .person__name { font-size: 22px; line-height: 1.3; margin-bottom: 4px; }
+
+/* Calmer text: highlighted lines use body size, darker ink */
+.prose .motto { font-family: var(--sans); font-size: inherit; line-height: inherit; font-weight: 500; color: var(--ink); }
+.farm-section { padding-top: 96px; }
+.farm-split { padding-top: 56px; }
+@media (max-width: 640px) {
+  .farm-section { padding-top: 64px; }
+  .farm-split { padding-top: 36px; }
+}
+.prose .motto { text-wrap: wrap; }
