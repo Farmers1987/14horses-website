@@ -76,6 +76,7 @@ EN = {
     "farm_h2": "At Farmers Circle, everything begins with living soil.",
     "farm_body": "Founded in 2018 by Danish entrepreneur Niels Peter Pretzmann, this organic farm in Radiškis, Ukmergė district, nurtures the connection between soil, plants, animals and people. From the outset, it has grown around the belief that good food begins with a responsible relationship with nature. Here, the seasons set the pace, and every decision considers both the harvest to come and the land that will sustain it.",
     "farm_link": "Visit Farmers Circle",
+    "read_more": "Read more", "read_less": "Show less",
     "farm_more": [
         "Grains grow in the fields, seasonal vegetables and culinary herbs fill the gardens, and Angus cattle graze the pastures. The farm’s produce also includes organic eggs and poultry, buckwheat, oats and flour. This diversity creates an interconnected system in which crop cultivation, market gardening and livestock farming support one another.",
         "Part of the harvest takes on a new form right here, in the farm’s own production kitchen. Vegetables are fermented and made into sauces, spreads and condiments, while the flavours of the seasons are preserved in jams, syrups and vinegars. The short distance between garden and kitchen allows freshly harvested produce to be processed promptly, preserving its character and finding value even in ingredients with an imperfect appearance.",
@@ -119,7 +120,7 @@ EN = {
         ("Kitchen Opening Hours", "The kitchen is open until 21:00 Tuesday-Thursday and until 22:00 on Fridays and Saturdays."),
         ("Bringing Your Own Cake or Wine", "Guests may bring their own cake or wine only by prior arrangement with the restaurant team. Additional charges apply and will be communicated when arrangements are made."),
         ("Dress Code", "The recommended dress code is smart casual."),
-        ("Payment and Service Charge", "The restaurant accepts card payments only. Cash is not accepted. A service charge applies. The amount and applicable terms are stated on the restaurant menu."),
+        ("Payment and Service Charge", "The restaurant accepts card payments only. Cash is not accepted. A 10% service charge is added to the final bill."),
         ("Accessibility", "The restaurant is accessible to guests using wheelchairs and those with pushchairs. Please inform us before your visit if you require additional assistance."),
     ],
     "f_nav": ["About us", "Menu", "Farmers Circle", "Booking", "Restaurant policy", "Contacts", "Instagram"],
@@ -168,6 +169,7 @@ LT = {
     "farm_h2": "„Farmers Circle“ viskas prasideda nuo gyvos žemės.",
     "farm_body": "2018 metais danų verslininko Niels Peter Pretzmann įkurtas ekologinis ūkis Radiškio kaime, Ukmergės rajone, puoselėja ryšį tarp dirvožemio, augalų, gyvūnų ir žmogaus. Nuo pat pradžių jį augina įsitikinimas, kad geras maistas prasideda nuo atsakingo santykio su gamta. Čia metų laikai diktuoja darbų ritmą, o kiekvienas sprendimas priimamas galvojant ir apie būsimą derlių, ir apie žemę, kurioje jis užaugs.",
     "farm_link": "Aplankykite Farmers Circle",
+    "read_more": "Skaityti daugiau", "read_less": "Rodyti mažiau",
     "farm_more": [
         "Ūkio laukuose auginami grūdai, daržuose - sezoninės daržovės ir prieskoninės žolelės, ganyklose ganosi angusų veislės galvijai. Ūkio produkciją papildo ekologiški kiaušiniai ir paukštiena, grikiai, avižos bei miltai. Ši įvairovė kuria tarpusavyje susijusią sistemą, kurioje augalininkystė, daržininkystė ir gyvulininkystė papildo viena kitą.",
         "Dalis derliaus savo kitą pavidalą atranda čia pat, ūkio perdirbimo virtuvėje. Daržovės fermentuojamos, iš jų gaminami padažai, užtepėlės ir pagardai, o sezonų skoniai išsaugomi džemuose, sirupuose bei actuose. Nedidelis atstumas tarp daržo ir gamybos leidžia apdoroti šviežią derlių, išsaugoti jo savitumą ir atrasti vertę net išvaizda netobuluose produktuose.",
@@ -211,7 +213,7 @@ LT = {
         ("Virtuvės darbo laikas", "Antradieniais-ketvirtadieniais virtuvė dirba iki 21.00 val., penktadieniais ir šeštadieniais - iki 22.00 val."),
         ("Atsineštas tortas ir vynas", "Atsinešti savo tortą ar vyną galima tik iš anksto suderinus su restorano komanda. Taikomi papildomi mokesčiai, apie kuriuos svečiai informuojami derinant apsilankymo sąlygas."),
         ("Aprangos rekomendacija", "Rekomenduojamas aprangos stilius - „smart casual“ (laisvalaikio elegancija)."),
-        ("Atsiskaitymas ir aptarnavimo mokestis", "Restorane atsiskaitoma tik mokėjimo kortelėmis. Grynieji pinigai nepriimami. Taikomas aptarnavimo mokestis. Jo dydis ir taikymo sąlygos nurodomi restorano meniu."),
+        ("Atsiskaitymas ir aptarnavimo mokestis", "Restorane atsiskaitoma tik mokėjimo kortelėmis. Grynieji pinigai nepriimami. Prie galutinės sąskaitos pridedamas 10 % aptarnavimo mokestis."),
         ("Prieinamumas", "Restorano patalpos prieinamos svečiams su judėjimo ir vaikiškais vežimėliais. Apie papildomos pagalbos poreikį prašome informuoti prieš apsilankymą."),
     ],
     "f_nav": ["Apie mus", "Meniu", "Farmers Circle", "Rezervacijos", "Restorano politika", "Kontaktai", "Instagram"],
@@ -248,7 +250,8 @@ def page(t: dict) -> str:
     strip += f'\n        <div class="strip__award">{bib}<div><dt>{a3}</dt><dd>{b3}</dd></div></div>'
     about_body = "\n".join(
         (f'          <p class="motto">{p[1:]}</p>' if p.startswith("!") else f"          <p>{p}</p>") for p in t["about_body"])
-    farm_more = "\n".join(f"          <p>{p}</p>" for p in t["farm_more"])
+    farm_first = f"          <p>{t['farm_more'][0]}</p>"
+    farm_more = "\n".join(f"            <p>{p}</p>" for p in t["farm_more"][1:])
     tel = "tel:" + CONTACT["phone"].replace(" ", "")
     steps = "\n".join(
         f'        <li><span class="num" aria-hidden="true">{n}</span><span class="lbl">{a}</span><span class="name">{b}</span><span class="dish">{ph(t["dish"])}</span></li>'
@@ -310,7 +313,7 @@ def page(t: dict) -> str:
     <div class="nav__links" id="nav-links">
 {nav}
       <span class="nav__lang" aria-label="{t['lang_label']}"><a href="/lt/" hreflang="lt" lang="lt" {lt_cur}>LT</a> / <a href="/" hreflang="en" lang="en" {en_cur}>EN</a></span>
-      <a class="btn" href="#reserve">{t['reserve']}</a>
+      <a class="btn" href="{SEVENROOMS_URL}" rel="noopener" target="_blank">{t['reserve']}</a>
     </div>
   </nav>
 </header>
@@ -322,7 +325,7 @@ def page(t: dict) -> str:
       <h1>{t['hero_h1']}</h1>
       <p class="hero__lead">{t['hero_lead']}</p>
       <div class="hero__ctas">
-        <a class="btn" href="#reserve">{t['reserve']}</a>
+        <a class="btn" href="{SEVENROOMS_URL}" rel="noopener" target="_blank">{t['reserve']}</a>
         <a class="link" href="#menu">{t['hero_menu']}</a>
       </div>
     </div>
@@ -371,8 +374,12 @@ def page(t: dict) -> str:
         <p class="statement">{t['farm_h2']}</p>
         <div class="prose">
           <p>{t['farm_body']}</p>
+{farm_first}
+          <details class="readmore">
+            <summary><span class="readmore__more">{t['read_more']}</span><span class="readmore__less">{t['read_less']}</span></summary>
 {farm_more}
-          <p class="motto">{t['farm_close']}</p>
+            <p class="motto">{t['farm_close']}</p>
+          </details>
         </div>
 {farm_link}      </div>
     </div>
@@ -472,6 +479,8 @@ def page(t: dict) -> str:
   </div>
 </footer>
 
+<div class="bookbar"><a class="btn" href="{SEVENROOMS_URL}" rel="noopener" target="_blank">{t['reserve']}</a></div>
+
 <script src="/assets/main.js" defer></script>
 </body>
 </html>
@@ -544,7 +553,12 @@ ARTIFACT_JS = r"""
   }
   var start = 'en';
   if (location.hash === '#lt') start = 'lt';
-  else { try { start = localStorage.getItem(KEY) || 'en'; } catch (e) {} }
+  else {
+    var saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    var langs = navigator.languages || [navigator.language || ''];
+    start = saved || (/^lt\b/i.test(langs[0] || '') ? 'lt' : 'en');
+  }
   setLang(start === 'lt' ? 'lt' : 'en');
 
   document.addEventListener('click', function (e) {

@@ -335,3 +335,24 @@ footer { border-top: 1px solid var(--line); }
 .reserve__action { display: flex; align-items: center; }
 .reserve__action .btn { width: 100%; }
 @media (max-width: 960px) { .reserve__action .btn { width: auto; } }
+
+/* Farmers Circle: "Read more" */
+.readmore { display: flex; flex-direction: column; gap: 16px; }
+.readmore > summary { order: 2; list-style: none; cursor: pointer; align-self: flex-start; color: var(--ink); text-decoration: none; border-bottom: 1px solid currentColor; padding: 4px 0; font-weight: 500; }
+.readmore > summary::-webkit-details-marker { display: none; }
+.readmore .readmore__less { display: none; }
+.readmore[open] .readmore__more { display: none; }
+.readmore[open] .readmore__less { display: inline; }
+
+/* Booking bar fixed to the bottom on phones */
+.bookbar { display: none; }
+@media (max-width: 640px) {
+  .bookbar {
+    display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+    padding: 10px max(var(--gutter), env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(var(--gutter), env(safe-area-inset-left, 0px));
+    background: rgba(239, 234, 226, .96); border-top: 1px solid var(--line); backdrop-filter: blur(8px);
+  }
+  .bookbar .btn { width: 100%; min-height: 50px; }
+  body { padding-bottom: 72px; }
+  .site-header.is-open ~ .bookbar { display: none; }
+}

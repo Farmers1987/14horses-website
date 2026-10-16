@@ -5,6 +5,23 @@
   // Example: 'fourteenhorses'. While empty, the button links to the contact section.
   var SEVENROOMS = { VENUE_ID: '', CLIENT_TOKEN: '' };
 
+  // Language: send visitors whose browser prefers Lithuanian to /lt/ on their
+  // first visit. Choosing LT or EN in the menu is remembered and wins after that.
+  var LANG_KEY = '14horses-lang';
+  document.querySelectorAll('.nav__lang a[hreflang]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem(LANG_KEY, a.getAttribute('hreflang')); } catch (e) {}
+    });
+  });
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem(LANG_KEY); } catch (e) {}
+    var onLt = /^\/lt(\/|$)/.test(location.pathname);
+    var langs = navigator.languages || [navigator.language || ''];
+    var wantsLt = langs.length && /^lt\b/i.test(langs[0]);
+    if (!saved && !onLt && wantsLt && location.pathname === '/') location.replace('/lt/' + location.hash);
+  })();
+
   // Mobile menu
   var header = document.querySelector('.site-header');
   var toggle = document.querySelector('.nav__toggle');
