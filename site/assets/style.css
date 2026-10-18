@@ -383,6 +383,13 @@ footer { border-top: 1px solid var(--line); }
 .footer__cookies:hover { color: var(--oak); }
 @media (max-width: 640px) {
   .consent { left: 0; right: 0; bottom: 0; width: auto; }
-  .consent__box { border-radius: 6px 6px 0 0; padding: 20px var(--gutter) calc(20px + env(safe-area-inset-bottom, 0px)); max-height: 85vh; }
+  .consent__box { border-radius: 6px 6px 0 0; padding: 16px 20px calc(14px + env(safe-area-inset-bottom, 0px)); gap: 10px; max-height: 85vh; }
+  .consent__title { font-size: 19px; }
+  .consent__text { font-size: 14px; line-height: 1.5; }
+  .consent__actions { gap: 8px; margin-top: 2px; }
+  .consent__actions .btn, .consent__actions .consent__link[data-consent-action="save"] { min-height: 42px; font-size: 15px; }
+  .consent__link { font-size: 14px; padding: 2px 0; }
+  .consent__opt { padding: 9px 0; }
+  .consent__opt small { font-size: 13px; }
   .consent-open .bookbar { display: none; }
 }
