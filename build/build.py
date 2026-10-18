@@ -131,6 +131,16 @@ EN = {
     "nl_err": "Please enter a valid email address.",
     "privacy": "Privacy policy",
     "service": "A 10% service charge is added to the final bill.",
+    "ck_title": "Cookies",
+    "ck_text": "We use necessary cookies to make the site work. With your consent, we also use statistics cookies to see how the site is used, and marketing cookies from Google and Meta to show relevant ads. You can change your choice at any time under Cookie settings at the bottom of the page.",
+    "ck_nec": ("Necessary", "Remembers your language and cookie choice. Always on."),
+    "ck_stat": ("Statistics", "Google Analytics: how visitors use the site."),
+    "ck_mkt": ("Marketing", "Google and Meta: showing relevant ads and measuring them."),
+    "ck_accept": "Accept all",
+    "ck_reject": "Reject all",
+    "ck_settings": "Settings",
+    "ck_save": "Save choices",
+    "ck_footer": "Cookie settings",
     "lang_label": "Language",
 }
 
@@ -224,6 +234,16 @@ LT = {
     "nl_err": "Įveskite teisingą el. pašto adresą.",
     "privacy": "Privatumo politika",
     "service": "Prie galutinės sąskaitos pridedamas 10 % aptarnavimo mokestis.",
+    "ck_title": "Slapukai",
+    "ck_text": "Būtinus slapukus naudojame, kad svetainė veiktų. Jums sutikus, taip pat naudojame statistikos slapukus, kad matytume, kaip naudojamasi svetaine, ir „Google“ bei „Meta“ rinkodaros slapukus, kad rodytume aktualią reklamą. Savo pasirinkimą bet kada galite pakeisti puslapio apačioje, skiltyje „Slapukų nustatymai“.",
+    "ck_nec": ("Būtini", "Įsimena kalbą ir slapukų pasirinkimą. Visada įjungti."),
+    "ck_stat": ("Statistika", "Google Analytics: kaip lankytojai naudojasi svetaine."),
+    "ck_mkt": ("Rinkodara", "Google ir Meta: aktualios reklamos rodymas ir jos rezultatų matavimas."),
+    "ck_accept": "Priimti visus",
+    "ck_reject": "Atmesti visus",
+    "ck_settings": "Nustatymai",
+    "ck_save": "Išsaugoti pasirinkimą",
+    "ck_footer": "Slapukų nustatymai",
     "lang_label": "Kalba",
 }
 
@@ -278,6 +298,25 @@ def page(t: dict) -> str:
                 else f'    <div class="frame r3" style="display:flex;align-items:flex-end;padding:20px;font-size:14px;color:#3A352F" role="img" aria-label="{t["alt_farm"]}"><span class="todo">[{t["farm_photo_todo"]}]</span></div>')
     farm_link = f'      <a class="link" href="{fc}" rel="noopener" target="_blank">{t["farm_link"]}</a>\n' if fc else ""
 
+    ck = lambda k: f'<label class="consent__opt"><input type="checkbox" name="{k}"><span><b>{t["ck_" + {"analytics": "stat", "marketing": "mkt"}[k]][0]}</b><small>{t["ck_" + {"analytics": "stat", "marketing": "mkt"}[k]][1]}</small></span></label>'
+    consent = f"""<div class="consent" data-consent hidden role="dialog" aria-labelledby="consent-title">
+  <div class="consent__box">
+    <h2 id="consent-title" class="consent__title">{t['ck_title']}</h2>
+    <p class="consent__text">{t['ck_text']}</p>
+    <div class="consent__prefs" data-consent-prefs hidden>
+      <label class="consent__opt"><input type="checkbox" checked disabled><span><b>{t['ck_nec'][0]}</b><small>{t['ck_nec'][1]}</small></span></label>
+      {ck('analytics')}
+      {ck('marketing')}
+    </div>
+    <div class="consent__actions">
+      <button type="button" class="btn" data-consent-action="reject">{t['ck_reject']}</button>
+      <button type="button" class="btn" data-consent-action="accept">{t['ck_accept']}</button>
+      <button type="button" class="consent__link" data-consent-action="settings">{t['ck_settings']}</button>
+      <button type="button" class="consent__link" data-consent-action="save" hidden>{t['ck_save']}</button>
+    </div>
+  </div>
+</div>"""
+
     return f"""<!doctype html>
 <html lang="{t['lang']}">
 <head>
@@ -295,9 +334,8 @@ def page(t: dict) -> str:
 <meta property="og:type" content="restaurant">
 <meta name="theme-color" content="#EFEAE2">
 <link rel="icon" href="/assets/favicon.png" type="image/png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/Newsreader.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/Karla.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/style.css">
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"Restaurant","name":"14Horses","url":"{SITE_URL}/","image":"{SITE_URL}{PHOTOS['hero_a']}","address":{{"@type":"PostalAddress","streetAddress":"Dominikonų g. 11","addressLocality":"Vilnius","addressCountry":"LT"}},"telephone":"+37061250845","email":"14horses@bfr.lt","openingHoursSpecification":[{{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"17:00","closes":"22:00"}},{{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"17:00","closes":"23:00"}}],"servesCuisine":"Baltic, Scandinavian","acceptsReservations":"True"}}
@@ -475,13 +513,16 @@ def page(t: dict) -> str:
     <div class="footer__bottom">
     <span>© <span data-year>2026</span> 14Horses · {t['credit']}: {PHOTO_CREDIT}</span>
     <span>{t['service']}</span>
+    <button type="button" class="footer__cookies" data-consent-open>{t['ck_footer']}</button>
     </div>
   </div>
 </footer>
 
 <div class="bookbar"><a class="btn" href="{SEVENROOMS_URL}" rel="noopener" target="_blank">{t['reserve']}</a></div>
 
+{consent}
 <script src="/assets/main.js" defer></script>
+<script src="/assets/consent.js" defer></script>
 </body>
 </html>
 """
@@ -520,7 +561,7 @@ ARTIFACT_CSS = """
 
 def _body(doc: str) -> str:
     b = doc.split("<body>", 1)[1].split("</body>", 1)[0]
-    b = re.sub(r'<script src="/assets/main.js" defer></script>\s*', "", b)
+    b = re.sub(r'<script src="/assets/(main|consent).js" defer></script>\s*', "", b)
     return b
 
 
@@ -599,14 +640,11 @@ ARTIFACT_JS = r"""
 
 def build_artifact():
     logo_uri = "data:image/png;base64," + base64.b64encode((ROOT / "assets" / "logo.png").read_bytes()).decode()
-    css = (ROOT / "assets" / "style.css").read_text(encoding="utf-8") + ARTIFACT_CSS
+    css = (ROOT / "assets" / "style.css").read_text(encoding="utf-8").replace("url('/assets/fonts/", "url('assets/fonts/") + ARTIFACT_CSS
     draft = ('<div class="draftbar"><div class="wrap"><span><b>Draft</b> · 14horses.com redesign · not public</span>'
              '<span>Text in [brackets] still needs real content</span></div></div>')
     html_out = f"""<title>14horses Website</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 {css}
 </style>
@@ -619,6 +657,7 @@ def build_artifact():
 {_artifact_body(LT, logo_uri)}
 </div>
 <script>{ARTIFACT_JS}</script>
+<script>{(ROOT / "assets" / "consent.js").read_text(encoding="utf-8")}</script>
 """
     out = pathlib.Path(__file__).resolve().parent / "artifact"
     out.mkdir(exist_ok=True)
