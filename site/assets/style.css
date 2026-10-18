@@ -393,3 +393,6 @@ footer { border-top: 1px solid var(--line); }
   .consent__opt small { font-size: 13px; }
   .consent-open .bookbar { display: none; }
 }
+/* Accept is the filled button, reject is an outlined button of the same size */
+.consent__actions .btn[data-consent-action="reject"] { background: transparent; color: var(--on-dark); box-shadow: inset 0 0 0 1px var(--on-dark-2); }
+.consent__actions .btn[data-consent-action="reject"]:hover { background: rgba(239, 234, 226, .08); color: var(--on-dark); }
