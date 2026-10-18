@@ -299,9 +299,8 @@ def page(t: dict) -> str:
     farm_link = f'      <a class="link" href="{fc}" rel="noopener" target="_blank">{t["farm_link"]}</a>\n' if fc else ""
 
     ck = lambda k: f'<label class="consent__opt"><input type="checkbox" name="{k}"><span><b>{t["ck_" + {"analytics": "stat", "marketing": "mkt"}[k]][0]}</b><small>{t["ck_" + {"analytics": "stat", "marketing": "mkt"}[k]][1]}</small></span></label>'
-    consent = f"""<div class="consent" data-consent hidden role="dialog" aria-labelledby="consent-title">
+    consent = f"""<div class="consent" data-consent hidden role="dialog" aria-label="{t['ck_title']}">
   <div class="consent__box">
-    <h2 id="consent-title" class="consent__title">{t['ck_title']}</h2>
     <p class="consent__text">{t['ck_text']}</p>
     <div class="consent__prefs" data-consent-prefs hidden>
       <label class="consent__opt"><input type="checkbox" checked disabled><span><b>{t['ck_nec'][0]}</b><small>{t['ck_nec'][1]}</small></span></label>
