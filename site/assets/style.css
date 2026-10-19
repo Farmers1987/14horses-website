@@ -360,39 +360,41 @@ footer { border-top: 1px solid var(--line); }
   .site-header.is-open ~ .bookbar { display: none; }
 }
 
-/* Cookie consent */
-.consent { position: fixed; z-index: 60; left: 24px; bottom: 24px; width: min(460px, calc(100vw - 48px)); }
+/* Cookie consent: thin full-width bar at the bottom */
+.consent { position: fixed; z-index: 60; left: 0; right: 0; bottom: 0; background: var(--ink); color: var(--on-dark); border-top: 1px solid #4A443C; }
 .consent[hidden] { display: none; }
-.consent__box { background: var(--ink); color: var(--on-dark); border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 14px; max-height: calc(100vh - 48px); overflow-y: auto; }
-.consent__title { font-size: 24px; color: var(--on-dark); }
-.consent__text { font-size: 15px; line-height: 1.6; color: var(--on-dark-2); }
-.consent__prefs { display: flex; flex-direction: column; border-top: 1px solid #4A443C; }
-.consent__prefs[hidden] { display: none; }
-.consent__opt { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid #4A443C; cursor: pointer; }
-.consent__opt input { width: 20px; height: 20px; margin: 2px 0 0; flex: none; accent-color: var(--moss); }
-.consent__opt span { display: flex; flex-direction: column; gap: 2px; }
-.consent__opt b { font-weight: 600; font-size: 15px; }
-.consent__opt small { font-size: 14px; line-height: 1.5; color: var(--on-dark-2); }
-.consent__actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 4px; }
-.consent__actions .btn { background: var(--washi); color: var(--ink); min-height: 46px; padding: 0 12px; letter-spacing: .02em; }
-.consent__actions .btn:hover { background: var(--clay); color: var(--ink); }
-.consent__link { grid-column: 1 / -1; justify-self: start; background: none; border: 0; padding: 4px 0; font: inherit; font-size: 15px; color: var(--on-dark); border-bottom: 1px solid currentColor; cursor: pointer; }
-.consent__link[hidden] { display: none; }
-.consent__actions .consent__link[data-consent-action="save"] { grid-column: 1 / -1; justify-self: stretch; text-align: center; background: var(--moss); border: 0; border-radius: 2px; min-height: 46px; }
-.footer__cookies { justify-self: start; background: none; border: 0; padding: 0; font: inherit; color: var(--ash); text-decoration: underline; cursor: pointer; text-align: left; }
-.footer__cookies:hover { color: var(--oak); }
-@media (max-width: 640px) {
-  .consent { left: 0; right: 0; bottom: 0; width: auto; }
-  .consent__box { border-radius: 6px 6px 0 0; padding: 16px 20px calc(14px + env(safe-area-inset-bottom, 0px)); gap: 10px; max-height: 85vh; }
-  .consent__title { font-size: 19px; }
-  .consent__text { font-size: 14px; line-height: 1.5; }
-  .consent__actions { gap: 8px; margin-top: 2px; }
-  .consent__actions .btn, .consent__actions .consent__link[data-consent-action="save"] { min-height: 42px; font-size: 15px; }
-  .consent__link { font-size: 14px; padding: 2px 0; }
-  .consent__opt { padding: 9px 0; }
-  .consent__opt small { font-size: 13px; }
-  .consent-open .bookbar { display: none; }
+.consent__box {
+  max-width: var(--wrap); margin: 0 auto;
+  padding: 14px max(var(--gutter), env(safe-area-inset-right, 0px)) calc(14px + env(safe-area-inset-bottom, 0px)) max(var(--gutter), env(safe-area-inset-left, 0px));
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "text actions" "prefs prefs";
+  column-gap: 32px; align-items: center; max-height: 85vh; overflow-y: auto;
 }
-/* Accept is the filled button, reject is an outlined button of the same size */
+.consent__text { grid-area: text; font-size: 14px; line-height: 1.5; color: var(--on-dark-2); max-width: 880px; }
+.consent__actions { grid-area: actions; display: flex; align-items: center; gap: 10px; }
+.consent__prefs { grid-area: prefs; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 24px; margin-top: 12px; border-top: 1px solid #4A443C; }
+.consent__prefs[hidden] { display: none; }
+.consent__opt { display: flex; gap: 10px; align-items: flex-start; padding: 12px 0 2px; cursor: pointer; }
+.consent__opt input { width: 18px; height: 18px; margin: 2px 0 0; flex: none; accent-color: var(--moss); }
+.consent__opt span { display: flex; flex-direction: column; gap: 2px; }
+.consent__opt b { font-weight: 600; font-size: 14px; }
+.consent__opt small { font-size: 13px; line-height: 1.45; color: var(--on-dark-2); }
+.consent__actions .btn { min-height: 38px; padding: 0 18px; font-size: 14px; letter-spacing: .02em; white-space: nowrap; background: var(--washi); color: var(--ink); }
+.consent__actions .btn:hover { background: var(--clay); color: var(--ink); }
 .consent__actions .btn[data-consent-action="reject"] { background: transparent; color: var(--on-dark); box-shadow: inset 0 0 0 1px var(--on-dark-2); }
 .consent__actions .btn[data-consent-action="reject"]:hover { background: rgba(239, 234, 226, .08); color: var(--on-dark); }
+.consent__link { order: -1; background: none; border: 0; padding: 2px 0; margin-right: 6px; font: inherit; font-size: 14px; color: var(--on-dark); border-bottom: 1px solid currentColor; cursor: pointer; white-space: nowrap; }
+.consent__link[hidden] { display: none; }
+.consent__link[data-consent-action="save"] { order: 0; margin: 0; min-height: 38px; padding: 0 18px; border: 0; border-radius: 2px; background: var(--moss); }
+.footer__cookies { justify-self: start; background: none; border: 0; padding: 0; font: inherit; color: var(--ash); text-decoration: underline; cursor: pointer; text-align: left; }
+.footer__cookies:hover { color: var(--oak); }
+.consent-open .bookbar { display: none !important; }
+@media (max-width: 860px) {
+  .consent__box { grid-template-columns: minmax(0, 1fr); grid-template-areas: "text" "prefs" "actions"; row-gap: 10px; padding-top: 12px; padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
+  .consent__text { font-size: 13px; }
+  .consent__prefs { grid-template-columns: minmax(0, 1fr); margin-top: 0; }
+  .consent__opt { padding: 8px 0 0; }
+  .consent__actions .btn { flex: 1 1 0; padding: 0 10px; min-height: 38px; font-size: 13px; }
+  .consent__link { font-size: 13px; margin-right: 4px; }
+  .consent__link[data-consent-action="save"] { flex: 1 1 100%; font-size: 13px; }
+  .consent__actions { flex-wrap: wrap; }
+}
