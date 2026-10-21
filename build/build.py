@@ -405,7 +405,7 @@ def page(t: dict) -> str:
 </header>
 
 <main id="main">
-  <section class="hero">
+  <section id="about" class="hero">
     <img class="hero__bg" src="{PHOTOS['hero']}" alt="{t['alt_hero']}" fetchpriority="high">
     <div class="wrap hero__inner">
       <div class="hero__text">
@@ -424,20 +424,6 @@ def page(t: dict) -> str:
     <dl class="wrap">
 {strip}
     </dl>
-  </section>
-
-  <section id="about" class="about-section">
-    <div class="wrap farm-more">
-      <div class="farm-more__body">
-        <h2 class="overline about-section__over">{t['about_over']}</h2>
-        <div class="farm-more__cols">
-          <p>{t['about_body'][0]}</p>
-          <div class="lead-in"><p class="motto">{t['about_body'][1][1:]}</p><p>{t['about_body'][2]}</p></div>
-          <p>{t['about_body'][3]}</p>
-        </div>
-        <p class="farm-more__close">{t['about_body'][4][1:]}</p>
-      </div>
-    </div>
   </section>
 
   <section id="farmers-circle" class="farm-section">
