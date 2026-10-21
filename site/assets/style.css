@@ -578,3 +578,9 @@ html.soon-open { overflow: hidden; }
 .farm-more { padding-top: 64px; }
 .farm-more__body { max-width: 1000px; }
 @media (max-width: 760px) { .farm-more { padding-top: 40px; } }
+/* "Menu" in the top bar is a button that shows the three menus */
+.nav__menu-btn { background: none; border: 0; padding: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; color: var(--ink); cursor: pointer; white-space: nowrap; }
+.nav__menu-btn:hover, .nav__item--menu:focus-within .nav__menu-btn { color: var(--oak); }
+@media (max-width: 1220px) { .nav__menu-btn { display: block; padding: 10px 0; font-size: 18px; color: var(--on-dark); } .nav__item--menu:focus-within .nav__menu-btn { color: var(--on-dark); } }
+.link--btn { background: none; border: 0; border-bottom: 1px solid currentColor; padding: 4px 0; font: inherit; cursor: pointer; }
+.hero .link--btn { color: var(--washi); }

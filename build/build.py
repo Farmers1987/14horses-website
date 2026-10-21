@@ -300,7 +300,7 @@ def page(t: dict) -> str:
     soon_btns = lambda cls: "".join(
         f'<button type="button" class="{cls}" data-soon>{m}</button>' for m in t["menus"])
     nav = "\n".join(
-        (f'          <div class="nav__item nav__item--menu"><a href="#{i}" aria-haspopup="true">{l}</a>'
+        (f'          <div class="nav__item nav__item--menu"><button type="button" class="nav__menu-btn" aria-haspopup="true">{l}</button>'
          f'<div class="nav__sub">{soon_btns("nav__subitem")}</div></div>') if i == "menu"
         else f'          <a href="#{i}">{l}</a>' for i, l in zip(nav_ids, t["nav"]))
     en_cur = 'aria-current="true"' if t["lang"] == "en" else ""
@@ -331,9 +331,10 @@ def page(t: dict) -> str:
     policy = "\n".join(
         f'          <details{" open" if k == 0 else ""}><summary>{q}</summary><p>{ph(a)}</p></details>'
         for k, (q, a) in enumerate(t["policy"]))
-    f_ids = ["about", "menu", "farmers-circle", "events", "policy", "contact", CONTACT["instagram_url"]]
+    f_ids = ["about", "soon", "farmers-circle", "events", "policy", "contact", CONTACT["instagram_url"]]
     f_nav = "\n".join(
-        f'        <a href="{i if i.startswith("http") else "#" + i}"{" rel=\"noopener\" target=\"_blank\"" if i.startswith("http") else ""}>{l}</a>'
+        (f'        <a href="#" data-soon>{l}</a>' if i == "soon" else
+         f'        <a href="{i if i.startswith("http") else "#" + i}"{" rel=\"noopener\" target=\"_blank\"" if i.startswith("http") else ""}>{l}</a>')
         for i, l in zip(f_ids, t["f_nav"]))
     canonical = SITE_URL + t["home"]
     alt_lang = "lt" if t["lang"] == "en" else "en"
@@ -411,7 +412,7 @@ def page(t: dict) -> str:
         <p class="hero__lead">{t['hero_lead']}</p>
         <div class="hero__ctas">
           <a id="sevenrooms-trigger" class="btn btn--light" href="{SEVENROOMS_URL}" rel="noopener" target="_blank">{t['reserve']}</a>
-          <a class="link" href="#menu">{t['hero_menu']}</a>
+          <button type="button" class="link link--btn" data-soon>{t['hero_menu']}</button>
         </div>
       </div>
     </div>
@@ -434,17 +435,6 @@ def page(t: dict) -> str:
 
   <section class="wrap feature">
     <div class="frame feature__img"><img src="{PHOTOS['room']}" alt="{t['alt_room']}" loading="lazy" decoding="async"></div>
-  </section>
-
-  <section id="menu" class="menu">
-    <div class="wrap">
-      <div class="menu__head">
-        <h2>{t['menu_h2']}</h2>
-      </div>
-      <div class="menu__options">
-        {soon_btns("menu__option")}
-      </div>
-    </div>
   </section>
 
   <section id="farmers-circle" class="farm-section">

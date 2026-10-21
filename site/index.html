@@ -17,7 +17,7 @@
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="preload" href="/assets/fonts/Newsreader.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Karla.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=463b914a">
+<link rel="stylesheet" href="/assets/style.css?v=df7946a9">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Restaurant","name":"14Horses","url":"https://14horses.com/","image":"https://14horses.com/assets/img/hero-wide.jpg","address":{"@type":"PostalAddress","streetAddress":"Dominikonų g. 11","addressLocality":"Vilnius","addressCountry":"LT"},"telephone":"+37061250845","email":"14horses@bfr.lt","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"17:00","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"17:00","closes":"23:00"}],"servesCuisine":"Baltic, Scandinavian","acceptsReservations":"True"}
 </script>
@@ -31,7 +31,7 @@
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><svg class="i-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h18M3 16h12"/></svg><svg class="i-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span aria-hidden="true">Menu</span></button>
     <div class="nav__links" id="nav-links">
           <a href="#about">About us</a>
-          <div class="nav__item nav__item--menu"><a href="#menu" aria-haspopup="true">Menu</a><div class="nav__sub"><button type="button" class="nav__subitem" data-soon>Tasting menu</button><button type="button" class="nav__subitem" data-soon>Dining week</button><button type="button" class="nav__subitem" data-soon>À la carte</button></div></div>
+          <div class="nav__item nav__item--menu"><button type="button" class="nav__menu-btn" aria-haspopup="true">Menu</button><div class="nav__sub"><button type="button" class="nav__subitem" data-soon>Tasting menu</button><button type="button" class="nav__subitem" data-soon>Dining week</button><button type="button" class="nav__subitem" data-soon>À la carte</button></div></div>
           <a href="#farmers-circle">Farmers Circle</a>
           <a href="#events">Events</a>
           <a href="#policy">Policy</a>
@@ -52,7 +52,7 @@
         <p class="hero__lead">Within the historic walls of Vainai Palace, a new chapter unfolds at 14Horses. Led by Chef Aleksandras Fedorovičius, our new team brings fresh creative energy to contemporary Baltic-Scandinavian cuisine, defined by bold flavours and unexpected combinations.</p>
         <div class="hero__ctas">
           <a id="sevenrooms-trigger" class="btn btn--light" href="https://www.sevenrooms.com/explore/14horses/reservations/create/search/" rel="noopener" target="_blank">Reserve a table</a>
-          <a class="link" href="#menu">See the menu</a>
+          <button type="button" class="link link--btn" data-soon>See the menu</button>
         </div>
       </div>
     </div>
@@ -81,17 +81,6 @@
 
   <section class="wrap feature">
     <div class="frame feature__img"><img src="/assets/img/room-wide.jpg" alt="The dining room at 14Horses" loading="lazy" decoding="async"></div>
-  </section>
-
-  <section id="menu" class="menu">
-    <div class="wrap">
-      <div class="menu__head">
-        <h2>Menu</h2>
-      </div>
-      <div class="menu__options">
-        <button type="button" class="menu__option" data-soon>Tasting menu</button><button type="button" class="menu__option" data-soon>Dining week</button><button type="button" class="menu__option" data-soon>À la carte</button>
-      </div>
-    </div>
   </section>
 
   <section id="farmers-circle" class="farm-section">
@@ -194,7 +183,7 @@
     </address>
     <nav aria-label="Footer">
         <a href="#about">About us</a>
-        <a href="#menu">Menu</a>
+        <a href="#" data-soon>Menu</a>
         <a href="#farmers-circle">Farmers Circle</a>
         <a href="#events">Events</a>
         <a href="#policy">Restaurant policy</a>
@@ -245,7 +234,7 @@
   <button type="button" class="soon__close" data-soon-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
 </div>
 <script src="/assets/main.js?v=8e34e71d" defer></script>
-<script src="/assets/ui.js?v=efa045ba" defer></script>
+<script src="/assets/ui.js?v=b6fd14e7" defer></script>
 <script src="/assets/consent.js?v=0c47bc64" defer></script>
 </body>
 </html>

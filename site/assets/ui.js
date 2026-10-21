@@ -26,10 +26,10 @@
   // ----- "Coming soon" window -----
   var lastFocus = null;
   function scope(el) { return el.closest('[data-lang]') || document; }
-  function openSoon(from) {
+  function openSoon(from, byKeyboard) {
     var d = scope(from).querySelector('[data-soon-dialog]');
     if (!d) return;
-    lastFocus = from;
+    lastFocus = byKeyboard ? from : null; // only hand focus back for keyboard users
     d.hidden = false;
     document.documentElement.classList.add('soon-open');
     var x = d.querySelector('[data-soon-close]');
@@ -47,7 +47,7 @@
   }
   document.addEventListener('click', function (e) {
     var b = e.target.closest('[data-soon]');
-    if (b) { e.preventDefault(); openSoon(b); return; }
+    if (b) { e.preventDefault(); openSoon(b, e.detail === 0); return; }
     if (e.target.closest('[data-soon-close]')) { closeSoon(); return; }
     var d = e.target.closest('[data-soon-dialog]');
     if (d && e.target === d) closeSoon();
