@@ -558,3 +558,20 @@ html.soon-open { overflow: hidden; }
 .banner__inner--left .banner__title { max-width: 960px; font-size: clamp(44px, 5.2vw, 76px); }
 .farm-more__close { margin-top: 28px; }
 @media (max-width: 640px) { .soon__text { font-size: 30px; letter-spacing: .1em; } .banner__inner--left .banner__title { font-size: 38px; } }
+
+/* Hero text placed high, as in the client's mockup; more of the table in view */
+@media (min-width: 641px) {
+  .hero { align-items: flex-start; }
+  .hero__inner { padding-top: clamp(56px, 9vh, 104px); padding-bottom: 120px; }
+  .hero__bg { object-position: center 72%; }
+  .hero::after { background: linear-gradient(to right, rgba(30, 27, 24, .66) 0%, rgba(30, 27, 24, .42) 45%, rgba(30, 27, 24, .1) 75%), linear-gradient(to bottom, rgba(30, 27, 24, .25) 0%, rgba(30, 27, 24, 0) 60%); }
+  .hero__lead { max-width: 560px; }
+}
+/* Closer to the client's mockups */
+.banner__inner { max-width: 1000px; }
+.banner__text { font-size: 20px; max-width: 760px; }
+.farm-more__close { max-width: 1000px; }
+.soon::after { background: linear-gradient(to bottom, rgba(216, 203, 184, .28), rgba(216, 203, 184, .18)); }
+.soon__bg { object-position: center 40%; filter: saturate(.9) sepia(.12); }
+.soon__text { font-weight: 400; letter-spacing: .06em; transform: translateY(-6vh); }
+@media (max-width: 640px) { .banner__text { font-size: 16px; } }
