@@ -121,6 +121,7 @@ EN = {
     "contact_h2": "Contacts",
     "c_hours": "Opening hours", "c_hours_v": "Tuesday-Thursday 17:00-22:00<br>Friday-Saturday 17:00-23:00",
     "c_phone": "Phone number", "c_email": "Email", "c_social": "Social media", "c_closed": "Sunday-Monday closed",
+    "aria_main": "Main", "aria_footer": "Footer", "bib_alt": "MICHELIN Guide 2026",
     "c_write": "Write or call", "c_addr": "Address", "c_follow": "Follow the season",
     "policy_h2": "Restaurant policy", "policy_sub": "Restaurant Rules and Reservation Terms",
     "policy": [
@@ -227,7 +228,8 @@ LT = {
     "res_note": "Rezervacijos per SevenRooms",
     "contact_h2": "Kontaktai",
     "c_hours": "Darbo valandos", "c_hours_v": "Antradienis - ketvirtadienis 17:00-22:00<br>Penktadienis - šeštadienis 17:00-23:00",
-    "c_phone": "Tel. nr.", "c_email": "El. paštas", "c_social": "Social media", "c_closed": "Sekmadienį-pirmadienį nedirbame",
+    "c_phone": "Tel. nr.", "c_email": "El. paštas", "c_social": "Socialiniai tinklai", "c_closed": "Sekmadienį-pirmadienį nedirbame",
+    "aria_main": "Pagrindinis meniu", "aria_footer": "Poraštė", "bib_alt": "MICHELIN gidas 2026",
     "c_write": "Rašykite ar skambinkite", "c_addr": "Adresas", "c_follow": "Sekite sezoną",
     "policy_h2": "Restorano politika", "policy_sub": "Restorano taisyklės ir rezervavimo sąlygos",
     "policy": [
@@ -307,7 +309,7 @@ def page(t: dict) -> str:
     lt_cur = 'aria-current="true"' if t["lang"] == "lt" else ""
     strip = "\n".join(f"        <div><dt>{a}</dt><dd>{b}</dd></div>" for a, b in t["strip"][:2])
     a3, b3 = t["strip"][2]
-    bib = (f'<img class="bib" src="{BIB_LOGO}" alt="MICHELIN Guide 2026" width="56" height="56">' if BIB_LOGO
+    bib = (f'<img class="bib" src="{BIB_LOGO}" alt="{t['bib_alt']}" width="56" height="56">' if BIB_LOGO
            else '<span class="bib bib--todo" role="img" aria-label="MICHELIN Bib Gourmand 2026"><span class="todo">[Bib Gourmand logo]</span></span>')
     strip += f'\n        <div class="strip__award">{bib}<div><dt>{a3}</dt><dd>{b3}</dd></div></div>'
     about_body = "\n".join(
@@ -391,7 +393,7 @@ def page(t: dict) -> str:
 <a class="skip" href="#main">{t['skip']}</a>
 
 <header class="site-header">
-  <nav class="wrap nav" aria-label="Main">
+  <nav class="wrap nav" aria-label="{t['aria_main']}">
     <a class="nav__logo" href="{t['home']}"><img src="/assets/logo.png" alt="14Horses" width="140" height="171"></a>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="{t['menu_open']}">{MENU_SVG}<span aria-hidden="true">{t['menu_btn']}</span></button>
     <div class="nav__links" id="nav-links">
@@ -517,7 +519,7 @@ def page(t: dict) -> str:
       <span>{CONTACT['address']}</span>
       <span>Senatorių pasažas</span>
     </address>
-    <nav aria-label="Footer">
+    <nav aria-label="{t['aria_footer']}">
 {f_nav}
     </nav>
     <form class="newsletter" action="{MAILERLITE_URL}" method="post" target="_blank" data-ok="{t['nl_ok']}" data-err="{t['nl_err']}">
