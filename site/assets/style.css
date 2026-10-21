@@ -622,3 +622,27 @@ html.soon-open { overflow: hidden; }
 .lead-in { break-inside: avoid; margin-bottom: 20px; }
 .lead-in .motto { margin-bottom: 6px; }
 .lead-in p:last-child { margin-bottom: 0; }
+
+/* ===== One spacing rhythm for the whole page =====
+   desktop: 96 between sections, 24 between photos that belong together, 48 inside a text block
+   mobile:  56 between sections, 16 between photos, 32 inside a text block */
+#farmers-circle .farm-more { padding-top: 64px; padding-bottom: 80px; }
+.farm-more__close { margin-top: 48px; }
+#events { padding-top: 16px; padding-bottom: 12px; }
+.banner-wrap { padding-top: 12px; padding-bottom: 12px; }
+.carousel { padding-top: 12px; padding-bottom: 96px; }
+.policy .split { padding-top: 96px; padding-bottom: 96px; }
+#contact { padding-top: 96px; padding-bottom: 96px; }
+@media (max-width: 760px) {
+  #farmers-circle .farm-more { padding-top: 40px; padding-bottom: 40px; }
+  .farm-more__close { margin-top: 32px; }
+  #events { padding-top: 16px; padding-bottom: 8px; }
+  .banner-wrap { padding-top: 8px; padding-bottom: 8px; }
+  .carousel { padding-top: 8px; padding-bottom: 56px; }
+  .policy .split { padding-top: 56px; padding-bottom: 56px; }
+  #contact { padding-top: 56px; padding-bottom: 56px; }
+}
+/* Same left edge as every other section */
+.farm-more__body { max-width: none; margin: 0; }
+.farm-more__close { max-width: 1000px; }
+@media (max-width: 640px) { .banner__inner.banner__inner--left { padding-left: var(--gutter); padding-right: var(--gutter); } }
