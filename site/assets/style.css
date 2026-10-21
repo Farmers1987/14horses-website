@@ -646,3 +646,22 @@ html.soon-open { overflow: hidden; }
 .farm-more__body { max-width: none; margin: 0; }
 .farm-more__close { max-width: 1000px; }
 @media (max-width: 640px) { .banner__inner.banner__inner--left { padding-left: var(--gutter); padding-right: var(--gutter); } }
+/* Front page and Farmers Circle photos: same height, text starts at the same place */
+@media (min-width: 641px) {
+  .hero, .banner--full { min-height: min(86vh, 880px); }
+  .banner--full { align-items: flex-start; }
+  .banner--full .banner__inner.banner__inner--left { padding-top: clamp(56px, 9vh, 104px); padding-bottom: 120px; gap: 24px; }
+  .hero__text { gap: 24px; }
+}
+@media (max-width: 640px) {
+  .hero, .banner--full { min-height: 82svh; align-items: flex-start; }
+  .hero__inner { padding-top: 64px; padding-bottom: 48px; }
+  .banner--full .banner__inner.banner__inner--left { padding-top: 64px; padding-bottom: 48px; gap: 18px; }
+  .hero__text { gap: 18px; }
+  .hero::after, .banner--full::after { background: linear-gradient(to bottom, rgba(30, 27, 24, .78) 0%, rgba(30, 27, 24, .55) 55%, rgba(30, 27, 24, .25) 100%); }
+}
+/* Same headline size on both photos */
+.hero h1, .banner--full .banner__title { font-size: clamp(44px, 5.4vw, 80px); line-height: 1.04; }
+@media (max-width: 640px) { .hero h1, .banner--full .banner__title { font-size: 40px; line-height: 1.08; } }
+.banner--full .banner__text { font-size: 19px; line-height: 1.6; max-width: 560px; }
+@media (max-width: 640px) { .banner--full .banner__text, .hero__lead { font-size: 17px; } }

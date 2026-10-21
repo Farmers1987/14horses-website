@@ -430,6 +430,7 @@ def page(t: dict) -> str:
     <div class="banner banner--full">
       <img class="banner__bg" src="{PHOTOS['farm']}" alt="{t['alt_farm']}" loading="lazy" decoding="async">
       <div class="wrap banner__inner banner__inner--left">
+        <p class="overline banner__over">{t['farm_over']}</p>
         <h2 class="banner__title">{t['farm_h2']}</h2>
         <p class="banner__text">{t['farm_body']}</p>
       </div>
