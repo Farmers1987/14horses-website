@@ -613,3 +613,8 @@ html.soon-open { overflow: hidden; }
 .about-section .farm-more { padding-bottom: 96px; }
 @media (max-width: 760px) { .about-section .farm-more { padding-bottom: 56px; } }
 .banner__inner.banner__inner--left { max-width: var(--wrap); }
+/* About us: text only, same layout as the text under the Farmers Circle photo */
+.about-section .farm-more { padding-top: 96px; padding-bottom: 96px; }
+.about-section__over { margin-bottom: 28px; }
+.farm-more__cols .motto { color: var(--ink); font-weight: 600; }
+@media (max-width: 760px) { .about-section .farm-more { padding-top: 56px; padding-bottom: 56px; } }

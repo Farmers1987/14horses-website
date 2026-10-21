@@ -426,18 +426,13 @@ def page(t: dict) -> str:
     </dl>
   </section>
 
-  <section id="about" class="about-section" aria-label="{t['about_over']}">
-    <div class="banner banner--full">
-      <img class="banner__bg" src="{PHOTOS['room']}" alt="{t['alt_room']}" loading="lazy" decoding="async">
-      <div class="wrap banner__inner banner__inner--left">
-        <p class="overline banner__over">{t['about_over']}</p>
-        <h2 class="banner__title">{t['about_body'][1][1:]}</h2>
-        <p class="banner__text">{t['about_body'][0]}</p>
-      </div>
-    </div>
+  <section id="about" class="about-section">
     <div class="wrap farm-more">
       <div class="farm-more__body">
+        <h2 class="overline about-section__over">{t['about_over']}</h2>
         <div class="farm-more__cols">
+          <p>{t['about_body'][0]}</p>
+          <p class="motto">{t['about_body'][1][1:]}</p>
           <p>{t['about_body'][2]}</p>
           <p>{t['about_body'][3]}</p>
         </div>
