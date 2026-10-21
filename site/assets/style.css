@@ -608,3 +608,8 @@ html.soon-open { overflow: hidden; }
   .soon, .soon__bg, .soon__text, .soon__close { transition: opacity .2s ease; transform: none; }
   .soon.is-visible .soon__bg, .soon.is-visible .soon__text { transform: none; }
 }
+/* About us: same layout as Farmers Circle */
+.banner__over { color: #E6DACA; }
+.about-section .farm-more { padding-bottom: 96px; }
+@media (max-width: 760px) { .about-section .farm-more { padding-bottom: 56px; } }
+.banner__inner.banner__inner--left { max-width: var(--wrap); }

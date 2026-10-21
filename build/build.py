@@ -426,17 +426,24 @@ def page(t: dict) -> str:
     </dl>
   </section>
 
-  <section id="about" class="wrap split">
-    <div class="split__aside"><h2 class="overline">{t['about_over']}</h2></div>
-    <div class="split__main">
-      <div class="prose">
-{about_body}
+  <section id="about" class="about-section" aria-label="{t['about_over']}">
+    <div class="banner banner--full">
+      <img class="banner__bg" src="{PHOTOS['room']}" alt="{t['alt_room']}" loading="lazy" decoding="async">
+      <div class="wrap banner__inner banner__inner--left">
+        <p class="overline banner__over">{t['about_over']}</p>
+        <h2 class="banner__title">{t['about_body'][1][1:]}</h2>
+        <p class="banner__text">{t['about_body'][0]}</p>
       </div>
     </div>
-  </section>
-
-  <section class="wrap feature">
-    <div class="frame feature__img"><img src="{PHOTOS['room']}" alt="{t['alt_room']}" loading="lazy" decoding="async"></div>
+    <div class="wrap farm-more">
+      <div class="farm-more__body">
+        <div class="farm-more__cols">
+          <p>{t['about_body'][2]}</p>
+          <p>{t['about_body'][3]}</p>
+        </div>
+        <p class="farm-more__close">{t['about_body'][4][1:]}</p>
+      </div>
+    </div>
   </section>
 
   <section id="farmers-circle" class="farm-section">
