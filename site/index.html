@@ -17,7 +17,7 @@
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="preload" href="/assets/fonts/Newsreader.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Karla.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v=fbef3838">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Restaurant","name":"14Horses","url":"https://14horses.com/","image":"https://14horses.com/assets/img/hero-wide.jpg","address":{"@type":"PostalAddress","streetAddress":"Dominikonų g. 11","addressLocality":"Vilnius","addressCountry":"LT"},"telephone":"+37061250845","email":"14horses@bfr.lt","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"17:00","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"17:00","closes":"23:00"}],"servesCuisine":"Baltic, Scandinavian","acceptsReservations":"True"}
 </script>
@@ -31,7 +31,7 @@
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><svg class="i-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h18M3 16h12"/></svg><svg class="i-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span aria-hidden="true">Menu</span></button>
     <div class="nav__links" id="nav-links">
           <a href="#about">About us</a>
-          <a href="#menu">Menu</a>
+          <div class="nav__item nav__item--menu"><a href="#menu" aria-haspopup="true">Menu</a><div class="nav__sub"><button type="button" class="nav__subitem" data-soon>Tasting menu</button><button type="button" class="nav__subitem" data-soon>Dining week</button><button type="button" class="nav__subitem" data-soon>À la carte</button></div></div>
           <a href="#farmers-circle">Farmers Circle</a>
           <a href="#events">Events</a>
           <a href="#policy">Policy</a>
@@ -49,7 +49,7 @@
       <div class="hero__text">
         <p class="overline">Senatorių Pasažas · Vilnius Old Town</p>
         <h1>Our roots lie in the soil.</h1>
-        <p class="hero__lead">Today, 14Horses opens a new chapter with Chef Aleksandras Fedorovičius, a new team and contemporary Baltic - Scandinavian cuisine.</p>
+        <p class="hero__lead">Within the historic walls of Vainai Palace, a new chapter unfolds at 14Horses. Led by Chef Aleksandras Fedorovičius, our new team brings fresh creative energy to contemporary Baltic-Scandinavian cuisine, defined by bold flavours and unexpected combinations.</p>
         <div class="hero__ctas">
           <a id="sevenrooms-trigger" class="btn btn--light" href="https://www.sevenrooms.com/explore/14horses/reservations/create/search/" rel="noopener" target="_blank">Reserve a table</a>
           <a class="link" href="#menu">See the menu</a>
@@ -69,7 +69,6 @@
   <section id="about" class="wrap split">
     <div class="split__aside"><h2 class="overline">About us</h2></div>
     <div class="split__main">
-      <p class="statement">The historic walls of Vainai Palace, a renewed creative energy and an ambition for bold flavours.</p>
       <div class="prose">
           <p>Our roots lie in the soil. At Farmers Circle in the village of Radiškis, the seasons set the rhythm and inspire ideas for the menu to come. 14Horses is part of this farm. From the soil to the creativity of the kitchen and the conversation at the table, an unbroken journey of discovery unfolds. Knowledge of what we grow, how we prepare it and why we choose it passes through our team to our guests, giving flavour its context and the experience its depth.</p>
           <p class="motto">Nose to tail. Root to leaf.</p>
@@ -89,60 +88,69 @@
       <div class="menu__head">
         <h2>Menu</h2>
       </div>
-      <p class="menu__soon"><span class="todo" title="Placeholder - replace before launch">[MENU]</span></p>
-    </div>
-  </section>
-
-  <section id="farmers-circle" class="farm-section">
-    <div class="wrap feature">
-      <div class="frame feature__img"><img src="/assets/img/farm-sheep.jpg" alt="Lambs grazing at Farmers Circle, our regenerative farm" loading="lazy" decoding="async"></div>
-    </div>
-    <div class="wrap split farm-split">
-      <div class="split__aside"><h2 class="overline">Farmers Circle</h2></div>
-      <div class="split__main">
-        <p class="statement">At Farmers Circle, everything begins with living soil.</p>
-        <div class="prose">
-          <p>Founded in 2018 by Danish entrepreneur Niels Peter Pretzmann, this organic farm in Radiškis, Ukmergė district, nurtures the connection between soil, plants, animals and people. From the outset, it has grown around the belief that good food begins with a responsible relationship with nature. Here, the seasons set the pace, and every decision considers both the harvest to come and the land that will sustain it.</p>
-          <p>Grains grow in the fields, seasonal vegetables and culinary herbs fill the gardens, and Angus cattle graze the pastures. The farm’s produce also includes organic eggs and poultry, buckwheat, oats and flour. This diversity creates an interconnected system in which crop cultivation, market gardening and livestock farming support one another.</p>
-          <details class="readmore">
-            <summary><span class="readmore__more">Read more</span><span class="readmore__less">Show less</span></summary>
-            <p>Part of the harvest takes on a new form right here, in the farm’s own production kitchen. Vegetables are fermented and made into sauces, spreads and condiments, while the flavours of the seasons are preserved in jams, syrups and vinegars. The short distance between garden and kitchen allows freshly harvested produce to be processed promptly, preserving its character and finding value even in ingredients with an imperfect appearance.</p>
-            <p>Care for the soil connects every aspect of the farm. Regenerative practices - reduced tillage, crop rotation, cover cropping, rotational grazing and composting - help restore soil vitality and support biodiversity. Organic matter returns to the soil through compost, nourishing future harvests. The end of one season becomes the beginning of the next.</p>
-            <p>Farmers Circle is also a place for gathering and discovery. Its very name invites growers, chefs, like-minded people and curious guests into a shared circle, united by a desire to understand where their food comes from. Farm tours, educational activities and cooking experiences open a window onto everyday farming and the work behind each ingredient.</p>
-            <p>This journey continues at Red Brick, the farm’s restaurant, where the harvest becomes a seasonal gastronomic experience. Event and meeting spaces, accommodation and a farm shop invite guests to stay a little longer - to observe, taste and settle into the rhythm of the place.</p>
-            <p class="motto">From soil to harvest. From experience to knowledge shared. This is how the Farmers Circle turns.</p>
-          </details>
-        </div>
+      <div class="menu__options">
+        <button type="button" class="menu__option" data-soon>Tasting menu</button><button type="button" class="menu__option" data-soon>Dining week</button><button type="button" class="menu__option" data-soon>À la carte</button>
       </div>
     </div>
   </section>
 
-  <section class="wrap mosaic" aria-label="Gallery">
-    <div class="frame m1"><img src="/assets/img/room-wine.jpg" alt="Tables in front of the wine wall" loading="lazy" decoding="async"></div>
-    <div class="frame m2"><img src="/assets/img/room-corner.jpg" alt="A set table among oak and steel" loading="lazy" decoding="async"></div>
-    <div class="frame m3"><img src="/assets/img/room-detail.jpg" alt="Wine glasses on an oak table" loading="lazy" decoding="async"></div>
+  <section id="farmers-circle" class="farm-section">
+    <div class="banner banner--full">
+      <img class="banner__bg" src="/assets/img/farm-sheep.jpg" alt="Lambs grazing at Farmers Circle, our regenerative farm" loading="lazy" decoding="async">
+      <div class="wrap banner__inner banner__inner--left">
+        <h2 class="banner__title">At Farmers Circle, the land tells the story.</h2>
+        <p class="banner__text">Founded in 2018 by Danish entrepreneur Niels Peter Pretzmann, this organic farm in Radiškis, Ukmergė district, nurtures the connection between soil, plants, animals and people. From the outset, it has grown around the belief that good food begins with a responsible relationship with nature. Here, the seasons set the pace, and every decision considers both the harvest to come and the land that will sustain it.</p>
+      </div>
+    </div>
+    <div class="wrap farm-more">
+      <details class="readmore">
+        <summary><span class="readmore__more">Read more</span><span class="readmore__less">Show less</span></summary>
+        <div class="farm-more__cols">
+            <p>Grains grow in the fields, seasonal vegetables and culinary herbs fill the gardens, and Angus cattle graze the pastures. The farm’s produce also includes organic eggs and poultry, buckwheat, oats and flour. This diversity creates an interconnected system in which crop cultivation, market gardening and livestock farming support one another.</p>
+            <p>Part of the harvest takes on a new form right here, in the farm’s own production kitchen. Vegetables are fermented and made into sauces, spreads and condiments, while the flavours of the seasons are preserved in jams, syrups and vinegars. The short distance between garden and kitchen allows freshly harvested produce to be processed promptly, preserving its character and finding value even in ingredients with an imperfect appearance.</p>
+            <p>Care for the soil connects every aspect of the farm. Regenerative practices - reduced tillage, crop rotation, cover cropping, rotational grazing and composting - help restore soil vitality and support biodiversity. Organic matter returns to the soil through compost, nourishing future harvests. The end of one season becomes the beginning of the next.</p>
+            <p>Farmers Circle is also a place for gathering and discovery. Its very name invites growers, chefs, like-minded people and curious guests into a shared circle, united by a desire to understand where their food comes from. Farm tours, educational activities and cooking experiences open a window onto everyday farming and the work behind each ingredient.</p>
+            <p>This journey continues at Red Brick, the farm’s restaurant, where the harvest becomes a seasonal gastronomic experience. Event and meeting spaces, accommodation and a farm shop invite guests to stay a little longer - to observe, taste and settle into the rhythm of the place.</p>
+        </div>
+        <p class="farm-more__close">From soil to harvest. From experience to knowledge shared. This is how the Farmers Circle turns.</p>
+      </details>
+    </div>
   </section>
 
-  <section class="wrap gallery" aria-label="Gallery">
-    <div class="frame"><img src="/assets/img/gallery-1.jpg" alt="Wine glasses by the window" loading="lazy" decoding="async"></div>
-    <div class="frame"><img src="/assets/img/gallery-2.jpg" alt="Tables by the wine wall" loading="lazy" decoding="async"></div>
-    <div class="frame"><img src="/assets/img/gallery-3.jpg" alt="A glass of wine on a set table" loading="lazy" decoding="async"></div>
-    <div class="frame"><img src="/assets/img/gallery-4.jpg" alt="A quiet corner of the dining room" loading="lazy" decoding="async"></div>
-    <div class="frame"><img src="/assets/img/hero-table.jpg" alt="A table set for dinner" loading="lazy" decoding="async"></div>
-    <div class="frame"><img src="/assets/img/room-light.jpg" alt="Soft light over a set table" loading="lazy" decoding="async"></div>
+  <section id="events" class="wrap banner-wrap">
+    <div class="banner">
+      <img class="banner__bg" src="/assets/img/room-wine.jpg" alt="Tables in front of the wine wall" loading="lazy" decoding="async">
+      <div class="banner__inner">
+        <h2 class="banner__title">Events &amp; private dining</h2>
+        <p class="banner__text">Harvest dinners, guest chefs and the whole room for your own occasion.</p>
+        <a class="link" href="mailto:14horses@bfr.lt">Ask about events: 14horses@bfr.lt</a>
+      </div>
+    </div>
   </section>
 
-  <section class="wrap cards">
-    <div id="events" class="card">
-      <h3>Events &amp; private dining</h3>
-      <p class="muted">Harvest dinners, guest chefs and the whole room for your own occasion.</p>
-      <a class="link" href="mailto:14horses@bfr.lt">Ask about events: 14horses@bfr.lt</a>
+  <section class="wrap banner-wrap">
+    <div class="banner">
+      <img class="banner__bg" src="/assets/img/room-corner.jpg" alt="A set table among oak and steel" loading="lazy" decoding="async">
+      <div class="banner__inner">
+        <h2 class="banner__title">Give an evening</h2>
+        <p class="banner__text">A gift voucher for 14Horses in any amount from €20 to €1,000. Valid for 12 months in all our restaurants and shops in Senatorių Pasažas.</p>
+        <a class="link" href="https://www.senatoriupasazas.lt/#vouchers" rel="noopener" target="_blank">Buy a gift voucher</a>
+      </div>
     </div>
-    <div class="card">
-      <h3>Give an evening</h3>
-      <p class="muted">A gift voucher for 14Horses in any amount from €20 to €1,000. Valid for 12 months in all our restaurants and shops in Senatorių Pasažas.</p>
-      <a class="link" href="https://www.senatoriupasazas.lt/#vouchers" rel="noopener" target="_blank">Buy a gift voucher</a>
-    </div>
+  </section>
+
+  <section class="wrap carousel" aria-label="Gallery" data-carousel>
+    <button type="button" class="carousel__btn carousel__btn--prev" data-dir="-1" aria-label="Previous photos"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 4l-8 8 8 8"/></svg></button>
+    <ul class="carousel__track">
+        <li class="carousel__slide frame"><img src="/assets/img/gallery-1.jpg" alt="Wine glasses by the window" loading="lazy" decoding="async"></li>
+        <li class="carousel__slide frame"><img src="/assets/img/gallery-2.jpg" alt="Tables by the wine wall" loading="lazy" decoding="async"></li>
+        <li class="carousel__slide frame"><img src="/assets/img/gallery-3.jpg" alt="A glass of wine on a set table" loading="lazy" decoding="async"></li>
+        <li class="carousel__slide frame"><img src="/assets/img/gallery-4.jpg" alt="A quiet corner of the dining room" loading="lazy" decoding="async"></li>
+        <li class="carousel__slide frame"><img src="/assets/img/hero-table.jpg" alt="A table set for dinner" loading="lazy" decoding="async"></li>
+        <li class="carousel__slide frame"><img src="/assets/img/room-light.jpg" alt="Soft light over a set table" loading="lazy" decoding="async"></li>
+        <li class="carousel__slide frame"><img src="/assets/img/room-detail.jpg" alt="Wine glasses on an oak table" loading="lazy" decoding="async"></li>
+    </ul>
+    <button type="button" class="carousel__btn carousel__btn--next" data-dir="1" aria-label="Next photos"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 4l8 8-8 8"/></svg></button>
   </section>
 
   <section id="policy" class="policy">
@@ -154,10 +162,10 @@
       <div class="split__main accordion" style="gap:0">
           <details open><summary>Reservations and Dining Duration</summary><p>Tables are reserved for 2 hours. Longer visits must be arranged in advance. Reserved tables are held for 15 minutes after the reservation time. Please inform the restaurant team if you are running late. Reservations will be cancelled if guests arrive more than 15 minutes late without prior notice.</p></details>
           <details><summary>Reservation Deposit and Cancellation Terms</summary><p>A deposit of €20 per person is required to confirm a reservation. This amount will be credited towards the final bill. For cancellations made at least 24 hours before the reservation time, the deposit will be refunded. For later cancellations or no-shows, the deposit is non-refundable. The same cancellation and refund terms apply to prepaid tasting events.</p></details>
-          <details><summary>Group Reservations</summary><p>Reservations for groups of 8 or more guests are arranged individually. Groups may choose dishes from the current restaurant menu or a pre-agreed event menu.</p></details>
+          <details><summary>Group Reservations</summary><p>Reservations for groups of 8 or more guests are arranged individually. Groups may choose dishes from the restaurant menu.</p></details>
           <details><summary>Children</summary><p>Children are welcome at the restaurant. High chairs are available. We do not offer a separate children’s menu.</p></details>
           <details><summary>Pets</summary><p>Pets are welcome both inside the restaurant and on the terrace. The accompanying guest is responsible for their pet’s care and behaviour. Pets must not disturb other guests or interfere with restaurant operations.</p></details>
-          <details><summary>Allergies and Dietary Requirements</summary><p>Please notify the restaurant of any allergies, food intolerances or specific dietary requirements at least 3 days before your visit. Menu adaptations and specific adjustments are agreed individually with the restaurant team.</p></details>
+          <details><summary>Allergies and Dietary Requirements</summary><p>Menu adaptations and specific adjustments are agreed with the restaurant team on an individual basis.</p></details>
           <details><summary>Kitchen Opening Hours</summary><p>The kitchen is open until 21:00 Tuesday-Thursday and until 22:00 on Fridays and Saturdays.</p></details>
           <details><summary>Dress Code</summary><p>The recommended dress code is smart casual.</p></details>
           <details><summary>Payment and Service Charge</summary><p>The restaurant accepts card payments only. Cash is not accepted. A 10% service charge is added to the final bill.</p></details>
@@ -232,7 +240,13 @@
     </div>
   </div>
 </div>
-<script src="/assets/main.js" defer></script>
-<script src="/assets/consent.js" defer></script>
+<div class="soon" data-soon-dialog hidden role="dialog" aria-modal="true" aria-label="Coming soon">
+  <img class="soon__bg" src="/assets/img/room-light.jpg" alt="" loading="lazy" decoding="async">
+  <p class="soon__text">Coming soon</p>
+  <button type="button" class="soon__close" data-soon-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+</div>
+<script src="/assets/main.js?v=8e34e71d" defer></script>
+<script src="/assets/ui.js?v=efa045ba" defer></script>
+<script src="/assets/consent.js?v=0c47bc64" defer></script>
 </body>
 </html>

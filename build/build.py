@@ -19,6 +19,7 @@ PHOTOS = {
     "m3":     "/assets/img/room-detail.jpg",
     "g5":     "/assets/img/hero-table.jpg",
     "g6":     "/assets/img/room-light.jpg",
+    "g7":     "/assets/img/room-detail.jpg",
     "hero_b": "/assets/img/hero-stone.jpg",
     "room":   "/assets/img/room-wide.jpg",
     "farm":   "/assets/img/farm-sheep.jpg",
@@ -59,7 +60,7 @@ EN = {
     "menu_btn": "Menu",
     "hero_over": "Senatorių Pasažas · Vilnius Old Town",
     "hero_h1": "Our roots lie in the soil.",
-    "hero_lead": "Today, 14Horses opens a new chapter with Chef Aleksandras Fedorovičius, a new team and contemporary Baltic - Scandinavian cuisine.",
+    "hero_lead": "Within the historic walls of Vainai Palace, a new chapter unfolds at 14Horses. Led by Chef Aleksandras Fedorovičius, our new team brings fresh creative energy to contemporary Baltic-Scandinavian cuisine, defined by bold flavours and unexpected combinations.",
     "hero_menu": "See the menu",
     "alt_hero_a": "A table set for dinner at 14Horses",
     "alt_hero_b": "Old stone wall in Senatorių Pasažas",
@@ -74,12 +75,15 @@ EN = {
         "!At our table, this language becomes flavour - bold, distinctive and memorable.",
     ],
     "menu_h2": "Menu",
+    "menus": ["Tasting menu", "Dining week", "À la carte"],
+    "soon": "Coming soon", "close": "Close",
+    "prev": "Previous photos", "next": "Next photos",
     "menu_intro": "Seasonal, local produce meets unexpected combinations, adventurous techniques and bold flavours. The menu follows what the season brings to Farmers Circle.",
     "steps": [("Step 1", "Snacks"), ("Step 2", "Starter"), ("Step 3", "Main course"), ("Step 4", "Dessert")],
     "dish": "[[MENU]]",
     "menu_full": "Read the full menu",
     "farm_over": "Farmers Circle",
-    "farm_h2": "At Farmers Circle, everything begins with living soil.",
+    "farm_h2": "At Farmers Circle, the land tells the story.",
     "farm_body": "Founded in 2018 by Danish entrepreneur Niels Peter Pretzmann, this organic farm in Radiškis, Ukmergė district, nurtures the connection between soil, plants, animals and people. From the outset, it has grown around the belief that good food begins with a responsible relationship with nature. Here, the seasons set the pace, and every decision considers both the harvest to come and the land that will sustain it.",
     "farm_link": "Visit Farmers Circle",
     "read_more": "Read more", "read_less": "Show less",
@@ -100,7 +104,7 @@ EN = {
     "alt_room": "The dining room at 14Horses",
     "alt_hero": "A table by the window in the dining room at 14Horses",
     "alt_mosaic": ["Tables in front of the wine wall", "A set table among oak and steel", "Wine glasses on an oak table"],
-    "alt_more": ["A table set for dinner", "Soft light over a set table"],
+    "alt_more": ["A table set for dinner", "Soft light over a set table", "Wine glasses on an oak table"],
     "credit": "Photos",
     "events_h3": "Events &amp; private dining",
     "events_body": "Harvest dinners, guest chefs and the whole room for your own occasion.",
@@ -122,10 +126,10 @@ EN = {
     "policy": [
         ("Reservations and Dining Duration", "Tables are reserved for 2 hours. Longer visits must be arranged in advance. Reserved tables are held for 15 minutes after the reservation time. Please inform the restaurant team if you are running late. Reservations will be cancelled if guests arrive more than 15 minutes late without prior notice."),
         ("Reservation Deposit and Cancellation Terms", "A deposit of €20 per person is required to confirm a reservation. This amount will be credited towards the final bill. For cancellations made at least 24 hours before the reservation time, the deposit will be refunded. For later cancellations or no-shows, the deposit is non-refundable. The same cancellation and refund terms apply to prepaid tasting events."),
-        ("Group Reservations", "Reservations for groups of 8 or more guests are arranged individually. Groups may choose dishes from the current restaurant menu or a pre-agreed event menu."),
+        ("Group Reservations", "Reservations for groups of 8 or more guests are arranged individually. Groups may choose dishes from the restaurant menu."),
         ("Children", "Children are welcome at the restaurant. High chairs are available. We do not offer a separate children’s menu."),
         ("Pets", "Pets are welcome both inside the restaurant and on the terrace. The accompanying guest is responsible for their pet’s care and behaviour. Pets must not disturb other guests or interfere with restaurant operations."),
-        ("Allergies and Dietary Requirements", "Please notify the restaurant of any allergies, food intolerances or specific dietary requirements at least 3 days before your visit. Menu adaptations and specific adjustments are agreed individually with the restaurant team."),
+        ("Allergies and Dietary Requirements", "Menu adaptations and specific adjustments are agreed with the restaurant team on an individual basis."),
         ("Kitchen Opening Hours", "The kitchen is open until 21:00 Tuesday-Thursday and until 22:00 on Fridays and Saturdays."),
         ("Dress Code", "The recommended dress code is smart casual."),
         ("Payment and Service Charge", "The restaurant accepts card payments only. Cash is not accepted. A 10% service charge is added to the final bill."),
@@ -163,7 +167,7 @@ LT = {
     "menu_btn": "Meniu",
     "hero_over": "Senatorių pasažas · Vilniaus senamiestis",
     "hero_h1": "Mūsų pradžia - žemėje.",
-    "hero_lead": "Šiandien 14Horses atsiveria su šefu Aleksandru Fedorovičiumi, nauja komanda ir šiuolaikine baltiška - skandinaviška virtuve.",
+    "hero_lead": "Tarp istorinių Vainų rūmų sienų atsiveria naujas „14Horses“ skyrius. Šefo Aleksandro Fedorovičiaus vedama nauja komanda šiuolaikinei baltiškai-skandinaviškai virtuvei suteikia šviežios kūrybinės energijos, atsiskleidžiančios ryškiais skoniais ir netikėtais deriniais.",
     "hero_menu": "Meniu",
     "alt_hero_a": "Vakarienei serviruotas stalas 14Horses",
     "alt_hero_b": "Sena akmeninė siena Senatorių pasaže",
@@ -178,12 +182,15 @@ LT = {
         "!Prie mūsų stalo ši kalba įgauna skonį - ryškų, savitą, įsimenantį.",
     ],
     "menu_h2": "Meniu",
+    "menus": ["Degustacinis meniu", "Gastronomijos savaitė", "À la carte"],
+    "soon": "Jau netrukus", "close": "Uždaryti",
+    "prev": "Ankstesnės nuotraukos", "next": "Kitos nuotraukos",
     "menu_intro": "Sezoniškumas ir vietiniai produktai susitinka su netikėtais deriniais, drąsiomis technikomis ir ryškiais skoniais. Meniu seka tai, ką sezonas atneša į „Farmers Circle“ ūkį.",
     "steps": [("1 žingsnis", "Užkandžiai"), ("2 žingsnis", "Pirmasis patiekalas"), ("3 žingsnis", "Pagrindinis patiekalas"), ("4 žingsnis", "Desertas")],
     "dish": "[[MENIU]]",
     "menu_full": "Visas meniu",
     "farm_over": "Farmers Circle",
-    "farm_h2": "„Farmers Circle“ viskas prasideda nuo gyvos žemės.",
+    "farm_h2": "„Farmers Circle“ istoriją rašo žemė.",
     "farm_body": "2018 metais danų verslininko Niels Peter Pretzmann įkurtas ekologinis ūkis Radiškio kaime, Ukmergės rajone, puoselėja ryšį tarp dirvožemio, augalų, gyvūnų ir žmogaus. Nuo pat pradžių jį augina įsitikinimas, kad geras maistas prasideda nuo atsakingo santykio su gamta. Čia metų laikai diktuoja darbų ritmą, o kiekvienas sprendimas priimamas galvojant ir apie būsimą derlių, ir apie žemę, kurioje jis užaugs.",
     "farm_link": "Aplankykite Farmers Circle",
     "read_more": "Skaityti daugiau", "read_less": "Rodyti mažiau",
@@ -204,7 +211,7 @@ LT = {
     "alt_room": "14Horses salė",
     "alt_hero": "Staliukas prie lango 14Horses salėje",
     "alt_mosaic": ["Staliukai prie vyno sienos", "Serviruotas stalas tarp ąžuolo ir plieno", "Vyno taurės ant ąžuolinio stalo"],
-    "alt_more": ["Vakarienei serviruotas stalas", "Švelni šviesa virš serviruoto stalo"],
+    "alt_more": ["Vakarienei serviruotas stalas", "Švelni šviesa virš serviruoto stalo", "Vyno taurės ant ąžuolinio stalo"],
     "credit": "Nuotraukos",
     "events_h3": "Renginiai ir privatūs vakarai",
     "events_body": "Derliaus vakarienės, kviestiniai šefai ir visa salė jūsų progai.",
@@ -226,10 +233,10 @@ LT = {
     "policy": [
         ("Rezervacijos ir apsilankymo trukmė", "Staliukas rezervuojamas 2 valandoms. Ilgesnė apsilankymo trukmė derinama iš anksto. Rezervuotas staliukas laikomas 15 minučių nuo rezervacijos pradžios. Apie vėlavimą prašome informuoti restorano komandą. Vėluojant ilgiau nei 15 minučių ir apie tai nepranešus, rezervacija atšaukiama."),
         ("Rezervacijos mokestis ir atšaukimo sąlygos", "Rezervacijai patvirtinti taikomas 20 Eur išankstinis mokėjimas kiekvienam asmeniui. Sumokėta suma įskaitoma į galutinę apsilankymo sąskaitą. Rezervaciją atšaukus likus ne mažiau kaip 24 valandoms iki rezervacijos pradžios, išankstinis mokėjimas grąžinamas. Atšaukus vėliau arba neatvykus, sumokėta suma negrąžinama. Tokia pati atšaukimo ir pinigų grąžinimo tvarka taikoma iš anksto apmokėtoms degustacijoms."),
-        ("Grupių rezervacijos", "8 ir daugiau asmenų grupių rezervacijos derinamos individualiai. Grupėms siūloma rinktis patiekalus iš esamo restorano meniu arba iš anksto suderinto renginių meniu."),
+        ("Grupių rezervacijos", "8 ir daugiau asmenų grupių rezervacijos derinamos individualiai. Grupėms siūloma rinktis patiekalus iš restorano meniu."),
         ("Apsilankymas su vaikais", "Restorane priimami svečiai su vaikais. Suteikiamos vaikiškos kėdutės. Atskiro vaikams skirto meniu nėra."),
         ("Apsilankymas su augintiniais", "Augintiniai priimami restorano vidaus patalpose ir terasoje. Už augintinio priežiūrą ir elgesį atsako jį lydintis asmuo. Augintinis neturi trukdyti kitų svečių patogumui ar restorano darbui."),
-        ("Alergijos ir specialūs mitybos poreikiai", "Apie alergijas, maisto netoleravimą ir specialius mitybos poreikius būtina informuoti ne vėliau kaip prieš 3 dienas iki apsilankymo. Meniu pritaikymo galimybės ir konkretūs pakeitimai derinami individualiai su restorano komanda."),
+        ("Alergijos ir specialūs mitybos poreikiai", "Meniu pritaikymo galimybės ir konkretūs pakeitimai derinami individualiai su restorano komanda."),
         ("Virtuvės darbo laikas", "Antradieniais-ketvirtadieniais virtuvė dirba iki 21.00 val., penktadieniais ir šeštadieniais - iki 22.00 val."),
         ("Aprangos rekomendacija", "Rekomenduojamas aprangos stilius - „smart casual“ (laisvalaikio elegancija)."),
         ("Atsiskaitymas ir aptarnavimo mokestis", "Restorane atsiskaitoma tik mokėjimo kortelėmis. Grynieji pinigai nepriimami. Prie galutinės sąskaitos pridedamas 10 % aptarnavimo mokestis."),
@@ -261,6 +268,11 @@ MENU_SVG = ('<svg class="i-open" width="24" height="24" viewBox="0 0 24 24" fill
 NUMS = ["一", "二", "三", "四"]
 
 
+ARROW_L = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 4l-8 8 8 8"/></svg>'
+ARROW_R = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 4l8 8-8 8"/></svg>'
+CLOSE_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 5l14 14M19 5L5 19"/></svg>'
+
+
 def ph(s: str) -> str:
     """Mark [[placeholders]] so they are visible until filled."""
     return re.sub(r"\[\[(.+?)\]\]", r'<span class="todo" title="Placeholder - replace before launch">[\1]</span>', s)
@@ -274,10 +286,23 @@ def _nb(v):
     return v
 
 
+def _ver():
+    import hashlib
+    return {f: hashlib.md5((ROOT / "assets" / f).read_bytes()).hexdigest()[:8]
+            for f in ("style.css", "main.js", "ui.js", "consent.js")}
+
+
 def page(t: dict) -> str:
+    global VER
+    VER = _ver()
     t = {k: _nb(v) for k, v in t.items()}
     nav_ids = ["about", "menu", "farmers-circle", "events", "policy", "contact"]
-    nav = "\n".join(f'          <a href="#{i}">{l}</a>' for i, l in zip(nav_ids, t["nav"]))
+    soon_btns = lambda cls: "".join(
+        f'<button type="button" class="{cls}" data-soon>{m}</button>' for m in t["menus"])
+    nav = "\n".join(
+        (f'          <div class="nav__item nav__item--menu"><a href="#{i}" aria-haspopup="true">{l}</a>'
+         f'<div class="nav__sub">{soon_btns("nav__subitem")}</div></div>') if i == "menu"
+        else f'          <a href="#{i}">{l}</a>' for i, l in zip(nav_ids, t["nav"]))
     en_cur = 'aria-current="true"' if t["lang"] == "en" else ""
     lt_cur = 'aria-current="true"' if t["lang"] == "lt" else ""
     strip = "\n".join(f"        <div><dt>{a}</dt><dd>{b}</dd></div>" for a, b in t["strip"][:2])
@@ -297,8 +322,9 @@ def page(t: dict) -> str:
         f'      <div class="person"><div class="frame r{k+1}" aria-hidden="true"></div><div><span class="person__name">{ph(n)}</span><span class="person__role">{r}</span></div></div>'
         for k, (n, r) in enumerate(t["team"]))
     gal = "\n".join(
-        f'    <div class="frame"><img src="{PHOTOS["g"+str(k+1)]}" alt="{a}" loading="lazy" decoding="async"></div>'
+        f'        <li class="carousel__slide frame"><img src="{PHOTOS["g"+str(k+1)]}" alt="{a}" loading="lazy" decoding="async"></li>'
         for k, a in enumerate(t["alt_gallery"] + t["alt_more"]))
+    farm_all = "\n".join(f"            <p>{p}</p>" for p in t["farm_more"])
     mosaic = "\n".join(
         f'    <div class="frame m{k+1}"><img src="{PHOTOS["m"+str(k+1)]}" alt="{a}" loading="lazy" decoding="async"></div>'
         for k, a in enumerate(t["alt_mosaic"]))
@@ -355,7 +381,7 @@ def page(t: dict) -> str:
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="preload" href="/assets/fonts/Newsreader.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Karla.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v={VER['style.css']}">
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"Restaurant","name":"14Horses","url":"{SITE_URL}/","image":"{SITE_URL}{PHOTOS['hero_a']}","address":{{"@type":"PostalAddress","streetAddress":"Dominikonų g. 11","addressLocality":"Vilnius","addressCountry":"LT"}},"telephone":"+37061250845","email":"14horses@bfr.lt","openingHoursSpecification":[{{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"17:00","closes":"22:00"}},{{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"17:00","closes":"23:00"}}],"servesCuisine":"Baltic, Scandinavian","acceptsReservations":"True"}}
 </script>
@@ -400,7 +426,6 @@ def page(t: dict) -> str:
   <section id="about" class="wrap split">
     <div class="split__aside"><h2 class="overline">{t['about_over']}</h2></div>
     <div class="split__main">
-      <p class="statement">{t['about_statement']}</p>
       <div class="prose">
 {about_body}
       </div>
@@ -416,50 +441,59 @@ def page(t: dict) -> str:
       <div class="menu__head">
         <h2>{t['menu_h2']}</h2>
       </div>
-      <p class="menu__soon">{ph(t['dish'])}</p>
+      <div class="menu__options">
+        {soon_btns("menu__option")}
+      </div>
     </div>
   </section>
 
   <section id="farmers-circle" class="farm-section">
-    <div class="wrap feature">
-      <div class="frame feature__img"><img src="{PHOTOS['farm']}" alt="{t['alt_farm']}" loading="lazy" decoding="async"></div>
+    <div class="banner banner--full">
+      <img class="banner__bg" src="{PHOTOS['farm']}" alt="{t['alt_farm']}" loading="lazy" decoding="async">
+      <div class="wrap banner__inner banner__inner--left">
+        <h2 class="banner__title">{t['farm_h2']}</h2>
+        <p class="banner__text">{t['farm_body']}</p>
+      </div>
     </div>
-    <div class="wrap split farm-split">
-      <div class="split__aside"><h2 class="overline">{t['farm_over']}</h2></div>
-      <div class="split__main">
-        <p class="statement">{t['farm_h2']}</p>
-        <div class="prose">
-          <p>{t['farm_body']}</p>
-{farm_first}
-          <details class="readmore">
-            <summary><span class="readmore__more">{t['read_more']}</span><span class="readmore__less">{t['read_less']}</span></summary>
-{farm_more}
-            <p class="motto">{t['farm_close']}</p>
-          </details>
+    <div class="wrap farm-more">
+      <details class="readmore">
+        <summary><span class="readmore__more">{t['read_more']}</span><span class="readmore__less">{t['read_less']}</span></summary>
+        <div class="farm-more__cols">
+{farm_all}
         </div>
-{farm_link}      </div>
+        <p class="farm-more__close">{t['farm_close']}</p>
+      </details>
+{farm_link}    </div>
+  </section>
+
+  <section id="events" class="wrap banner-wrap">
+    <div class="banner">
+      <img class="banner__bg" src="{PHOTOS['m1']}" alt="{t['alt_mosaic'][0]}" loading="lazy" decoding="async">
+      <div class="banner__inner">
+        <h2 class="banner__title">{t['events_h3']}</h2>
+        <p class="banner__text">{t['events_body']}</p>
+        <a class="link" href="mailto:{CONTACT['email']}">{t['events_link']}: {CONTACT['email']}</a>
+      </div>
     </div>
   </section>
 
-  <section class="wrap mosaic" aria-label="{t['gallery_label']}">
-{mosaic}
+  <section class="wrap banner-wrap">
+    <div class="banner">
+      <img class="banner__bg" src="{PHOTOS['m2']}" alt="{t['alt_mosaic'][1]}" loading="lazy" decoding="async">
+      <div class="banner__inner">
+        <h2 class="banner__title">{t['gift_h3']}</h2>
+        <p class="banner__text">{t['gift_body']}</p>
+        <a class="link" href="https://www.senatoriupasazas.lt/#vouchers" rel="noopener" target="_blank">{t['gift_link']}</a>
+      </div>
+    </div>
   </section>
 
-  <section class="wrap gallery" aria-label="{t['gallery_label']}">
+  <section class="wrap carousel" aria-label="{t['gallery_label']}" data-carousel>
+    <button type="button" class="carousel__btn carousel__btn--prev" data-dir="-1" aria-label="{t['prev']}">{ARROW_L}</button>
+    <ul class="carousel__track">
 {gal}
-  </section>
-
-  <section class="wrap cards">
-    <div id="events" class="card">
-      <h3>{t['events_h3']}</h3>
-      <p class="muted">{t['events_body']}</p>
-      <a class="link" href="mailto:{CONTACT['email']}">{t['events_link']}: {CONTACT['email']}</a>
-    </div>
-    <div class="card">
-      <h3>{t['gift_h3']}</h3>
-      <p class="muted">{t['gift_body']}</p>
-      <a class="link" href="https://www.senatoriupasazas.lt/#vouchers" rel="noopener" target="_blank">{t['gift_link']}</a>
-    </div>
+    </ul>
+    <button type="button" class="carousel__btn carousel__btn--next" data-dir="1" aria-label="{t['next']}">{ARROW_R}</button>
   </section>
 
   <section id="policy" class="policy">
@@ -520,8 +554,14 @@ def page(t: dict) -> str:
 <div class="bookbar"><a class="btn" href="{SEVENROOMS_URL}" rel="noopener" target="_blank">{t['reserve']}</a></div>
 
 {consent}
-<script src="/assets/main.js" defer></script>
-<script src="/assets/consent.js" defer></script>
+<div class="soon" data-soon-dialog hidden role="dialog" aria-modal="true" aria-label="{t['soon']}">
+  <img class="soon__bg" src="{PHOTOS['g6']}" alt="" loading="lazy" decoding="async">
+  <p class="soon__text">{t['soon']}</p>
+  <button type="button" class="soon__close" data-soon-close aria-label="{t['close']}">{CLOSE_SVG}</button>
+</div>
+<script src="/assets/main.js?v={VER['main.js']}" defer></script>
+<script src="/assets/ui.js?v={VER['ui.js']}" defer></script>
+<script src="/assets/consent.js?v={VER['consent.js']}" defer></script>
 </body>
 </html>
 """
@@ -560,7 +600,7 @@ ARTIFACT_CSS = """
 
 def _body(doc: str) -> str:
     b = doc.split("<body>", 1)[1].split("</body>", 1)[0]
-    b = re.sub(r'<script src="/assets/(main|consent).js" defer></script>\s*', "", b)
+    b = re.sub(r'<script src="/assets/(main|consent|ui)\.js(\?v=\w+)?" defer></script>\s*', "", b)
     return b
 
 
@@ -656,6 +696,7 @@ def build_artifact():
 {_artifact_body(LT, logo_uri)}
 </div>
 <script>{ARTIFACT_JS}</script>
+<script>{(ROOT / "assets" / "ui.js").read_text(encoding="utf-8")}</script>
 <script>{(ROOT / "assets" / "consent.js").read_text(encoding="utf-8")}</script>
 """
     out = pathlib.Path(__file__).resolve().parent / "artifact"

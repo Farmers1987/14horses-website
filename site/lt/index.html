@@ -17,7 +17,7 @@
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="preload" href="/assets/fonts/Newsreader.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Karla.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v=fbef3838">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Restaurant","name":"14Horses","url":"https://14horses.com/","image":"https://14horses.com/assets/img/hero-wide.jpg","address":{"@type":"PostalAddress","streetAddress":"Dominikonų g. 11","addressLocality":"Vilnius","addressCountry":"LT"},"telephone":"+37061250845","email":"14horses@bfr.lt","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"17:00","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"17:00","closes":"23:00"}],"servesCuisine":"Baltic, Scandinavian","acceptsReservations":"True"}
 </script>
@@ -31,7 +31,7 @@
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Atidaryti meniu"><svg class="i-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h18M3 16h12"/></svg><svg class="i-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span aria-hidden="true">Meniu</span></button>
     <div class="nav__links" id="nav-links">
           <a href="#about">Apie mus</a>
-          <a href="#menu">Meniu</a>
+          <div class="nav__item nav__item--menu"><a href="#menu" aria-haspopup="true">Meniu</a><div class="nav__sub"><button type="button" class="nav__subitem" data-soon>Degustacinis meniu</button><button type="button" class="nav__subitem" data-soon>Gastronomijos savaitė</button><button type="button" class="nav__subitem" data-soon>À la carte</button></div></div>
           <a href="#farmers-circle">Farmers Circle</a>
           <a href="#events">Renginiai</a>
           <a href="#policy">Politika</a>
@@ -49,7 +49,7 @@
       <div class="hero__text">
         <p class="overline">Senatorių pasažas · Vilniaus senamiestis</p>
         <h1>Mūsų pradžia - žemėje.</h1>
-        <p class="hero__lead">Šiandien 14Horses atsiveria su šefu Aleksandru Fedorovičiumi, nauja komanda ir šiuolaikine baltiška - skandinaviška virtuve.</p>
+        <p class="hero__lead">Tarp istorinių Vainų rūmų sienų atsiveria naujas „14Horses“ skyrius. Šefo Aleksandro Fedorovičiaus vedama nauja komanda šiuolaikinei baltiškai-skandinaviškai virtuvei suteikia šviežios kūrybinės energijos, atsiskleidžiančios ryškiais skoniais ir netikėtais deriniais.</p>
         <div class="hero__ctas">
           <a id="sevenrooms-trigger" class="btn btn--light" href="https://www.sevenrooms.com/explore/14horses/reservations/create/search/" rel="noopener" target="_blank">Rezervuoti staliuką</a>
           <a class="link" href="#menu">Meniu</a>
@@ -69,7 +69,6 @@
   <section id="about" class="wrap split">
     <div class="split__aside"><h2 class="overline">Apie mus</h2></div>
     <div class="split__main">
-      <p class="statement">Istorinės Vainų rūmų sienos, nauja kūrybinė energija ir ryškaus skonio ambicija.</p>
       <div class="prose">
           <p>Mūsų pradžia - žemėje. Radiškių kaime įsikūrusiame „Farmers Circle“ ūkyje, kur metų laikai diktuoja ritmą ir augina būsimo meniu idėjas. „14Horses“ yra šio ūkio dalis. Nuo dirvos iki kūrybos virtuvėje ir pokalbio prie stalo tęsiasi vientisa pažinimo kelionė. Žinios apie tai, ką auginame, kaip ruošiame ir kodėl renkamės, nuosekliai keliauja per mūsų komandą iki svečio, suteikdamos skoniui kontekstą, o patirčiai - gylį.</p>
           <p class="motto">Nuo galvos iki uodegos. Nuo šaknų iki lapelių.</p>
@@ -89,60 +88,69 @@
       <div class="menu__head">
         <h2>Meniu</h2>
       </div>
-      <p class="menu__soon"><span class="todo" title="Placeholder - replace before launch">[MENIU]</span></p>
-    </div>
-  </section>
-
-  <section id="farmers-circle" class="farm-section">
-    <div class="wrap feature">
-      <div class="frame feature__img"><img src="/assets/img/farm-sheep.jpg" alt="Ėriukai ganosi Farmers Circle, mūsų regeneraciniame ūkyje" loading="lazy" decoding="async"></div>
-    </div>
-    <div class="wrap split farm-split">
-      <div class="split__aside"><h2 class="overline">Farmers Circle</h2></div>
-      <div class="split__main">
-        <p class="statement">„Farmers Circle“ viskas prasideda nuo gyvos žemės.</p>
-        <div class="prose">
-          <p>2018 metais danų verslininko Niels Peter Pretzmann įkurtas ekologinis ūkis Radiškio kaime, Ukmergės rajone, puoselėja ryšį tarp dirvožemio, augalų, gyvūnų ir žmogaus. Nuo pat pradžių jį augina įsitikinimas, kad geras maistas prasideda nuo atsakingo santykio su gamta. Čia metų laikai diktuoja darbų ritmą, o kiekvienas sprendimas priimamas galvojant ir apie būsimą derlių, ir apie žemę, kurioje jis užaugs.</p>
-          <p>Ūkio laukuose auginami grūdai, daržuose - sezoninės daržovės ir prieskoninės žolelės, ganyklose ganosi angusų veislės galvijai. Ūkio produkciją papildo ekologiški kiaušiniai ir paukštiena, grikiai, avižos bei miltai. Ši įvairovė kuria tarpusavyje susijusią sistemą, kurioje augalininkystė, daržininkystė ir gyvulininkystė papildo viena kitą.</p>
-          <details class="readmore">
-            <summary><span class="readmore__more">Skaityti daugiau</span><span class="readmore__less">Rodyti mažiau</span></summary>
-            <p>Dalis derliaus savo kitą pavidalą atranda čia pat, ūkio perdirbimo virtuvėje. Daržovės fermentuojamos, iš jų gaminami padažai, užtepėlės ir pagardai, o sezonų skoniai išsaugomi džemuose, sirupuose bei actuose. Nedidelis atstumas tarp daržo ir gamybos leidžia apdoroti šviežią derlių, išsaugoti jo savitumą ir atrasti vertę net išvaizda netobuluose produktuose.</p>
-            <p>Rūpestis dirvožemiu jungia visas ūkio veiklas. Regeneracinio ūkininkavimo praktikos - mažesnis žemės dirbimas, sėjomaina, tarpiniai pasėliai, rotacinis ganymas ir kompostavimas - padeda atkurti jo gyvybingumą ir palaikyti biologinę įvairovę. Organinės liekanos per kompostą sugrįžta į dirvą, maitindamos būsimą derlių. Taip vieno sezono pabaiga tampa kito pradžia.</p>
-            <p>„Farmers Circle“ - ir susitikimų bei pažinimo vieta. Pats pavadinimas kviečia į bendrą ratą: augintojus, šefus, bendraminčius ir svečius, norinčius suprasti, iš kur atkeliauja jų maistas. Ekskursijos po ūkį, edukacijos ir maisto gaminimo patirtys atveria kasdienį ūkininkavimo pasaulį bei leidžia pažinti darbą, slypintį už kiekvieno ingrediento.</p>
-            <p>Šį pažinimą pratęsia ūkyje įsikūręs restoranas „Red Brick“, kuriame derlius tampa sezonine gastronomine patirtimi. Renginių ir susitikimų erdvės, nakvynės vieta bei ūkio parduotuvė kviečia pasilikti ilgiau - stebėti, ragauti ir pajusti vietos ritmą.</p>
-            <p class="motto">Nuo dirvos iki derliaus. Nuo patirties iki žinių, kuriomis dalijamės. Taip sukasi „Farmers Circle“ ratas.</p>
-          </details>
-        </div>
+      <div class="menu__options">
+        <button type="button" class="menu__option" data-soon>Degustacinis meniu</button><button type="button" class="menu__option" data-soon>Gastronomijos savaitė</button><button type="button" class="menu__option" data-soon>À la carte</button>
       </div>
     </div>
   </section>
 
-  <section class="wrap mosaic" aria-label="Galerija">
-    <div class="frame m1"><img src="/assets/img/room-wine.jpg" alt="Staliukai prie vyno sienos" loading="lazy" decoding="async"></div>
-    <div class="frame m2"><img src="/assets/img/room-corner.jpg" alt="Serviruotas stalas tarp ąžuolo ir plieno" loading="lazy" decoding="async"></div>
-    <div class="frame m3"><img src="/assets/img/room-detail.jpg" alt="Vyno taurės ant ąžuolinio stalo" loading="lazy" decoding="async"></div>
+  <section id="farmers-circle" class="farm-section">
+    <div class="banner banner--full">
+      <img class="banner__bg" src="/assets/img/farm-sheep.jpg" alt="Ėriukai ganosi Farmers Circle, mūsų regeneraciniame ūkyje" loading="lazy" decoding="async">
+      <div class="wrap banner__inner banner__inner--left">
+        <h2 class="banner__title">„Farmers Circle“ istoriją rašo žemė.</h2>
+        <p class="banner__text">2018 metais danų verslininko Niels Peter Pretzmann įkurtas ekologinis ūkis Radiškio kaime, Ukmergės rajone, puoselėja ryšį tarp dirvožemio, augalų, gyvūnų ir žmogaus. Nuo pat pradžių jį augina įsitikinimas, kad geras maistas prasideda nuo atsakingo santykio su gamta. Čia metų laikai diktuoja darbų ritmą, o kiekvienas sprendimas priimamas galvojant ir apie būsimą derlių, ir apie žemę, kurioje jis užaugs.</p>
+      </div>
+    </div>
+    <div class="wrap farm-more">
+      <details class="readmore">
+        <summary><span class="readmore__more">Skaityti daugiau</span><span class="readmore__less">Rodyti mažiau</span></summary>
+        <div class="farm-more__cols">
+            <p>Ūkio laukuose auginami grūdai, daržuose - sezoninės daržovės ir prieskoninės žolelės, ganyklose ganosi angusų veislės galvijai. Ūkio produkciją papildo ekologiški kiaušiniai ir paukštiena, grikiai, avižos bei miltai. Ši įvairovė kuria tarpusavyje susijusią sistemą, kurioje augalininkystė, daržininkystė ir gyvulininkystė papildo viena kitą.</p>
+            <p>Dalis derliaus savo kitą pavidalą atranda čia pat, ūkio perdirbimo virtuvėje. Daržovės fermentuojamos, iš jų gaminami padažai, užtepėlės ir pagardai, o sezonų skoniai išsaugomi džemuose, sirupuose bei actuose. Nedidelis atstumas tarp daržo ir gamybos leidžia apdoroti šviežią derlių, išsaugoti jo savitumą ir atrasti vertę net išvaizda netobuluose produktuose.</p>
+            <p>Rūpestis dirvožemiu jungia visas ūkio veiklas. Regeneracinio ūkininkavimo praktikos - mažesnis žemės dirbimas, sėjomaina, tarpiniai pasėliai, rotacinis ganymas ir kompostavimas - padeda atkurti jo gyvybingumą ir palaikyti biologinę įvairovę. Organinės liekanos per kompostą sugrįžta į dirvą, maitindamos būsimą derlių. Taip vieno sezono pabaiga tampa kito pradžia.</p>
+            <p>„Farmers Circle“ - ir susitikimų bei pažinimo vieta. Pats pavadinimas kviečia į bendrą ratą: augintojus, šefus, bendraminčius ir svečius, norinčius suprasti, iš kur atkeliauja jų maistas. Ekskursijos po ūkį, edukacijos ir maisto gaminimo patirtys atveria kasdienį ūkininkavimo pasaulį bei leidžia pažinti darbą, slypintį už kiekvieno ingrediento.</p>
+            <p>Šį pažinimą pratęsia ūkyje įsikūręs restoranas „Red Brick“, kuriame derlius tampa sezonine gastronomine patirtimi. Renginių ir susitikimų erdvės, nakvynės vieta bei ūkio parduotuvė kviečia pasilikti ilgiau - stebėti, ragauti ir pajusti vietos ritmą.</p>
+        </div>
+        <p class="farm-more__close">Nuo dirvos iki derliaus. Nuo patirties iki žinių, kuriomis dalijamės. Taip sukasi „Farmers Circle“ ratas.</p>
+      </details>
+    </div>
   </section>
 
-  <section class="wrap gallery" aria-label="Galerija">
-    <div class="frame"><img src="/assets/img/gallery-1.jpg" alt="Taurės prie lango" loading="lazy" decoding="async"></div>
-    <div class="frame"><img src="/assets/img/gallery-2.jpg" alt="Staliukai prie vyno sienos" loading="lazy" decoding="async"></div>
-    <div class="frame"><img src="/assets/img/gallery-3.jpg" alt="Vyno taurė ant serviruoto stalo" loading="lazy" decoding="async"></div>
-    <div class="frame"><img src="/assets/img/gallery-4.jpg" alt="Jaukus salės kampelis" loading="lazy" decoding="async"></div>
-    <div class="frame"><img src="/assets/img/hero-table.jpg" alt="Vakarienei serviruotas stalas" loading="lazy" decoding="async"></div>
-    <div class="frame"><img src="/assets/img/room-light.jpg" alt="Švelni šviesa virš serviruoto stalo" loading="lazy" decoding="async"></div>
+  <section id="events" class="wrap banner-wrap">
+    <div class="banner">
+      <img class="banner__bg" src="/assets/img/room-wine.jpg" alt="Staliukai prie vyno sienos" loading="lazy" decoding="async">
+      <div class="banner__inner">
+        <h2 class="banner__title">Renginiai ir privatūs vakarai</h2>
+        <p class="banner__text">Derliaus vakarienės, kviestiniai šefai ir visa salė jūsų progai.</p>
+        <a class="link" href="mailto:14horses@bfr.lt">Teiraukitės dėl renginių: 14horses@bfr.lt</a>
+      </div>
+    </div>
   </section>
 
-  <section class="wrap cards">
-    <div id="events" class="card">
-      <h3>Renginiai ir privatūs vakarai</h3>
-      <p class="muted">Derliaus vakarienės, kviestiniai šefai ir visa salė jūsų progai.</p>
-      <a class="link" href="mailto:14horses@bfr.lt">Teiraukitės dėl renginių: 14horses@bfr.lt</a>
+  <section class="wrap banner-wrap">
+    <div class="banner">
+      <img class="banner__bg" src="/assets/img/room-corner.jpg" alt="Serviruotas stalas tarp ąžuolo ir plieno" loading="lazy" decoding="async">
+      <div class="banner__inner">
+        <h2 class="banner__title">Padovanokite vakarą</h2>
+        <p class="banner__text">14Horses dovanų kuponas bet kokiai sumai nuo 20 iki 1 000 €. Galioja 12 mėn. visuose mūsų restoranuose ir parduotuvėse Senatorių pasaže.</p>
+        <a class="link" href="https://www.senatoriupasazas.lt/#vouchers" rel="noopener" target="_blank">Pirkti dovanų kuponą</a>
+      </div>
     </div>
-    <div class="card">
-      <h3>Padovanokite vakarą</h3>
-      <p class="muted">14Horses dovanų kuponas bet kokiai sumai nuo 20 iki 1 000 €. Galioja 12 mėn. visuose mūsų restoranuose ir parduotuvėse Senatorių pasaže.</p>
-      <a class="link" href="https://www.senatoriupasazas.lt/#vouchers" rel="noopener" target="_blank">Pirkti dovanų kuponą</a>
-    </div>
+  </section>
+
+  <section class="wrap carousel" aria-label="Galerija" data-carousel>
+    <button type="button" class="carousel__btn carousel__btn--prev" data-dir="-1" aria-label="Ankstesnės nuotraukos"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 4l-8 8 8 8"/></svg></button>
+    <ul class="carousel__track">
+        <li class="carousel__slide frame"><img src="/assets/img/gallery-1.jpg" alt="Taurės prie lango" loading="lazy" decoding="async"></li>
+        <li class="carousel__slide frame"><img src="/assets/img/gallery-2.jpg" alt="Staliukai prie vyno sienos" loading="lazy" decoding="async"></li>
+        <li class="carousel__slide frame"><img src="/assets/img/gallery-3.jpg" alt="Vyno taurė ant serviruoto stalo" loading="lazy" decoding="async"></li>
+        <li class="carousel__slide frame"><img src="/assets/img/gallery-4.jpg" alt="Jaukus salės kampelis" loading="lazy" decoding="async"></li>
+        <li class="carousel__slide frame"><img src="/assets/img/hero-table.jpg" alt="Vakarienei serviruotas stalas" loading="lazy" decoding="async"></li>
+        <li class="carousel__slide frame"><img src="/assets/img/room-light.jpg" alt="Švelni šviesa virš serviruoto stalo" loading="lazy" decoding="async"></li>
+        <li class="carousel__slide frame"><img src="/assets/img/room-detail.jpg" alt="Vyno taurės ant ąžuolinio stalo" loading="lazy" decoding="async"></li>
+    </ul>
+    <button type="button" class="carousel__btn carousel__btn--next" data-dir="1" aria-label="Kitos nuotraukos"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 4l8 8-8 8"/></svg></button>
   </section>
 
   <section id="policy" class="policy">
@@ -154,10 +162,10 @@
       <div class="split__main accordion" style="gap:0">
           <details open><summary>Rezervacijos ir apsilankymo trukmė</summary><p>Staliukas rezervuojamas 2 valandoms. Ilgesnė apsilankymo trukmė derinama iš anksto. Rezervuotas staliukas laikomas 15 minučių nuo rezervacijos pradžios. Apie vėlavimą prašome informuoti restorano komandą. Vėluojant ilgiau nei 15 minučių ir apie tai nepranešus, rezervacija atšaukiama.</p></details>
           <details><summary>Rezervacijos mokestis ir atšaukimo sąlygos</summary><p>Rezervacijai patvirtinti taikomas 20 Eur išankstinis mokėjimas kiekvienam asmeniui. Sumokėta suma įskaitoma į galutinę apsilankymo sąskaitą. Rezervaciją atšaukus likus ne mažiau kaip 24 valandoms iki rezervacijos pradžios, išankstinis mokėjimas grąžinamas. Atšaukus vėliau arba neatvykus, sumokėta suma negrąžinama. Tokia pati atšaukimo ir pinigų grąžinimo tvarka taikoma iš anksto apmokėtoms degustacijoms.</p></details>
-          <details><summary>Grupių rezervacijos</summary><p>8 ir daugiau asmenų grupių rezervacijos derinamos individualiai. Grupėms siūloma rinktis patiekalus iš esamo restorano meniu arba iš anksto suderinto renginių meniu.</p></details>
+          <details><summary>Grupių rezervacijos</summary><p>8 ir daugiau asmenų grupių rezervacijos derinamos individualiai. Grupėms siūloma rinktis patiekalus iš restorano meniu.</p></details>
           <details><summary>Apsilankymas su vaikais</summary><p>Restorane priimami svečiai su vaikais. Suteikiamos vaikiškos kėdutės. Atskiro vaikams skirto meniu nėra.</p></details>
           <details><summary>Apsilankymas su augintiniais</summary><p>Augintiniai priimami restorano vidaus patalpose ir terasoje. Už augintinio priežiūrą ir elgesį atsako jį lydintis asmuo. Augintinis neturi trukdyti kitų svečių patogumui ar restorano darbui.</p></details>
-          <details><summary>Alergijos ir specialūs mitybos poreikiai</summary><p>Apie alergijas, maisto netoleravimą ir specialius mitybos poreikius būtina informuoti ne vėliau kaip prieš 3 dienas iki apsilankymo. Meniu pritaikymo galimybės ir konkretūs pakeitimai derinami individualiai su restorano komanda.</p></details>
+          <details><summary>Alergijos ir specialūs mitybos poreikiai</summary><p>Meniu pritaikymo galimybės ir konkretūs pakeitimai derinami individualiai su restorano komanda.</p></details>
           <details><summary>Virtuvės darbo laikas</summary><p>Antradieniais-ketvirtadieniais virtuvė dirba iki 21.00 val., penktadieniais ir šeštadieniais - iki 22.00 val.</p></details>
           <details><summary>Aprangos rekomendacija</summary><p>Rekomenduojamas aprangos stilius - „smart casual“ (laisvalaikio elegancija).</p></details>
           <details><summary>Atsiskaitymas ir aptarnavimo mokestis</summary><p>Restorane atsiskaitoma tik mokėjimo kortelėmis. Grynieji pinigai nepriimami. Prie galutinės sąskaitos pridedamas 10 % aptarnavimo mokestis.</p></details>
@@ -232,7 +240,13 @@
     </div>
   </div>
 </div>
-<script src="/assets/main.js" defer></script>
-<script src="/assets/consent.js" defer></script>
+<div class="soon" data-soon-dialog hidden role="dialog" aria-modal="true" aria-label="Jau netrukus">
+  <img class="soon__bg" src="/assets/img/room-light.jpg" alt="" loading="lazy" decoding="async">
+  <p class="soon__text">Jau netrukus</p>
+  <button type="button" class="soon__close" data-soon-close aria-label="Uždaryti"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+</div>
+<script src="/assets/main.js?v=8e34e71d" defer></script>
+<script src="/assets/ui.js?v=efa045ba" defer></script>
+<script src="/assets/consent.js?v=0c47bc64" defer></script>
 </body>
 </html>
