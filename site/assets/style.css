@@ -575,3 +575,6 @@ html.soon-open { overflow: hidden; }
 .soon__bg { object-position: center 40%; filter: saturate(.9) sepia(.12); }
 .soon__text { font-weight: 400; letter-spacing: .06em; transform: translateY(-6vh); }
 @media (max-width: 640px) { .banner__text { font-size: 16px; } }
+.farm-more { padding-top: 64px; }
+.farm-more__body { max-width: 1000px; }
+@media (max-width: 760px) { .farm-more { padding-top: 40px; } }

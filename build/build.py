@@ -456,13 +456,12 @@ def page(t: dict) -> str:
       </div>
     </div>
     <div class="wrap farm-more">
-      <details class="readmore">
-        <summary><span class="readmore__more">{t['read_more']}</span><span class="readmore__less">{t['read_less']}</span></summary>
+      <div class="farm-more__body">
         <div class="farm-more__cols">
 {farm_all}
         </div>
         <p class="farm-more__close">{t['farm_close']}</p>
-      </details>
+      </div>
 {farm_link}    </div>
   </section>
 
