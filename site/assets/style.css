@@ -584,3 +584,14 @@ html.soon-open { overflow: hidden; }
 @media (max-width: 1220px) { .nav__menu-btn { display: block; padding: 10px 0; font-size: 18px; color: var(--on-dark); } .nav__item--menu:focus-within .nav__menu-btn { color: var(--on-dark); } }
 .link--btn { background: none; border: 0; border-bottom: 1px solid currentColor; padding: 4px 0; font: inherit; cursor: pointer; }
 .hero .link--btn { color: var(--washi); }
+/* Even spacing around the closing line; text block centred on the page */
+.farm-more { padding-bottom: 56px; }
+.farm-more__body { margin: 0 auto; }
+.farm-more__cols p:last-child { margin-bottom: 0; }
+.farm-more__close { margin: 48px auto 0; }
+#events { padding-top: 16px; }
+@media (max-width: 760px) {
+  .farm-more { padding-bottom: 40px; }
+  .farm-more__cols p { margin-bottom: 16px; }
+  .farm-more__close { margin-top: 32px; }
+}
