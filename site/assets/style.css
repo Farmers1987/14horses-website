@@ -665,3 +665,28 @@ html.soon-open { overflow: hidden; }
 @media (max-width: 640px) { .hero h1, .banner--full .banner__title { font-size: 40px; line-height: 1.08; } }
 .banner--full .banner__text { font-size: 19px; line-height: 1.6; max-width: 560px; }
 @media (max-width: 640px) { .banner--full .banner__text, .hero__lead { font-size: 17px; } }
+/* Farmers Circle photo: narrower text column so the sheep stay visible (as in the mockup);
+   start position and sizes still match the front page */
+@media (min-width: 641px) {
+  .banner--full .banner__title { max-width: 13.5em; }
+  .banner--full .banner__text, .hero__lead { max-width: 520px; }
+  #farmers-circle .banner__bg { object-position: 70% 55%; }
+  .banner--full::after { background: linear-gradient(to right, rgba(30, 27, 24, .72) 0%, rgba(30, 27, 24, .5) 38%, rgba(30, 27, 24, .08) 62%); }
+}
+@media (min-width: 641px) {
+  #farmers-circle .banner__bg { object-position: center 55%; transform: scale(1.22); transform-origin: 0% 55%; }
+}
+@media (min-width: 641px) {
+  /* Sheep on the right, text on a dark forest tone on the left (as in the mockup) */
+  #farmers-circle .banner { background: #2E3327; }
+  #farmers-circle .banner__bg { transform: none; left: auto; right: 0; width: 66%; object-position: 30% 55%; }
+  #farmers-circle .banner::after { background: linear-gradient(to right, #2E3327 0%, #2E3327 34%, rgba(46, 51, 39, .72) 44%, rgba(46, 51, 39, .15) 62%, rgba(30, 27, 24, .05) 100%); }
+}
+@media (min-width: 641px) {
+  #farmers-circle .banner__bg { width: 58%; object-position: 34% 55%; }
+  #farmers-circle .banner::after { background: linear-gradient(to right, #2E3327 0%, #2E3327 40%, rgba(46, 51, 39, .7) 47%, rgba(46, 51, 39, .12) 60%, rgba(30, 27, 24, .04) 100%); }
+}
+@media (min-width: 641px) { #farmers-circle .banner__bg { object-position: 4% 55%; } }
+@media (min-width: 641px) {
+  #farmers-circle .banner::after { background: linear-gradient(to right, #2E3327 0%, #2E3327 44%, rgba(46, 51, 39, .78) 50%, rgba(46, 51, 39, .3) 58%, rgba(46, 51, 39, .06) 70%, rgba(30, 27, 24, .04) 100%); }
+}
