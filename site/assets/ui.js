@@ -30,7 +30,10 @@
     var d = scope(from).querySelector('[data-soon-dialog]');
     if (!d) return;
     lastFocus = byKeyboard ? from : null; // only hand focus back for keyboard users
+    clearTimeout(d._t);
     d.hidden = false;
+    void d.offsetWidth; // let the browser draw the start state, then fade in
+    d.classList.add('is-visible');
     document.documentElement.classList.add('soon-open');
     var x = d.querySelector('[data-soon-close]');
     if (x) x.focus();
@@ -41,7 +44,12 @@
     });
   }
   function closeSoon() {
-    document.querySelectorAll('[data-soon-dialog]').forEach(function (d) { d.hidden = true; });
+    document.querySelectorAll('[data-soon-dialog]').forEach(function (d) {
+      if (d.hidden) return;
+      d.classList.remove('is-visible');
+      clearTimeout(d._t);
+      d._t = setTimeout(function () { d.hidden = true; }, 450); // after the fade-out
+    });
     document.documentElement.classList.remove('soon-open');
     if (lastFocus) { try { lastFocus.focus(); } catch (e) {} }
   }

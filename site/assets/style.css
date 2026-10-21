@@ -595,3 +595,16 @@ html.soon-open { overflow: hidden; }
   .farm-more__cols p { margin-bottom: 16px; }
   .farm-more__close { margin-top: 32px; }
 }
+/* "Coming soon": gentle fade in and out */
+.soon { opacity: 0; transition: opacity .45s ease; }
+.soon.is-visible { opacity: 1; }
+.soon__bg { transform: scale(1.06); transition: transform 1.8s cubic-bezier(.2, .6, .2, 1); }
+.soon.is-visible .soon__bg { transform: scale(1); }
+.soon__text { opacity: 0; transform: translateY(calc(-6vh + 14px)); transition: opacity .9s ease .3s, transform 1.1s cubic-bezier(.2, .6, .2, 1) .3s; }
+.soon.is-visible .soon__text { opacity: 1; transform: translateY(-6vh); }
+.soon__close { opacity: 0; transition: opacity .4s ease .5s, background .2s ease; }
+.soon.is-visible .soon__close { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .soon, .soon__bg, .soon__text, .soon__close { transition: opacity .2s ease; transform: none; }
+  .soon.is-visible .soon__bg, .soon.is-visible .soon__text { transform: none; }
+}
