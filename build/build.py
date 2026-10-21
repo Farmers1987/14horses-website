@@ -432,8 +432,7 @@ def page(t: dict) -> str:
         <h2 class="overline about-section__over">{t['about_over']}</h2>
         <div class="farm-more__cols">
           <p>{t['about_body'][0]}</p>
-          <p class="motto">{t['about_body'][1][1:]}</p>
-          <p>{t['about_body'][2]}</p>
+          <div class="lead-in"><p class="motto">{t['about_body'][1][1:]}</p><p>{t['about_body'][2]}</p></div>
           <p>{t['about_body'][3]}</p>
         </div>
         <p class="farm-more__close">{t['about_body'][4][1:]}</p>

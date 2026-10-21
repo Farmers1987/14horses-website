@@ -618,3 +618,7 @@ html.soon-open { overflow: hidden; }
 .about-section__over { margin-bottom: 28px; }
 .farm-more__cols .motto { color: var(--ink); font-weight: 600; }
 @media (max-width: 760px) { .about-section .farm-more { padding-top: 56px; padding-bottom: 56px; } }
+/* A short line that introduces the paragraph right after it stays with it */
+.lead-in { break-inside: avoid; margin-bottom: 20px; }
+.lead-in .motto { margin-bottom: 6px; }
+.lead-in p:last-child { margin-bottom: 0; }
