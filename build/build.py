@@ -22,7 +22,7 @@ PHOTOS = {
     "g7":     "/assets/img/room-detail.jpg",
     "hero_b": "/assets/img/hero-stone.jpg",
     "room":   "/assets/img/room-wide.jpg",
-    "farm":   "/assets/img/farm-sheep.jpg",
+    "farm":   "/assets/img/farm-sheep-wide.jpg",
     "g1":     "/assets/img/gallery-1.jpg",
     "g2":     "/assets/img/gallery-2.jpg",
     "g3":     "/assets/img/gallery-3.jpg",

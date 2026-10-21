@@ -690,3 +690,14 @@ html.soon-open { overflow: hidden; }
 @media (min-width: 641px) {
   #farmers-circle .banner::after { background: linear-gradient(to right, #2E3327 0%, #2E3327 44%, rgba(46, 51, 39, .78) 50%, rgba(46, 51, 39, .3) 58%, rgba(46, 51, 39, .06) 70%, rgba(30, 27, 24, .04) 100%); }
 }
+/* Farmers Circle: photo extended to the left with more of the same forest (no flat green) */
+#farmers-circle .banner { background: var(--ink); }
+#farmers-circle .banner__bg { left: 0; right: 0; width: 100%; transform: none; object-position: 72% 55%; }
+#farmers-circle .banner::after { background: linear-gradient(to right, rgba(30, 27, 24, .62) 0%, rgba(30, 27, 24, .42) 40%, rgba(30, 27, 24, .1) 62%, rgba(30, 27, 24, .04) 100%); }
+@media (max-width: 640px) {
+  #farmers-circle .banner__bg { object-position: 64% 55%; }
+  #farmers-circle .banner::after { background: linear-gradient(to bottom, rgba(30, 27, 24, .78) 0%, rgba(30, 27, 24, .55) 55%, rgba(30, 27, 24, .25) 100%); }
+}
+@media (min-width: 641px) { #farmers-circle .banner__bg { object-position: 48% 55%; } }
+@media (min-width: 1600px) { #farmers-circle .banner__bg { object-position: 66% 55%; } }
+@media (min-width: 1600px) { #farmers-circle .banner__bg { object-position: 28% 55%; } }
