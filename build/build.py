@@ -12,7 +12,13 @@ SITE_URL = "https://14horses.com"
 
 # Photos by G. Rozmanaite (14horses photo shoot), resized in site/assets/img
 PHOTOS = {
-    "hero_a": "/assets/img/hero-table.jpg",
+    "hero":   "/assets/img/hero-wide.jpg",
+    "hero_a": "/assets/img/hero-wide.jpg",
+    "m1":     "/assets/img/room-wine.jpg",
+    "m2":     "/assets/img/room-corner.jpg",
+    "m3":     "/assets/img/room-detail.jpg",
+    "g5":     "/assets/img/hero-table.jpg",
+    "g6":     "/assets/img/room-light.jpg",
     "hero_b": "/assets/img/hero-stone.jpg",
     "room":   "/assets/img/room-wide.jpg",
     "farm":   "/assets/img/farm-sheep.jpg",
@@ -47,7 +53,7 @@ EN = {
     "title": "14Horses - Contemporary Baltic - Scandinavian restaurant in Vilnius",
     "desc": "The historic walls of Vainai Palace, a renewed creative energy and an ambition for bold flavours. Today, 14Horses opens a new chapter with Chef Aleksandras Fedorovičius, a new team and contemporary Baltic - Scandinavian cuisine.",
     "skip": "Skip to content",
-    "nav": ["About us", "Menu", "Farmers Circle", "Events", "Booking", "Policy", "Contacts"],
+    "nav": ["About us", "Menu", "Farmers Circle", "Events", "Policy", "Contacts"],
     "reserve": "Reserve a table",
     "menu_open": "Open menu",
     "menu_btn": "Menu",
@@ -59,7 +65,7 @@ EN = {
     "alt_hero_b": "Old stone wall in Senatorių Pasažas",
     "strip": [("Opening hours", "Tuesday-Thursday 17:00-22:00<br>Friday-Saturday 17:00-23:00"), ("Address", "Dominikonų g. 11, Vilnius"), ("MICHELIN Guide 2026", "Bib Gourmand")],
     "about_over": "About us",
-    "about_statement": "The historic walls of Vainai Palace, a renewed creative energy and an ambition for bold flavours. Today, 14Horses opens a new chapter with Chef Aleksandras Fedorovičius, a new team and contemporary Baltic - Scandinavian cuisine.",
+    "about_statement": "The historic walls of Vainai Palace, a renewed creative energy and an ambition for bold flavours.",
     "about_body": [
         "Our roots lie in the soil. At Farmers Circle in the village of Radiškis, the seasons set the rhythm and inspire ideas for the menu to come. 14Horses is part of this farm. From the soil to the creativity of the kitchen and the conversation at the table, an unbroken journey of discovery unfolds. Knowledge of what we grow, how we prepare it and why we choose it passes through our team to our guests, giving flavour its context and the experience its depth.",
         "!Nose to tail. Root to leaf.",
@@ -92,6 +98,9 @@ EN = {
     "gallery_label": "Gallery",
     "alt_gallery": ["Wine glasses by the window", "Tables by the wine wall", "A glass of wine on a set table", "A quiet corner of the dining room"],
     "alt_room": "The dining room at 14Horses",
+    "alt_hero": "A table by the window in the dining room at 14Horses",
+    "alt_mosaic": ["Tables in front of the wine wall", "A set table among oak and steel", "Wine glasses on an oak table"],
+    "alt_more": ["A table set for dinner", "Soft light over a set table"],
     "credit": "Photos",
     "events_h3": "Events &amp; private dining",
     "events_body": "Harvest dinners, guest chefs and the whole room for your own occasion.",
@@ -118,12 +127,10 @@ EN = {
         ("Pets", "Pets are welcome both inside the restaurant and on the terrace. The accompanying guest is responsible for their pet’s care and behaviour. Pets must not disturb other guests or interfere with restaurant operations."),
         ("Allergies and Dietary Requirements", "Please notify the restaurant of any allergies, food intolerances or specific dietary requirements at least 3 days before your visit. Menu adaptations and specific adjustments are agreed individually with the restaurant team."),
         ("Kitchen Opening Hours", "The kitchen is open until 21:00 Tuesday-Thursday and until 22:00 on Fridays and Saturdays."),
-        ("Bringing Your Own Cake or Wine", "Guests may bring their own cake or wine only by prior arrangement with the restaurant team. Additional charges apply and will be communicated when arrangements are made."),
         ("Dress Code", "The recommended dress code is smart casual."),
         ("Payment and Service Charge", "The restaurant accepts card payments only. Cash is not accepted. A 10% service charge is added to the final bill."),
-        ("Accessibility", "The restaurant is accessible to guests using wheelchairs and those with pushchairs. Please inform us before your visit if you require additional assistance."),
     ],
-    "f_nav": ["About us", "Menu", "Farmers Circle", "Booking", "Restaurant policy", "Contacts", "Instagram"],
+    "f_nav": ["About us", "Menu", "Farmers Circle", "Events", "Restaurant policy", "Contacts", "Instagram"],
     "nl_label": "Sign up for biweekly stories from our restaurants, kitchens, farm and food outlets!",
     "nl_ph": "Your email", "nl_btn": "Sign up",
     "nl_note": "Newsletter from Senatorių Pasažas.",
@@ -150,7 +157,7 @@ LT = {
     "title": "14Horses - šiuolaikinės baltiškos - skandinaviškos virtuvės restoranas Vilniuje",
     "desc": "Istorinės Vainų rūmų sienos, nauja kūrybinė energija ir ryškaus skonio ambicija. Šiandien 14Horses atsiveria su šefu Aleksandru Fedorovičiumi, nauja komanda ir šiuolaikine baltiška - skandinaviška virtuve.",
     "skip": "Pereiti prie turinio",
-    "nav": ["Apie mus", "Meniu", "Farmers Circle", "Renginiai", "Rezervacijos", "Politika", "Kontaktai"],
+    "nav": ["Apie mus", "Meniu", "Farmers Circle", "Renginiai", "Politika", "Kontaktai"],
     "reserve": "Rezervuoti staliuką",
     "menu_open": "Atidaryti meniu",
     "menu_btn": "Meniu",
@@ -162,7 +169,7 @@ LT = {
     "alt_hero_b": "Sena akmeninė siena Senatorių pasaže",
     "strip": [("Darbo valandos", "Antradienis - ketvirtadienis 17:00-22:00<br>Penktadienis - šeštadienis 17:00-23:00"), ("Adresas", "Dominikonų g. 11, Vilnius"), ("MICHELIN gidas 2026", "Bib Gourmand")],
     "about_over": "Apie mus",
-    "about_statement": "Istorinės Vainų rūmų sienos, nauja kūrybinė energija ir ryškaus skonio ambicija. Šiandien 14Horses atsiveria su šefu Aleksandru Fedorovičiumi, nauja komanda ir šiuolaikine baltiška - skandinaviška virtuve.",
+    "about_statement": "Istorinės Vainų rūmų sienos, nauja kūrybinė energija ir ryškaus skonio ambicija.",
     "about_body": [
         "Mūsų pradžia - žemėje. Radiškių kaime įsikūrusiame „Farmers Circle“ ūkyje, kur metų laikai diktuoja ritmą ir augina būsimo meniu idėjas. „14Horses“ yra šio ūkio dalis. Nuo dirvos iki kūrybos virtuvėje ir pokalbio prie stalo tęsiasi vientisa pažinimo kelionė. Žinios apie tai, ką auginame, kaip ruošiame ir kodėl renkamės, nuosekliai keliauja per mūsų komandą iki svečio, suteikdamos skoniui kontekstą, o patirčiai - gylį.",
         "!Nuo galvos iki uodegos. Nuo šaknų iki lapelių.",
@@ -195,6 +202,9 @@ LT = {
     "gallery_label": "Galerija",
     "alt_gallery": ["Taurės prie lango", "Staliukai prie vyno sienos", "Vyno taurė ant serviruoto stalo", "Jaukus salės kampelis"],
     "alt_room": "14Horses salė",
+    "alt_hero": "Staliukas prie lango 14Horses salėje",
+    "alt_mosaic": ["Staliukai prie vyno sienos", "Serviruotas stalas tarp ąžuolo ir plieno", "Vyno taurės ant ąžuolinio stalo"],
+    "alt_more": ["Vakarienei serviruotas stalas", "Švelni šviesa virš serviruoto stalo"],
     "credit": "Nuotraukos",
     "events_h3": "Renginiai ir privatūs vakarai",
     "events_body": "Derliaus vakarienės, kviestiniai šefai ir visa salė jūsų progai.",
@@ -221,12 +231,10 @@ LT = {
         ("Apsilankymas su augintiniais", "Augintiniai priimami restorano vidaus patalpose ir terasoje. Už augintinio priežiūrą ir elgesį atsako jį lydintis asmuo. Augintinis neturi trukdyti kitų svečių patogumui ar restorano darbui."),
         ("Alergijos ir specialūs mitybos poreikiai", "Apie alergijas, maisto netoleravimą ir specialius mitybos poreikius būtina informuoti ne vėliau kaip prieš 3 dienas iki apsilankymo. Meniu pritaikymo galimybės ir konkretūs pakeitimai derinami individualiai su restorano komanda."),
         ("Virtuvės darbo laikas", "Antradieniais-ketvirtadieniais virtuvė dirba iki 21.00 val., penktadieniais ir šeštadieniais - iki 22.00 val."),
-        ("Atsineštas tortas ir vynas", "Atsinešti savo tortą ar vyną galima tik iš anksto suderinus su restorano komanda. Taikomi papildomi mokesčiai, apie kuriuos svečiai informuojami derinant apsilankymo sąlygas."),
         ("Aprangos rekomendacija", "Rekomenduojamas aprangos stilius - „smart casual“ (laisvalaikio elegancija)."),
         ("Atsiskaitymas ir aptarnavimo mokestis", "Restorane atsiskaitoma tik mokėjimo kortelėmis. Grynieji pinigai nepriimami. Prie galutinės sąskaitos pridedamas 10 % aptarnavimo mokestis."),
-        ("Prieinamumas", "Restorano patalpos prieinamos svečiams su judėjimo ir vaikiškais vežimėliais. Apie papildomos pagalbos poreikį prašome informuoti prieš apsilankymą."),
     ],
-    "f_nav": ["Apie mus", "Meniu", "Farmers Circle", "Rezervacijos", "Restorano politika", "Kontaktai", "Instagram"],
+    "f_nav": ["Apie mus", "Meniu", "Farmers Circle", "Renginiai", "Restorano politika", "Kontaktai", "Instagram"],
     "nl_label": "Naujienlaiškis",
     "nl_ph": "Jūsų el. paštas", "nl_btn": "Prenumeruoti",
     "nl_note": "Senatorių pasažo naujienlaiškis.",
@@ -258,8 +266,17 @@ def ph(s: str) -> str:
     return re.sub(r"\[\[(.+?)\]\]", r'<span class="todo" title="Placeholder - replace before launch">[\1]</span>', s)
 
 
+def _nb(v):
+    """Keep ' - ' joined to the word before it, so no line starts with a hyphen."""
+    if isinstance(v, str): return v.replace(" - ", "\u00a0- ")
+    if isinstance(v, list): return [_nb(x) for x in v]
+    if isinstance(v, tuple): return tuple(_nb(x) for x in v)
+    return v
+
+
 def page(t: dict) -> str:
-    nav_ids = ["about", "menu", "farmers-circle", "events", "reserve", "policy", "contact"]
+    t = {k: _nb(v) for k, v in t.items()}
+    nav_ids = ["about", "menu", "farmers-circle", "events", "policy", "contact"]
     nav = "\n".join(f'          <a href="#{i}">{l}</a>' for i, l in zip(nav_ids, t["nav"]))
     en_cur = 'aria-current="true"' if t["lang"] == "en" else ""
     lt_cur = 'aria-current="true"' if t["lang"] == "lt" else ""
@@ -280,12 +297,15 @@ def page(t: dict) -> str:
         f'      <div class="person"><div class="frame r{k+1}" aria-hidden="true"></div><div><span class="person__name">{ph(n)}</span><span class="person__role">{r}</span></div></div>'
         for k, (n, r) in enumerate(t["team"]))
     gal = "\n".join(
-        f'    <div class="frame r{k+1}"><img src="{PHOTOS["g"+str(k+1)]}" alt="{a}" loading="lazy" decoding="async"></div>'
-        for k, a in enumerate(t["alt_gallery"]))
+        f'    <div class="frame"><img src="{PHOTOS["g"+str(k+1)]}" alt="{a}" loading="lazy" decoding="async"></div>'
+        for k, a in enumerate(t["alt_gallery"] + t["alt_more"]))
+    mosaic = "\n".join(
+        f'    <div class="frame m{k+1}"><img src="{PHOTOS["m"+str(k+1)]}" alt="{a}" loading="lazy" decoding="async"></div>'
+        for k, a in enumerate(t["alt_mosaic"]))
     policy = "\n".join(
         f'          <details{" open" if k == 0 else ""}><summary>{q}</summary><p>{ph(a)}</p></details>'
         for k, (q, a) in enumerate(t["policy"]))
-    f_ids = ["about", "menu", "farmers-circle", "reserve", "policy", "contact", CONTACT["instagram_url"]]
+    f_ids = ["about", "menu", "farmers-circle", "events", "policy", "contact", CONTACT["instagram_url"]]
     f_nav = "\n".join(
         f'        <a href="{i if i.startswith("http") else "#" + i}"{" rel=\"noopener\" target=\"_blank\"" if i.startswith("http") else ""}>{l}</a>'
         for i, l in zip(f_ids, t["f_nav"]))
@@ -356,19 +376,18 @@ def page(t: dict) -> str:
 </header>
 
 <main id="main">
-  <section class="wrap hero">
-    <div class="hero__text">
-      <p class="overline">{t['hero_over']}</p>
-      <h1>{t['hero_h1']}</h1>
-      <p class="hero__lead">{t['hero_lead']}</p>
-      <div class="hero__ctas">
-        <a class="btn" href="{SEVENROOMS_URL}" rel="noopener" target="_blank">{t['reserve']}</a>
-        <a class="link" href="#menu">{t['hero_menu']}</a>
+  <section class="hero">
+    <img class="hero__bg" src="{PHOTOS['hero']}" alt="{t['alt_hero']}" fetchpriority="high">
+    <div class="wrap hero__inner">
+      <div class="hero__text">
+        <p class="overline">{t['hero_over']}</p>
+        <h1>{t['hero_h1']}</h1>
+        <p class="hero__lead">{t['hero_lead']}</p>
+        <div class="hero__ctas">
+          <a id="sevenrooms-trigger" class="btn btn--light" href="{SEVENROOMS_URL}" rel="noopener" target="_blank">{t['reserve']}</a>
+          <a class="link" href="#menu">{t['hero_menu']}</a>
+        </div>
       </div>
-    </div>
-    <div class="hero__images">
-      <div class="frame r1 a"><img src="{PHOTOS['hero_a']}" alt="{t['alt_hero_a']}" fetchpriority="high"></div>
-      <div class="frame r2 b"><img src="{PHOTOS['hero_b']}" alt="{t['alt_hero_b']}"></div>
     </div>
   </section>
 
@@ -422,13 +441,8 @@ def page(t: dict) -> str:
     </div>
   </section>
 
-  <section class="team" aria-labelledby="team-h">
-    <div class="wrap">
-      <h2 id="team-h" class="overline">{t['team_over']}</h2>
-      <div class="team__people">
-{team}
-      </div>
-    </div>
+  <section class="wrap mosaic" aria-label="{t['gallery_label']}">
+{mosaic}
   </section>
 
   <section class="wrap gallery" aria-label="{t['gallery_label']}">
@@ -439,26 +453,12 @@ def page(t: dict) -> str:
     <div id="events" class="card">
       <h3>{t['events_h3']}</h3>
       <p class="muted">{t['events_body']}</p>
-      <a class="link" href="#contact">{t['events_link']}</a>
+      <a class="link" href="mailto:{CONTACT['email']}">{t['events_link']}: {CONTACT['email']}</a>
     </div>
     <div class="card">
       <h3>{t['gift_h3']}</h3>
       <p class="muted">{t['gift_body']}</p>
       <a class="link" href="https://www.senatoriupasazas.lt/#vouchers" rel="noopener" target="_blank">{t['gift_link']}</a>
-    </div>
-  </section>
-
-  <section id="reserve" class="reserve">
-    <div class="wrap">
-      <div class="reserve__text">
-        <h2>{t['res_h2']}</h2>
-      </div>
-      <div class="reserve__box r1">
-        <h3 style="font-size:28px">{t['res_box_h']}</h3>
-        <p class="muted" style="font-size:15px">{t['res_deposit']}</p>
-        <a id="sevenrooms-trigger" class="btn btn--lg" href="{SEVENROOMS_URL}" rel="noopener" target="_blank">{t['reserve']}</a>
-        <p class="reserve__note">{t['res_note']}</p>
-      </div>
     </div>
   </section>
 
