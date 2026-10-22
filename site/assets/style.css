@@ -704,3 +704,27 @@ html.soon-open { overflow: hidden; }
 /* 404 page */
 .notfound { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; gap: 16px; padding-top: 48px; padding-bottom: 48px; }
 .notfound h1 { font-size: clamp(32px, 5vw, 52px); margin-top: 24px; }
+
+/* ===== Colour scheme "Warm earth" (palette from the client's document) =====
+   warm beige #D8CBB8 · linen taupe #B7A793 · natural stone #CFC4B2 · clay brown #8F745C (deeper #7A614B for buttons) */
+:root { --earth: #7A614B; }
+.site-header { background: rgba(216, 203, 184, .96); border-bottom-color: #C4B6A2; }
+.strip { background: #B7A793; border-color: #B7A793; }
+.strip dt, .strip .label { color: #2A2723; }
+.policy { background: #CFC4B2; border-top: 0; }
+.accordion, .accordion details { border-color: #B7A793; }
+footer { background: #D8CBB8; border-top: 0; }
+.footer__bottom { border-color: #B7A793; }
+.footer__bottom, .footer__bottom a, .footer__cookies { color: #4A443C; }
+.btn:not(.btn--light) { background: var(--earth); color: #F4F0E9; }
+.btn:not(.btn--light):hover { background: var(--ink); color: #F4F0E9; }
+.nav__toggle { background: var(--earth); }
+.consent, .consent__box { background: var(--earth); }
+.consent__opt, .consent__prefs { border-color: rgba(239, 234, 226, .3); }
+.nav__sub { background: #EFEAE2; }
+@media (max-width: 1220px) { .nav__links { background: var(--earth); } }
+@media (max-width: 1220px) {
+  .nav__sub { background: none; }
+  .nav__links .btn:not(.btn--light) { background: var(--washi); color: var(--ink); }
+  .nav__links .btn:not(.btn--light):hover { background: var(--clay); color: var(--ink); }
+}
