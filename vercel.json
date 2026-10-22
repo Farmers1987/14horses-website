@@ -8,25 +8,123 @@
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
       ]
     },
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=()" }
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        }
       ]
     },
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "(?<sub>.*)\\.vercel\\.app" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "(?<sub>.*)\\.vercel\\.app"
+        }
+      ],
       "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex" }
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/category/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/product-category/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/product/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/shop/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/cart/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/checkout/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/my-account/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/lt/:path+",
+      "destination": "/lt/",
+      "permanent": true
+    },
+    {
+      "source": "/kategorija/:path*",
+      "destination": "/lt/",
+      "permanent": true
+    },
+    {
+      "source": "/parduotuve/:path*",
+      "destination": "/lt/",
+      "permanent": true
+    },
+    {
+      "source": "/produktas/:path*",
+      "destination": "/lt/",
+      "permanent": true
     }
   ]
 }
