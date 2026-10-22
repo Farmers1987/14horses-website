@@ -250,6 +250,11 @@
       "source": "/comments",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/((?!lt(?:/|$)|assets/|sitemap\\.xml$|robots\\.txt$|404(?:\\.html)?$|favicon).+)",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
