@@ -382,7 +382,7 @@ def page(t: dict) -> str:
 <meta property="og:type" content="restaurant">
 <meta name="theme-color" content="#EFEAE2">
 <link rel="icon" href="/assets/favicon.png" type="image/png">
-<link rel="preload" href="/assets/fonts/Newsreader.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/ZillaSlab-500-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Karla.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/style.css?v={VER['style.css']}">
 <script type="application/ld+json">
