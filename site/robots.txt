@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://14horses.lt/sitemap.xml

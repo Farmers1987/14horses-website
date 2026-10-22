@@ -701,3 +701,6 @@ html.soon-open { overflow: hidden; }
 @media (min-width: 641px) { #farmers-circle .banner__bg { object-position: 48% 55%; } }
 @media (min-width: 1600px) { #farmers-circle .banner__bg { object-position: 66% 55%; } }
 @media (min-width: 1600px) { #farmers-circle .banner__bg { object-position: 28% 55%; } }
+/* 404 page */
+.notfound { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; gap: 16px; padding-top: 48px; padding-bottom: 48px; }
+.notfound h1 { font-size: clamp(32px, 5vw, 52px); margin-top: 24px; }

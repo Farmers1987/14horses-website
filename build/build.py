@@ -8,7 +8,7 @@ it is rendered with a dashed underline so it is easy to spot.
 import html, re, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent / "site"
-SITE_URL = "https://14horses.com"
+SITE_URL = "https://14horses.lt"
 
 # Photos by G. Rozmanaite (14horses photo shoot), resized in site/assets/img
 PHOTOS = {
@@ -545,10 +545,49 @@ def page(t: dict) -> str:
 """
 
 
+def extras():
+    """robots.txt, sitemap.xml and a two-language 404 page."""
+    (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
+    alt = (f'<xhtml:link rel="alternate" hreflang="en" href="{SITE_URL}/"/>'
+           f'<xhtml:link rel="alternate" hreflang="lt" href="{SITE_URL}/lt/"/>'
+           f'<xhtml:link rel="alternate" hreflang="x-default" href="{SITE_URL}/"/>')
+    (ROOT / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+        f'  <url><loc>{SITE_URL}/</loc>{alt}</url>\n'
+        f'  <url><loc>{SITE_URL}/lt/</loc>{alt}</url>\n'
+        '</urlset>\n', encoding="utf-8")
+    v = _ver()
+    (ROOT / "404.html").write_text(f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>14 Horses - Page not found</title>
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="/assets/style.css?v={v['style.css']}">
+</head>
+<body>
+<main class="wrap notfound">
+  <a href="/"><img src="/assets/logo.png" alt="14 Horses" width="140" height="171" style="height:96px;width:auto"></a>
+  <h1>Page not found</h1>
+  <p class="muted">The page may have moved with our new website.</p>
+  <p><a class="link" href="/">Go to the front page</a></p>
+  <h1 lang="lt">Puslapis nerastas</h1>
+  <p class="muted" lang="lt">Puslapis galėjo būti perkeltas į naują mūsų svetainę.</p>
+  <p lang="lt"><a class="link" href="/lt/">Eiti į pagrindinį puslapį</a></p>
+</main>
+</body>
+</html>
+""", encoding="utf-8")
+
+
 def main():
     (ROOT / "index.html").write_text(page(EN), encoding="utf-8")
     (ROOT / "lt").mkdir(exist_ok=True)
     (ROOT / "lt" / "index.html").write_text(page(LT), encoding="utf-8")
+    extras()
     print("built", ROOT)
 
 
@@ -658,7 +697,7 @@ ARTIFACT_JS = r"""
 def build_artifact():
     logo_uri = "data:image/png;base64," + base64.b64encode((ROOT / "assets" / "logo.png").read_bytes()).decode()
     css = (ROOT / "assets" / "style.css").read_text(encoding="utf-8").replace("url('/assets/fonts/", "url('assets/fonts/") + ARTIFACT_CSS
-    draft = ('<div class="draftbar"><div class="wrap"><span><b>Draft</b> · 14horses.com redesign · not public</span>'
+    draft = ('<div class="draftbar"><div class="wrap"><span><b>Draft</b> · 14horses.lt redesign · not public</span>'
              '<span>Text in [brackets] still needs real content</span></div></div>')
     html_out = f"""<title>14horses Website</title>
 <meta name="claude:viewport-fit-sides" content="cover">
