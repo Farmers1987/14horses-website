@@ -11,11 +11,19 @@ Static site, no framework. English at `/`, Lithuanian at `/lt/`.
 - `build/build.py` - all page text (EN + LT) and settings. Edit text here, then run `python3 build/build.py`.
 
 ## Before launch
+**Outside this website (from the 22 Oct 2026 checklist):**
+- **senatoriupasazas.lt must be updated:** its opening hours for 14 Horses (Tuesday–Saturday 17:00–23:00) do not match this site
+  (Tuesday–Thursday 17:00–22:00, Friday–Saturday 17:00–23:00), and its "Reserve table" button should open
+  https://www.sevenrooms.com/explore/14horses/reservations/create/search/
+- **SevenRooms deposit:** the site and policy say €20 per person, but the SevenRooms booking form asks for no payment. Set up the deposit in SevenRooms or change the text.
+- **SevenRooms last booking time:** SevenRooms offers 21:00 (Tue–Thu) and 22:00 (Fri–Sat), the same as kitchen closing. Decide the last seating time and set it in SevenRooms.
+- **SevenRooms name:** the venue is called "14 Horses" (with a space); the site now uses the same.
+- **Gift vouchers:** the site says vouchers work in all restaurants and shops in Senatorių Pasažas; the voucher shop sells them per venue. Confirm and align the wording.
+
 0. **Remove the `X-Robots-Tag: noindex` header** from `vercel.json` when the site moves to 14horses.com (it keeps the test version out of Google).
-1. **Menu**: the menu section shows a placeholder until the chef's menu is ready (`dish` text in `build/build.py`).
-2. **Team portraits**: the three portrait frames are empty until photos arrive.
+1. **Menu**: the three menus (Tasting menu, Dining week, À la carte) open a "Coming soon" window until the menus are ready.
 3. **Privacy policy**: the `#privacy` links need a real page or URL.
-4. **SevenRooms**: the "Reserve a table" button links to the 14Horses SevenRooms booking page
+4. **SevenRooms**: the "Reserve a table" button links to the 14 Horses SevenRooms booking page
    (`SEVENROOMS_URL` in `build/build.py`). The embedded widget in `assets/main.js` stays off unless `VENUE_ID` is set.
 5. **Newsletter**: the footer form posts to MailerLite form `h8a6e9` (Senatorių Pasažas list).
 

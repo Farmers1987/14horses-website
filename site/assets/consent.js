@@ -19,7 +19,7 @@
 (function () {
   var CONFIG = {
     GTM_ID: '',          // e.g. 'GTM-XXXXXXX'
-    GA4_ID: 'G-J0VGWZH8FD', // Google Analytics 4 (14Horses)
+    GA4_ID: 'G-J0VGWZH8FD', // Google Analytics 4 (14 Horses)
     META_PIXEL_ID: ''    // e.g. '123456789012345' (only if not using GTM)
   };
   var KEY = '14horses-consent';
