@@ -18,7 +18,7 @@ Static site, no framework. English at `/`, Lithuanian at `/lt/`.
 - **SevenRooms deposit:** the site and policy say €20 per person, but the SevenRooms booking form asks for no payment. Set up the deposit in SevenRooms or change the text.
 - **SevenRooms last booking time:** SevenRooms offers 21:00 (Tue–Thu) and 22:00 (Fri–Sat), the same as kitchen closing. Decide the last seating time and set it in SevenRooms.
 - **SevenRooms name:** the venue is called "14 Horses" (with a space); the site now uses the same.
-- **Gift vouchers:** the site says vouchers work in all restaurants and shops in Senatorių Pasažas; the voucher shop sells them per venue. Confirm and align the wording.
+- **Gift vouchers:** confirmed 22 Oct 2026 that they are valid at all restaurants and shops in Senatorių Pasažas (site text is correct).
 
 0. **Remove the `X-Robots-Tag: noindex` header** from `vercel.json` when the site moves to 14horses.com (it keeps the test version out of Google).
 1. **Menu**: the three menus (Tasting menu, Dining week, À la carte) open a "Coming soon" window until the menus are ready.
