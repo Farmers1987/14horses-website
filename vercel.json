@@ -190,6 +190,66 @@
       "source": "/produktas",
       "destination": "/lt/",
       "permanent": true
+    },
+    {
+      "source": "/page/(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/page",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/author/(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/author",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feed",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/komentarai/(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/komentarai",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/comments/(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/comments",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
