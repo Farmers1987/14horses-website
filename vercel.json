@@ -57,72 +57,137 @@
   ],
   "redirects": [
     {
-      "source": "/category/:path*",
+      "source": "/category/(.*)",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/product-category/:path*",
+      "source": "/category",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/product/:path*",
+      "source": "/product-category/(.*)",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/shop/:path*",
+      "source": "/product-category",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/cart/:path*",
+      "source": "/product/(.*)",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/checkout/:path*",
+      "source": "/product",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/my-account/:path*",
+      "source": "/shop/(.*)",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/tag/:path*",
+      "source": "/shop",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/en/:path*",
+      "source": "/cart/(.*)",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/ru/:path*",
+      "source": "/cart",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/lt/:path+",
+      "source": "/checkout/(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/checkout",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/my-account/(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/my-account",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tag",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ru",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/lt/(.+)",
       "destination": "/lt/",
       "permanent": true
     },
     {
-      "source": "/kategorija/:path*",
+      "source": "/kategorija/(.*)",
       "destination": "/lt/",
       "permanent": true
     },
     {
-      "source": "/parduotuve/:path*",
+      "source": "/kategorija",
       "destination": "/lt/",
       "permanent": true
     },
     {
-      "source": "/produktas/:path*",
+      "source": "/parduotuve/(.*)",
+      "destination": "/lt/",
+      "permanent": true
+    },
+    {
+      "source": "/parduotuve",
+      "destination": "/lt/",
+      "permanent": true
+    },
+    {
+      "source": "/produktas/(.*)",
+      "destination": "/lt/",
+      "permanent": true
+    },
+    {
+      "source": "/produktas",
       "destination": "/lt/",
       "permanent": true
     }
