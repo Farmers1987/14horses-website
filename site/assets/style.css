@@ -734,3 +734,36 @@ footer { background: #D8CBB8; border-top: 0; }
   .nav__links .btn:not(.btn--light) { background: var(--washi); color: var(--ink); }
   .nav__links .btn:not(.btn--light):hover { background: var(--clay); color: var(--ink); }
 }
+
+/* ===== Menus (Tasting / Gastronomy week): a printed menu card in a window ===== */
+.mdlg { position: fixed; inset: 0; z-index: 85; background: rgba(42, 39, 35, .55); opacity: 0; transition: opacity .4s ease; }
+.mdlg[hidden] { display: none; }
+.mdlg.is-visible { opacity: 1; }
+.mdlg__scroll { height: 100%; overflow-y: auto; overscroll-behavior: contain; padding: 56px 20px 64px; display: flex; flex-direction: column; align-items: center; }
+.mdlg__tabs { display: inline-flex; gap: 4px; padding: 4px; margin-bottom: 16px; background: rgba(239, 234, 226, .14); border-radius: 999px; }
+.mdlg__tab { border: 0; background: none; color: var(--on-dark); font: inherit; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; padding: 8px 18px; border-radius: 999px; cursor: pointer; white-space: nowrap; }
+.mdlg__tab[aria-selected="true"] { background: var(--washi); color: var(--ink); }
+.mdlg__card { width: 100%; max-width: 560px; background: var(--washi); border-radius: 6px; padding: 48px 44px 40px; text-align: center; transform: translateY(14px); transition: transform .5s cubic-bezier(.2, .6, .2, 1); }
+.mdlg.is-visible .mdlg__card { transform: none; }
+.mdlg__logo { width: 70px; height: auto; margin: 0 auto 20px; mix-blend-mode: multiply; }
+.mdlg__title { font-size: clamp(26px, 3vw, 32px); margin-bottom: 28px; }
+.mdlg__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
+.mdlg__item h3 { font-family: var(--serif); font-weight: 500; font-size: 20px; color: var(--sage); line-height: 1.3; }
+.mdlg__item p { font-size: 15px; line-height: 1.5; color: var(--ink); margin-top: 4px; text-wrap: balance; }
+.mdlg__item--course { padding-top: 10px; }
+.mdlg__item--course h3 { font-size: 14px; letter-spacing: .14em; text-transform: uppercase; }
+.mdlg__item--course p { margin-top: 8px; }
+.mdlg__list:has(.mdlg__item--course) { gap: 28px; }
+.mdlg__or { font-size: 13px; color: var(--ash); margin: -10px 0; }
+.mdlg__price { font-family: var(--serif); font-size: 28px; color: var(--sage); margin-top: 40px; }
+.mdlg__notes { margin-top: 10px; font-size: 12px; line-height: 1.6; color: var(--ash); }
+.mdlg__close { position: fixed; opacity: 1; }
+html.menu-open { overflow: hidden; }
+@media (max-width: 640px) {
+  .mdlg__scroll { padding: 72px 12px 40px; }
+  .mdlg__card { padding: 36px 22px 32px; }
+  .mdlg__tab { font-size: 12px; padding: 8px 14px; }
+  .mdlg__item h3 { font-size: 18px; }
+  .mdlg__close { top: 12px; right: 12px; width: 46px; height: 46px; }
+}
+@media (prefers-reduced-motion: reduce) { .mdlg, .mdlg__card { transition: none; transform: none; } }

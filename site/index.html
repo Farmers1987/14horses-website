@@ -17,7 +17,7 @@
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="preload" href="/assets/fonts/ZillaSlab-500-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Karla.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=7ae6d49a">
+<link rel="stylesheet" href="/assets/style.css?v=594f67ed">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Restaurant","name":"14 Horses","url":"https://14horses.lt/","image":"https://14horses.lt/assets/img/hero-wide.jpg","address":{"@type":"PostalAddress","streetAddress":"Dominikonų g. 11","addressLocality":"Vilnius","addressCountry":"LT"},"telephone":"+37061250845","email":"14horses@bfr.lt","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"17:00","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"17:00","closes":"23:00"}],"servesCuisine":"Baltic, Scandinavian","acceptsReservations":"True"}
 </script>
@@ -31,7 +31,7 @@
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><svg class="i-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h18M3 16h12"/></svg><svg class="i-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span aria-hidden="true">Menu</span></button>
     <div class="nav__links" id="nav-links">
           <a href="#about">About us</a>
-          <div class="nav__item nav__item--menu"><button type="button" class="nav__menu-btn" aria-haspopup="true">Menu</button><div class="nav__sub"><button type="button" class="nav__subitem" data-soon>Tasting menu</button><button type="button" class="nav__subitem" data-soon>Dining week</button><button type="button" class="nav__subitem" data-soon>À la carte</button></div></div>
+          <div class="nav__item nav__item--menu"><button type="button" class="nav__menu-btn" aria-haspopup="true">Menu</button><div class="nav__sub"><button type="button" class="nav__subitem" data-menu="tasting">Tasting menu</button><button type="button" class="nav__subitem" data-menu="week">Dining week</button><button type="button" class="nav__subitem" data-soon>À la carte</button></div></div>
           <a href="#farmers-circle">Farmers Circle</a>
           <a href="#events">Events</a>
           <a href="#policy">Policy</a>
@@ -52,7 +52,7 @@
         <p class="hero__lead">Within the historic walls of Vainai Palace, a new chapter unfolds at 14 Horses. Led by Chef Aleksandras Fedorovičius, our new team brings fresh creative energy to contemporary Baltic–Scandinavian cuisine, defined by bold flavours and unexpected combinations.</p>
         <div class="hero__ctas">
           <a id="sevenrooms-trigger" class="btn btn--light" href="https://www.sevenrooms.com/explore/14horses/reservations/create/search/" rel="noopener" target="_blank">Reserve a table</a>
-          <button type="button" class="link link--btn" data-soon>See the menu</button>
+          <button type="button" class="link link--btn" data-menu="tasting">See the menu</button>
         </div>
       </div>
     </div>
@@ -166,7 +166,7 @@
     </address>
     <nav aria-label="Footer">
         <a href="#about">About us</a>
-        <a href="#" data-soon>Menu</a>
+        <a href="#" data-menu="tasting">Menu</a>
         <a href="#farmers-circle">Farmers Circle</a>
         <a href="#events">Events</a>
         <a href="#policy">Restaurant policy</a>
@@ -216,8 +216,44 @@
   <p class="soon__text">Coming soon</p>
   <button type="button" class="soon__close" data-soon-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
 </div>
+<div class="mdlg" data-menu-dialog hidden role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mdlg__scroll">
+    <div class="mdlg__tabs" role="tablist"><button type="button" role="tab" class="mdlg__tab" id="mtab-tasting" aria-controls="mpanel-tasting" aria-selected="true" data-menu-tab="tasting">Tasting menu</button><button type="button" role="tab" class="mdlg__tab" id="mtab-week" aria-controls="mpanel-week" aria-selected="false" data-menu-tab="week">Dining week</button></div>
+    <section class="mdlg__card" role="tabpanel" id="mpanel-tasting" aria-labelledby="mtab-tasting" data-menu-panel="tasting">
+      <img class="mdlg__logo" src="/assets/logo.png" alt="" width="70" height="86">
+      <h2 class="mdlg__title">Tasting Menu</h2>
+      <ul class="mdlg__list">
+        <li class="mdlg__item mdlg__item--dish"><h3>Welcome Bread</h3><p>Malted sourdough bread, kefir butter</p></li>
+        <li class="mdlg__item mdlg__item--dish"><h3>Sardine Crudo</h3><p>Cured Baltic sardines, fennel, sea buckthorn, buckwheat croustade</p></li>
+        <li class="mdlg__item mdlg__item--dish"><h3>Beef Tartare</h3><p>Brioche, Lithuanian beef, hazelnuts, pear, Gammel Knas cheese</p></li>
+        <li class="mdlg__item mdlg__item--dish"><h3>Chargrilled Eel</h3><p>Smoked and grilled eel, pickled seasonal beetroot, herb yoghurt cream, tomatillo</p></li>
+        <li class="mdlg__item mdlg__item--dish"><h3>Chanterelle Croquette</h3><p>Salted seasonal cucumber relish, smoked cheese, kohlrabi</p></li>
+        <li class="mdlg__item mdlg__item--dish"><h3>Apple &amp; Thyme Sorbet</h3><p>Farm-grown apple sorbet, vanilla</p></li>
+        <li class="mdlg__item mdlg__item--dish"><h3>Balandėlis</h3><p>Savoy cabbage, slow-cooked pork cheek, creamy herb sauce</p></li>
+        <li class="mdlg__or">or</li>
+        <li class="mdlg__item mdlg__item--dish"><h3>Potato &amp; Mushroom Dumpling</h3><p>Jerusalem artichoke, potato and porcini espuma, charred leek, black trumpet mushrooms</p></li>
+        <li class="mdlg__item mdlg__item--dish"><h3>Carrot &amp; Sea Buckthorn</h3><p>Almond mousse, vanilla sponge, sea buckthorn</p></li>
+      </ul>
+      <p class="mdlg__price">65 €</p>
+      <div class="mdlg__notes"><p>Please inform our staff of any dietary preferences before ordering.</p><p>A 10% service charge is added to the bill.</p></div>
+    </section>
+    <section class="mdlg__card" role="tabpanel" id="mpanel-week" aria-labelledby="mtab-week" data-menu-panel="week" hidden>
+      <img class="mdlg__logo" src="/assets/logo.png" alt="" width="70" height="86">
+      <h2 class="mdlg__title">Gastronomy Week Menu</h2>
+      <ul class="mdlg__list">
+        <li class="mdlg__item mdlg__item--course"><h3>Bread</h3><p>Dark beer bread, whipped kefir butter</p></li>
+        <li class="mdlg__item mdlg__item--course"><h3>Starter</h3><p>Smoked eel, Farmers Circle beetroot, tomatillo, smoked cow’s milk cheese</p></li>
+        <li class="mdlg__item mdlg__item--course"><h3>Main course</h3><p>Slow-braised beef ossobuco, grilled beef heart, seasonal Farmers Circle vegetables</p></li>
+        <li class="mdlg__item mdlg__item--course"><h3>Dessert</h3><p>Rice, almonds, Madagascar vanilla, cherry jam</p></li>
+      </ul>
+      <p class="mdlg__price">60 €</p>
+      <div class="mdlg__notes"><p>Please inform our staff of any dietary preferences before ordering.</p></div>
+    </section>
+  </div>
+  <button type="button" class="soon__close mdlg__close" data-menu-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+</div>
 <script src="/assets/main.js?v=8e34e71d" defer></script>
-<script src="/assets/ui.js?v=a63e4765" defer></script>
+<script src="/assets/ui.js?v=bfa3e6ac" defer></script>
 <script src="/assets/consent.js?v=ecac8e6f" defer></script>
 </body>
 </html>

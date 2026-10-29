@@ -1,4 +1,4 @@
-/* 14horses - photo carousel, "Coming soon" window for the menus */
+/* 14horses - photo carousel, menu window, "Coming soon" window (à la carte) */
 (function () {
   // ----- Carousel: three photos at a time, arrows move one photo -----
   document.querySelectorAll('[data-carousel]').forEach(function (c) {
@@ -62,5 +62,48 @@
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && document.documentElement.classList.contains('soon-open')) closeSoon();
+  });
+  // ----- Menus: Tasting / Gastronomy week in one window with two tabs -----
+  var menuFocus = null;
+  function showTab(d, key) {
+    d.querySelectorAll('[data-menu-tab]').forEach(function (b) { b.setAttribute('aria-selected', b.getAttribute('data-menu-tab') === key ? 'true' : 'false'); });
+    d.querySelectorAll('[data-menu-panel]').forEach(function (p) { p.hidden = p.getAttribute('data-menu-panel') !== key; });
+  }
+  function openMenu(from, byKeyboard) {
+    var d = document.querySelector('[data-menu-dialog]');
+    if (!d) return;
+    menuFocus = byKeyboard ? from : null;
+    showTab(d, from.getAttribute('data-menu') || 'tasting');
+    clearTimeout(d._t);
+    d.hidden = false;
+    d.querySelector('.mdlg__scroll').scrollTop = 0;
+    void d.offsetWidth;
+    d.classList.add('is-visible');
+    document.documentElement.classList.add('menu-open');
+    var x = d.querySelector('[data-menu-close]'); if (x) x.focus();
+    document.querySelectorAll('.site-header.is-open').forEach(function (h) {
+      h.classList.remove('is-open');
+      var t = h.querySelector('.nav__toggle'); if (t) t.setAttribute('aria-expanded', 'false');
+    });
+  }
+  function closeMenu() {
+    var d = document.querySelector('[data-menu-dialog]');
+    if (!d || d.hidden) return;
+    d.classList.remove('is-visible');
+    clearTimeout(d._t);
+    d._t = setTimeout(function () { d.hidden = true; }, 400);
+    document.documentElement.classList.remove('menu-open');
+    if (menuFocus) { try { menuFocus.focus(); } catch (e) {} }
+  }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-menu]');
+    if (b) { e.preventDefault(); openMenu(b, e.detail === 0); return; }
+    var tab = e.target.closest('[data-menu-tab]');
+    if (tab) { var dd = tab.closest('[data-menu-dialog]'); showTab(dd, tab.getAttribute('data-menu-tab')); dd.querySelector('.mdlg__scroll').scrollTop = 0; return; }
+    if (e.target.closest('[data-menu-close]')) { closeMenu(); return; }
+    if (e.target.classList && (e.target.matches('[data-menu-dialog]') || e.target.matches('.mdlg__scroll'))) closeMenu();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && document.documentElement.classList.contains('menu-open')) closeMenu();
   });
 })();

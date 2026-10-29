@@ -275,6 +275,105 @@ ARROW_R = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="curre
 CLOSE_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 5l14 14M19 5L5 19"/></svg>'
 
 
+# Menus, copied word for word from the restaurant's print PDFs (Oct 2026).
+# Each item: ("dish", name, description) | ("course", label, description) | ("or",)
+MENUS = {
+    "en": {
+        "tasting": {
+            "title": "Tasting Menu",
+            "items": [
+                ("dish", "Welcome Bread", "Malted sourdough bread, kefir butter"),
+                ("dish", "Sardine Crudo", "Cured Baltic sardines, fennel, sea buckthorn, buckwheat croustade"),
+                ("dish", "Beef Tartare", "Brioche, Lithuanian beef, hazelnuts, pear, Gammel Knas cheese"),
+                ("dish", "Chargrilled Eel", "Smoked and grilled eel, pickled seasonal beetroot, herb yoghurt cream, tomatillo"),
+                ("dish", "Chanterelle Croquette", "Salted seasonal cucumber relish, smoked cheese, kohlrabi"),
+                ("dish", "Apple &amp; Thyme Sorbet", "Farm-grown apple sorbet, vanilla"),
+                ("dish", "Balandėlis", "Savoy cabbage, slow-cooked pork cheek, creamy herb sauce"),
+                ("or", "or"),
+                ("dish", "Potato &amp; Mushroom Dumpling", "Jerusalem artichoke, potato and porcini espuma, charred leek, black trumpet mushrooms"),
+                ("dish", "Carrot &amp; Sea Buckthorn", "Almond mousse, vanilla sponge, sea buckthorn"),
+            ],
+            "price": "65 €",
+            "notes": ["Please inform our staff of any dietary preferences before ordering.", "A 10% service charge is added to the bill."],
+        },
+        "week": {
+            "title": "Gastronomy Week Menu",
+            "items": [
+                ("course", "Bread", "Dark beer bread, whipped kefir butter"),
+                ("course", "Starter", "Smoked eel, Farmers Circle beetroot, tomatillo, smoked cow’s milk cheese"),
+                ("course", "Main course", "Slow-braised beef ossobuco, grilled beef heart, seasonal Farmers Circle vegetables"),
+                ("course", "Dessert", "Rice, almonds, Madagascar vanilla, cherry jam"),
+            ],
+            "price": "60 €",
+            "notes": ["Please inform our staff of any dietary preferences before ordering."],
+        },
+    },
+    "lt": {
+        "tasting": {
+            "title": "Degustacinis meniu",
+            "items": [
+                ("dish", "Duona pasitikimui", "Salyklinė raugo duona, kefyro sviestas"),
+                ("dish", "Sardinių crudo", "Sūdytos Baltijos sardinės, pankoliai, šaltalankiai, grikių krepšelis"),
+                ("dish", "Jautienos tartaras", "Sviestinė bandelė, lietuviška jautiena, lazdynų riešutai, kriaušė, „Gammel Knas“ sūris"),
+                ("dish", "Ant žarijų keptas ungurys", "Rūkytas ir ant žarijų keptas ungurys, marinuoti sezoniniai burokėliai, žolelių jogurto kremas, dumplainiai"),
+                ("dish", "Voveraičių kroketas", "Sūdytų sezoninių agurkų pagardas, rūkytas sūris, kaliaropė"),
+                ("dish", "Obuolių ir čiobrelių šerbetas", "Ūkio obuolių šerbetas, vanilė"),
+                ("dish", "Balandėlis", "Savojinis kopūstas, lėtai troškintas kiaulės žandas, grietinėlės ir žolelių padažas"),
+                ("or", "arba"),
+                ("dish", "Bulvių virtinis su grybais", "Topinambai, bulvių ir baravykų puta, degintas poras, juodieji trimitėliai"),
+                ("dish", "Morkos ir šaltalankiai", "Migdolų putėsiai, vanilinis biskvitas, šaltalankiai"),
+            ],
+            "price": "65 €",
+            "notes": ["Apie mitybos pageidavimus prašome informuoti personalą prieš užsakant.", "Prie sąskaitos pridedamas 10 % aptarnavimo mokestis."],
+        },
+        "week": {
+            "title": "Gastronomijos savaitės meniu",
+            "items": [
+                ("course", "Duona", "Juoda alaus duona, plaktas kefyro sviestas"),
+                ("course", "Užkandis", "Rūkytas ungurys, „Farmers Circle“ ūkio burokėliai, dumplainiai, rūkytas karvės pieno sūris"),
+                ("course", "Pagrindinis patiekalas", "Lėtai troškinta jaučio kulninė, grilyje kepta jaučio širdis, sezoninės „Farmers Circle“ ūkio daržovės"),
+                ("course", "Desertas", "Ryžiai, migdolai, Madagaskaro vanilė, vyšnių uogienė"),
+            ],
+            "price": "60 €",
+            "notes": ["Apie mitybos pageidavimus prašome informuoti personalą prieš užsakant."],
+        },
+    },
+}
+MENU_KEYS = ["tasting", "week", None]  # order matches t["menus"]; None = à la carte (coming soon)
+
+
+def menu_dialog(t: dict) -> str:
+    m = MENUS[t["lang"]]
+    tabs, panels = [], []
+    for k, key in enumerate(MENU_KEYS[:2]):
+        d = m[key]
+        sel = "true" if k == 0 else "false"
+        tabs.append(f'<button type="button" role="tab" class="mdlg__tab" id="mtab-{key}" aria-controls="mpanel-{key}" aria-selected="{sel}" data-menu-tab="{key}">{t["menus"][k]}</button>')
+        rows = []
+        for it in d["items"]:
+            if it[0] == "or":
+                rows.append(f'        <li class="mdlg__or">{it[1]}</li>')
+            else:
+                kind, name, desc = it
+                rows.append(f'        <li class="mdlg__item mdlg__item--{kind}"><h3>{name}</h3><p>{desc}</p></li>')
+        notes = "".join(f"<p>{n}</p>" for n in d["notes"])
+        panels.append(
+            f'    <section class="mdlg__card" role="tabpanel" id="mpanel-{key}" aria-labelledby="mtab-{key}" data-menu-panel="{key}"{"" if k == 0 else " hidden"}>\n'
+            f'      <img class="mdlg__logo" src="/assets/logo.png" alt="" width="70" height="86">\n'
+            f'      <h2 class="mdlg__title">{d["title"]}</h2>\n'
+            f'      <ul class="mdlg__list">\n' + "\n".join(rows) + '\n      </ul>\n'
+            f'      <p class="mdlg__price">{d["price"]}</p>\n'
+            f'      <div class="mdlg__notes">{notes}</div>\n'
+            f'    </section>')
+    return (f'<div class="mdlg" data-menu-dialog hidden role="dialog" aria-modal="true" aria-label="{t["menu_h2"]}">\n'
+            f'  <div class="mdlg__scroll">\n'
+            f'    <div class="mdlg__tabs" role="tablist">{"".join(tabs)}</div>\n'
+            + "\n".join(panels) +
+            f'\n  </div>\n'
+            f'  <button type="button" class="soon__close mdlg__close" data-menu-close aria-label="{t["close"]}">{CLOSE_SVG}</button>\n'
+            f'</div>')
+
+
 def ph(s: str) -> str:
     """Mark [[placeholders]] so they are visible until filled."""
     return re.sub(r"\[\[(.+?)\]\]", r'<span class="todo" title="Placeholder - replace before launch">[\1]</span>', s)
@@ -300,7 +399,9 @@ def page(t: dict) -> str:
     t = {k: _nb(v) for k, v in t.items()}
     nav_ids = ["about", "menu", "farmers-circle", "events", "policy", "contact"]
     soon_btns = lambda cls: "".join(
-        f'<button type="button" class="{cls}" data-soon>{m}</button>' for m in t["menus"])
+        (f'<button type="button" class="{cls}" data-menu="{key}">{m}</button>' if key else
+         f'<button type="button" class="{cls}" data-soon>{m}</button>')
+        for m, key in zip(t["menus"], MENU_KEYS))
     nav = "\n".join(
         (f'          <div class="nav__item nav__item--menu"><button type="button" class="nav__menu-btn" aria-haspopup="true">{l}</button>'
          f'<div class="nav__sub">{soon_btns("nav__subitem")}</div></div>') if i == "menu"
@@ -335,7 +436,7 @@ def page(t: dict) -> str:
         for k, (q, a) in enumerate(t["policy"]))
     f_ids = ["about", "soon", "farmers-circle", "events", "policy", "contact", CONTACT["instagram_url"]]
     f_nav = "\n".join(
-        (f'        <a href="#" data-soon>{l}</a>' if i == "soon" else
+        (f'        <a href="#" data-menu="tasting">{l}</a>' if i == "soon" else
          f'        <a href="{i if i.startswith("http") else "#" + i}"{" rel=\"noopener\" target=\"_blank\"" if i.startswith("http") else ""}>{l}</a>')
         for i, l in zip(f_ids, t["f_nav"]))
     canonical = SITE_URL + t["home"]
@@ -414,7 +515,7 @@ def page(t: dict) -> str:
         <p class="hero__lead">{t['hero_lead']}</p>
         <div class="hero__ctas">
           <a id="sevenrooms-trigger" class="btn btn--light" href="{SEVENROOMS_URL}" rel="noopener" target="_blank">{t['reserve']}</a>
-          <button type="button" class="link link--btn" data-soon>{t['hero_menu']}</button>
+          <button type="button" class="link link--btn" data-menu="tasting">{t['hero_menu']}</button>
         </div>
       </div>
     </div>
@@ -537,6 +638,7 @@ def page(t: dict) -> str:
   <p class="soon__text">{t['soon']}</p>
   <button type="button" class="soon__close" data-soon-close aria-label="{t['close']}">{CLOSE_SVG}</button>
 </div>
+{menu_dialog(t)}
 <script src="/assets/main.js?v={VER['main.js']}" defer></script>
 <script src="/assets/ui.js?v={VER['ui.js']}" defer></script>
 <script src="/assets/consent.js?v={VER['consent.js']}" defer></script>
