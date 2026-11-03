@@ -4,8 +4,8 @@
  *  - Statistics  -> Google Analytics 4
  *  - Marketing   -> Meta Pixel and Google Ads (via Google Tag Manager)
  *
- * GA4 is loaded directly (GA4_ID) alongside Tag Manager. If a GA4 tag is
- * added inside Tag Manager, clear GA4_ID here, or visits are counted twice.
+ * GA4 (G-J0VGWZH8FD) runs as a Google tag inside Tag Manager, so GA4_ID
+ * stays empty here - setting it would count visits twice.
  * Meta Pixel: set it up inside Tag Manager, or use META_PIXEL_ID without GTM.
  *
  * Inside Tag Manager: GA4 tags must require "analytics_storage", Meta and
@@ -19,7 +19,7 @@
  */
 (function () {
   var CONFIG = {
-    GA4_ID: 'G-J0VGWZH8FD', // Google Analytics 4 (14 Horses)
+    GA4_ID: '',          // GA4 G-J0VGWZH8FD runs inside Tag Manager - leave empty
     META_PIXEL_ID: ''    // e.g. '123456789012345' (only if not using GTM)
   };
   var KEY = '14horses-consent';
