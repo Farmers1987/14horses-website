@@ -10,15 +10,15 @@
  *
  * Inside Tag Manager: GA4 tags must require "analytics_storage", Meta and
  * Google Ads tags must require "ad_storage" (Consent settings on each tag).
- * Tag Manager itself is only loaded after the visitor accepts at least one
- * category, so before that nothing is sent to Google or Meta.
+ * Tag Manager (GTM-NXTJ2Z4L) is loaded in <head> on every page with Consent
+ * Mode set to denied; this file updates consent when the visitor chooses.
+ * Non-Google tags in GTM (e.g. Meta) must use "Require additional consent".
  *
  * The choice is stored in localStorage ('14horses-consent') for 12 months,
  * then the banner is shown again. Footer link "Cookie settings" reopens it.
  */
 (function () {
   var CONFIG = {
-    GTM_ID: 'GTM-NXTJ2Z4L', // Google Tag Manager (14 Horses)
     GA4_ID: 'G-J0VGWZH8FD', // Google Analytics 4 (14 Horses)
     META_PIXEL_ID: ''    // e.g. '123456789012345' (only if not using GTM)
   };
@@ -40,15 +40,10 @@
     return c;
   }
 
-  // ----- Google consent mode (only matters once a Google tag is loaded) -----
+  // ----- Google consent mode -----
+  // Defaults (denied) and Tag Manager are set inline in <head> by build.py.
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
-  gtag('consent', 'default', {
-    analytics_storage: 'denied', ad_storage: 'denied',
-    ad_user_data: 'denied', ad_personalization: 'denied',
-    functionality_storage: 'granted', security_storage: 'granted',
-    wait_for_update: 500
-  });
 
   function addScript(src) {
     var s = document.createElement('script');
@@ -65,18 +60,13 @@
       ad_personalization: c.marketing ? 'granted' : 'denied'
     });
 
-    if (CONFIG.GTM_ID && (c.analytics || c.marketing) && !loaded.gtm) {
-      loaded.gtm = true;
-      window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
-      addScript('https://www.googletagmanager.com/gtm.js?id=' + CONFIG.GTM_ID);
-    }
     if (CONFIG.GA4_ID && c.analytics && !loaded.ga4) {
       loaded.ga4 = true;
       gtag('js', new Date());
       gtag('config', CONFIG.GA4_ID);
       addScript('https://www.googletagmanager.com/gtag/js?id=' + CONFIG.GA4_ID);
     }
-    if (CONFIG.META_PIXEL_ID && !CONFIG.GTM_ID && c.marketing && !loaded.meta) {
+    if (CONFIG.META_PIXEL_ID && c.marketing && !loaded.meta) {
       loaded.meta = true;
       /* Meta Pixel base code */
       !function (f, b, e, v, n, t, s) {

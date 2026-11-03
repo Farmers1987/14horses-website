@@ -393,6 +393,23 @@ def _ver():
             for f in ("style.css", "main.js", "ui.js", "consent.js")}
 
 
+GTM_ID = "GTM-NXTJ2Z4L"
+# Consent Mode defaults (denied) + saved choice, then the standard GTM snippet.
+# Must sit high in <head> so Google can detect the tag; tags only set cookies after consent.
+GTM_HEAD = """<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
+try{var c=JSON.parse(localStorage.getItem('14horses-consent')||'null');if(c&&c.v===1&&c.ts&&Date.now()-c.ts<31536000000)gtag('consent','update',{analytics_storage:c.analytics?'granted':'denied',ad_storage:c.marketing?'granted':'denied',ad_user_data:c.marketing?'granted':'denied',ad_personalization:c.marketing?'granted':'denied'});}catch(e){}
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','""" + GTM_ID + """');</script>
+<!-- End Google Tag Manager -->"""
+
+
 def page(t: dict) -> str:
     global VER
     VER = _ver()
@@ -471,6 +488,7 @@ def page(t: dict) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{GTM_HEAD}
 <title>{t['title']}</title>
 <meta name="description" content="{html.escape(t['desc'])}">
 <link rel="canonical" href="{canonical}">
