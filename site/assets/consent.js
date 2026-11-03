@@ -4,9 +4,9 @@
  *  - Statistics  -> Google Analytics 4
  *  - Marketing   -> Meta Pixel and Google Ads (via Google Tag Manager)
  *
- * Fill in the IDs below when the accounts are ready. Use EITHER GTM_ID
- * (and set up GA4 / Meta inside Tag Manager) OR GA4_ID + META_PIXEL_ID
- * directly - not both, or visits are counted twice.
+ * GA4 is loaded directly (GA4_ID) alongside Tag Manager. If a GA4 tag is
+ * added inside Tag Manager, clear GA4_ID here, or visits are counted twice.
+ * Meta Pixel: set it up inside Tag Manager, or use META_PIXEL_ID without GTM.
  *
  * Inside Tag Manager: GA4 tags must require "analytics_storage", Meta and
  * Google Ads tags must require "ad_storage" (Consent settings on each tag).
@@ -18,7 +18,7 @@
  */
 (function () {
   var CONFIG = {
-    GTM_ID: '',          // e.g. 'GTM-XXXXXXX'
+    GTM_ID: 'GTM-NXTJ2Z4L', // Google Tag Manager (14 Horses)
     GA4_ID: 'G-J0VGWZH8FD', // Google Analytics 4 (14 Horses)
     META_PIXEL_ID: ''    // e.g. '123456789012345' (only if not using GTM)
   };
@@ -70,7 +70,7 @@
       window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
       addScript('https://www.googletagmanager.com/gtm.js?id=' + CONFIG.GTM_ID);
     }
-    if (CONFIG.GA4_ID && !CONFIG.GTM_ID && c.analytics && !loaded.ga4) {
+    if (CONFIG.GA4_ID && c.analytics && !loaded.ga4) {
       loaded.ga4 = true;
       gtag('js', new Date());
       gtag('config', CONFIG.GA4_ID);
