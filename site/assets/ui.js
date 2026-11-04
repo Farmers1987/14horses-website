@@ -74,6 +74,7 @@
     if (!d) return;
     menuFocus = byKeyboard ? from : null;
     showTab(d, from.getAttribute('data-menu') || 'tasting');
+    try { (window.dataLayer = window.dataLayer || []).push({ event: 'menu_open', menu_name: from.getAttribute('data-menu') || 'tasting', page_language: document.documentElement.lang }); } catch (e) {}
     clearTimeout(d._t);
     d.hidden = false;
     d.querySelector('.mdlg__scroll').scrollTop = 0;

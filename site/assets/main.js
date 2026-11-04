@@ -83,10 +83,31 @@
           status.hidden = false; status.classList.remove('is-error');
           status.textContent = form.getAttribute('data-ok');
           form.reset();
+          track('newsletter_signup', { form_location: 'footer' });
         })
         .catch(function () { form.submit(); });
     });
   });
+
+  // Analytics events -> dataLayer (Google Tag Manager sends them to GA4;
+  // GA4 only stores them with cookies after the visitor accepts statistics).
+  function track(name, params) {
+    window.dataLayer = window.dataLayer || [];
+    var o = { event: name, page_language: document.documentElement.lang };
+    for (var k in params) o[k] = params[k];
+    window.dataLayer.push(o);
+  }
+  window.track14 = track;
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    var where = a.closest('.bookbar') ? 'mobile_bar' : a.closest('.hero') ? 'hero' : a.closest('.nav') ? 'header' : 'other';
+    if (/sevenrooms\.com/.test(href)) track('reserve_table', { link_url: href, click_location: where });
+    else if (/#vouchers|gift/i.test(href)) track('gift_voucher_click', { link_url: href, click_location: where });
+    else if (/^mailto:/.test(href)) track('email_click', { link_url: href.replace(/^mailto:/, '') });
+    else if (/^tel:/.test(href)) track('phone_click', { link_url: href.replace(/^tel:/, '') });
+  }, true);
 
   // Footer year
   var y = document.querySelector('[data-year]');
