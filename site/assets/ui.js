@@ -116,7 +116,8 @@
     if (!(Date.now() < until)) return;
     var seen = 0;
     try { seen = Number(localStorage.getItem(key)) || 0; } catch (e) {}
-    if (Date.now() - seen < 24 * 60 * 60 * 1000) return;
+    var force = /[?&]popup\b/.test(location.search);
+    if (!force && Date.now() - seen < 24 * 60 * 60 * 1000) return;
     function mark() { try { localStorage.setItem(key, String(Date.now())); } catch (e) {} }
     function open() {
       if (document.documentElement.classList.contains('menu-open') || document.documentElement.classList.contains('soon-open')) return;
@@ -135,7 +136,8 @@
       setTimeout(function () { p.hidden = true; }, 450);
     }
     p.addEventListener('click', function (e) {
-      if (e.target.closest('[data-promo-close]') || e.target === p) close();
+      // on touch screens only the cross closes it, so a stray tap does not
+      if (e.target.closest('[data-promo-close]') || (e.target === p && window.matchMedia('(pointer: fine)').matches)) close();
       else if (e.target.closest('[data-promo-go]')) {
         try { (window.dataLayer = window.dataLayer || []).push({ event: 'promo_ticket_click', promo_name: p.getAttribute('data-promo'), page_language: document.documentElement.lang }); } catch (err) {}
         mark(); close();
