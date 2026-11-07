@@ -136,7 +136,10 @@
     }
     p.addEventListener('click', function (e) {
       if (e.target.closest('[data-promo-close]') || e.target === p) close();
-      else if (e.target.closest('[data-promo-go]')) { mark(); close(); }
+      else if (e.target.closest('[data-promo-go]')) {
+        try { (window.dataLayer = window.dataLayer || []).push({ event: 'promo_ticket_click', promo_name: p.getAttribute('data-promo'), page_language: document.documentElement.lang }); } catch (err) {}
+        mark(); close();
+      }
     });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !p.hidden) close(); });
     // wait until the cookie bar is answered, then show it after a short pause
