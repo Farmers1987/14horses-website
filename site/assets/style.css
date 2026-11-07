@@ -787,3 +787,25 @@ html.promo-open { overflow: hidden; }
   .promo__close { top: 8px; right: 8px; width: 38px; height: 38px; }
 }
 @media (prefers-reduced-motion: reduce) { .promo, .promo__box { transition: none; transform: none; } }
+
+/* ===== Newsletter: its own band in the middle of the page, so more guests see it ===== */
+.nl-band { background: var(--sage); color: #F4F0E9; }
+.nl-band__inner { padding-top: 88px; padding-bottom: 88px; display: flex; justify-content: center; }
+.nl-band .newsletter { flex: none; width: 100%; max-width: 720px; align-items: center; text-align: center; gap: 22px; }
+.nl-band .nl-band__title { font-family: var(--serif); font-weight: 500; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.2; color: #F4F0E9; text-wrap: balance; }
+.nl-band .newsletter__row { width: 100%; max-width: 560px; gap: 10px; }
+.nl-band .newsletter input { min-height: 56px; padding: 0 18px; font-size: 17px; background: #F4F0E9; border: 0; color: var(--ink); }
+.nl-band .newsletter input::placeholder { color: #7A7266; }
+.nl-band .newsletter .btn { min-height: 56px; padding: 0 30px; font-size: 16px; letter-spacing: .08em; text-transform: uppercase; background: var(--ink); color: #F4F0E9; }
+.nl-band .newsletter .btn:hover { background: var(--earth); color: #F4F0E9; }
+.nl-band .newsletter__note { font-size: 14px; color: #E2DED2; }
+.nl-band .newsletter__status { font-size: 16px; color: #F4F0E9; }
+.nl-band .newsletter__status.is-error { color: #FFD9CC; }
+.nl-band :focus-visible { outline-color: #F4F0E9; }
+@media (max-width: 640px) {
+  .nl-band__inner { padding-top: 56px; padding-bottom: 56px; }
+  .nl-band .newsletter { text-align: left; align-items: stretch; gap: 16px; }
+  .nl-band .nl-band__title { font-size: 28px; }
+  .nl-band .newsletter__row { flex-direction: column; }
+  .nl-band .newsletter .btn { width: 100%; }
+}

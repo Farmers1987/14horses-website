@@ -619,6 +619,21 @@ def page(t: dict) -> str:
     <button type="button" class="carousel__btn carousel__btn--next" data-dir="1" aria-label="{t['next']}">{ARROW_R}</button>
   </section>
 
+  <section class="nl-band" id="newsletter" aria-label="{t['nl_note']}">
+    <div class="wrap nl-band__inner">
+      <form class="newsletter" action="{MAILERLITE_URL}" method="post" target="_blank" data-ok="{t['nl_ok']}" data-err="{t['nl_err']}">
+        <label class="nl-band__title" for="nl">{t['nl_label']}</label>
+        <div class="newsletter__row">
+          <input id="nl" type="email" name="fields[email]" required autocomplete="email" placeholder="{t['nl_ph']}">
+          <button class="btn" type="submit">{t['nl_btn']}</button>
+        </div>
+        <input type="hidden" name="ml-submit" value="1">
+        <p class="newsletter__note">{t['nl_note']}</p>
+        <p class="newsletter__status" role="status" aria-live="polite" hidden></p>
+      </form>
+    </div>
+  </section>
+
   <section id="policy" class="policy">
     <div class="wrap split">
       <div class="split__aside" style="display:flex;flex-direction:column;gap:12px">
@@ -654,16 +669,6 @@ def page(t: dict) -> str:
     <nav aria-label="{t['aria_footer']}">
 {f_nav}
     </nav>
-    <form class="newsletter" action="{MAILERLITE_URL}" method="post" target="_blank" data-ok="{t['nl_ok']}" data-err="{t['nl_err']}">
-      <label for="nl">{t['nl_label']}</label>
-      <div class="newsletter__row">
-        <input id="nl" type="email" name="fields[email]" required autocomplete="email" placeholder="{t['nl_ph']}">
-        <button class="btn" type="submit">{t['nl_btn']}</button>
-      </div>
-      <input type="hidden" name="ml-submit" value="1">
-      <p class="newsletter__note">{t['nl_note']}</p>
-      <p class="newsletter__status" role="status" aria-live="polite" hidden></p>
-    </form>
   </div>
   <div class="wrap">
     <div class="footer__bottom">
