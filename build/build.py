@@ -374,6 +374,32 @@ def menu_dialog(t: dict) -> str:
             f'</div>')
 
 
+# Event pop-up (Julefrokost 28 Nov 2026). One picture per language with the text in it, one button.
+# Shown once a day per visitor, after the cookie choice; hides itself after the event (PROMO_UNTIL).
+PROMO_URL = "https://www.sevenrooms.com/events/ahNzfnNldmVucm9vbXMtc2VjdXJlchwLEg9uaWdodGxvb3BfVmVudWUYgIDrrcXW6QgM?event_id=ahNzfnNldmVucm9vbXMtc2VjdXJlcjkLEg9uaWdodGxvb3BfVmVudWUYgIDrrcXW6QgMCxIQc3JfR2VuVmVudWVFdmVudBiAgNekveyACgw"
+PROMO_UNTIL = "2026-11-28T22:00:00Z"  # midnight in Vilnius after the event
+PROMO = {
+    "en": {"img": "/assets/img/julefrokost-en.jpg", "btn": "Tickets",
+           "alt": "14 Horses Julefrokost – A Danish Christmas Feast. 28 November 2026. €85 per person."},
+    "lt": {"img": "/assets/img/julefrokost-lt.jpg", "btn": "Bilietai",
+           "alt": "14 Horses Julefrokost – Danų kalėdinė puota. 2026 m. lapkričio 28 d. 85 € vienam asmeniui."},
+}
+
+
+def promo_html(t: dict) -> str:
+    import datetime as _dt
+    if _dt.datetime.now(_dt.timezone.utc) >= _dt.datetime.fromisoformat(PROMO_UNTIL.replace("Z", "+00:00")):
+        return ""
+    pr = PROMO[t["lang"]]
+    return (f'<div class="promo" data-promo="julefrokost-2026" data-promo-until="{PROMO_UNTIL}" data-promo-img="{pr["img"]}" hidden role="dialog" aria-modal="true" aria-label="Julefrokost">\n'
+            f'  <div class="promo__box">\n'
+            f'    <img class="promo__img" alt="{pr["alt"]}" width="1200" height="800">\n'
+            f'    <a class="btn btn--light promo__btn" href="{PROMO_URL}" rel="noopener" target="_blank" data-promo-go>{pr["btn"]}</a>\n'
+            f'    <button type="button" class="promo__close" data-promo-close aria-label="{t["close"]}">{CLOSE_SVG}</button>\n'
+            f'  </div>\n'
+            f'</div>')
+
+
 def ph(s: str) -> str:
     """Mark [[placeholders]] so they are visible until filled."""
     return re.sub(r"\[\[(.+?)\]\]", r'<span class="todo" title="Placeholder - replace before launch">[\1]</span>', s)
@@ -657,6 +683,7 @@ def page(t: dict) -> str:
   <button type="button" class="soon__close" data-soon-close aria-label="{t['close']}">{CLOSE_SVG}</button>
 </div>
 {menu_dialog(t)}
+{promo_html(t)}
 <script src="/assets/main.js?v={VER['main.js']}" defer></script>
 <script src="/assets/ui.js?v={VER['ui.js']}" defer></script>
 <script src="/assets/consent.js?v={VER['consent.js']}" defer></script>

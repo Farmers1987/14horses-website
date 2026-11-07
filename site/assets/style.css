@@ -767,3 +767,23 @@ html.menu-open { overflow: hidden; }
   .mdlg__close { top: 12px; right: 12px; width: 46px; height: 46px; }
 }
 @media (prefers-reduced-motion: reduce) { .mdlg, .mdlg__card { transition: none; transform: none; } }
+
+/* ===== Event pop-up: picture with the text in it, one Tickets button ===== */
+.promo { position: fixed; inset: 0; z-index: 90; display: flex; align-items: center; justify-content: center; padding: 20px; background: rgba(42, 39, 35, .6); opacity: 0; transition: opacity .45s ease; }
+.promo[hidden] { display: none; }
+.promo.is-visible { opacity: 1; }
+.promo__box { position: relative; width: min(860px, 100%); border-radius: 6px; overflow: hidden; background: var(--washi); box-shadow: 0 24px 60px rgba(0, 0, 0, .35); transform: translateY(14px) scale(.98); transition: transform .55s cubic-bezier(.2, .6, .2, 1); }
+.promo.is-visible .promo__box { transform: none; }
+.promo__img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.promo__btn { position: absolute; left: 50%; bottom: 5.5%; transform: translateX(-50%); min-width: 200px; text-transform: uppercase; letter-spacing: .14em; font-size: 15px; box-shadow: 0 6px 20px rgba(0, 0, 0, .25); }
+.promo__close { position: absolute; top: 10px; right: 10px; display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; padding: 0; border: 0; border-radius: 50%; background: rgba(239, 234, 226, .92); color: var(--ink); cursor: pointer; }
+.promo__close svg { width: 20px; height: 20px; }
+.promo__close:hover { background: var(--washi); }
+html.promo-open { overflow: hidden; }
+@media (max-width: 640px) {
+  .promo { padding: 12px; }
+  .promo__btn { position: static; transform: none; display: flex; width: calc(100% - 24px); margin: 12px auto; min-width: 0; box-shadow: none; background: var(--earth); color: #F4F0E9; }
+  .promo__btn:hover { background: var(--ink); color: #F4F0E9; }
+  .promo__close { top: 8px; right: 8px; width: 38px; height: 38px; }
+}
+@media (prefers-reduced-motion: reduce) { .promo, .promo__box { transition: none; transform: none; } }

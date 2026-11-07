@@ -107,4 +107,44 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && document.documentElement.classList.contains('menu-open')) closeMenu();
   });
+  // ----- Event pop-up: once a day, after the cookie choice, until the event is over -----
+  (function () {
+    var p = document.querySelector('[data-promo]');
+    if (!p) return;
+    var key = 'promo-' + p.getAttribute('data-promo');
+    var until = Date.parse(p.getAttribute('data-promo-until'));
+    if (!(Date.now() < until)) return;
+    var seen = 0;
+    try { seen = Number(localStorage.getItem(key)) || 0; } catch (e) {}
+    if (Date.now() - seen < 24 * 60 * 60 * 1000) return;
+    function mark() { try { localStorage.setItem(key, String(Date.now())); } catch (e) {} }
+    function open() {
+      if (document.documentElement.classList.contains('menu-open') || document.documentElement.classList.contains('soon-open')) return;
+      var img = p.querySelector('.promo__img');
+      img.onload = function () {
+        p.hidden = false; void p.offsetWidth;
+        p.classList.add('is-visible');
+        document.documentElement.classList.add('promo-open');
+        mark();
+      };
+      img.src = p.getAttribute('data-promo-img');
+    }
+    function close() {
+      p.classList.remove('is-visible');
+      document.documentElement.classList.remove('promo-open');
+      setTimeout(function () { p.hidden = true; }, 450);
+    }
+    p.addEventListener('click', function (e) {
+      if (e.target.closest('[data-promo-close]') || e.target === p) close();
+      else if (e.target.closest('[data-promo-go]')) { mark(); close(); }
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !p.hidden) close(); });
+    // wait until the cookie bar is answered, then show it after a short pause
+    function start() {
+      if (document.documentElement.classList.contains('consent-open')) {
+        window.addEventListener('consentchange', function once() { window.removeEventListener('consentchange', once); setTimeout(open, 600); });
+      } else setTimeout(open, 1200);
+    }
+    if (document.readyState === 'complete') setTimeout(start, 50); else window.addEventListener('load', function () { setTimeout(start, 50); });
+  })();
 })();
