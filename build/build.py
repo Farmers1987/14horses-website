@@ -375,7 +375,7 @@ def menu_dialog(t: dict) -> str:
 
 
 # Event pop-up (Julefrokost 28 Nov 2026). One picture per language with the text in it, one button.
-# Shown once a day per visitor, after the cookie choice; hides itself after the event (PROMO_UNTIL).
+# Shown after the cookie choice, and again 30 minutes after it was last seen; hides itself after the event (PROMO_UNTIL).
 PROMO_URL = "https://www.sevenrooms.com/events/ahNzfnNldmVucm9vbXMtc2VjdXJlchwLEg9uaWdodGxvb3BfVmVudWUYgIDrrcXW6QgM?event_id=ahNzfnNldmVucm9vbXMtc2VjdXJlcjkLEg9uaWdodGxvb3BfVmVudWUYgIDrrcXW6QgMCxIQc3JfR2VuVmVudWVFdmVudBiAgNekveyACgw"
 PROMO_UNTIL = "2026-11-28T22:00:00Z"  # midnight in Vilnius after the event
 PROMO = {

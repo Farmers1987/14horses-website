@@ -107,7 +107,7 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && document.documentElement.classList.contains('menu-open')) closeMenu();
   });
-  // ----- Event pop-up: once a day, after the cookie choice, until the event is over -----
+  // ----- Event pop-up: after the cookie choice, again 30 minutes after it was last seen, until the event is over -----
   (function () {
     var p = document.querySelector('[data-promo]');
     if (!p) return;
@@ -117,7 +117,7 @@
     var seen = 0;
     try { seen = Number(localStorage.getItem(key)) || 0; } catch (e) {}
     var force = /[?&]popup\b/.test(location.search);
-    if (!force && Date.now() - seen < 24 * 60 * 60 * 1000) return;
+    if (!force && Date.now() - seen < 30 * 60 * 1000) return;
     function mark() { try { localStorage.setItem(key, String(Date.now())); } catch (e) {} }
     function open() {
       if (document.documentElement.classList.contains('menu-open') || document.documentElement.classList.contains('soon-open')) return;
