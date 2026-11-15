@@ -43,7 +43,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Atidaryti meniu"><svg class="i-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h18M3 16h12"/></svg><svg class="i-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span aria-hidden="true">Meniu</span></button>
     <div class="nav__links" id="nav-links">
           <a href="#about">Apie mus</a>
-          <div class="nav__item nav__item--menu"><button type="button" class="nav__menu-btn" aria-haspopup="true">Meniu</button><div class="nav__sub"><button type="button" class="nav__subitem" data-menu="tasting">Degustacinis meniu</button><button type="button" class="nav__subitem" data-menu="week">Gastronomijos savaitė</button><button type="button" class="nav__subitem" data-soon>À la carte</button></div></div>
+          <div class="nav__item nav__item--menu"><button type="button" class="nav__menu-btn" aria-haspopup="true">Meniu</button><div class="nav__sub"><button type="button" class="nav__subitem" data-menu="tasting">Kalėdinis degustacinis meniu</button><button type="button" class="nav__subitem" data-soon>À la carte</button></div></div>
           <a href="#farmers-circle">Farmers Circle</a>
           <a href="#events">Renginiai</a>
           <a href="#policy">Taisyklės</a>
@@ -235,36 +235,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <div class="mdlg" data-menu-dialog hidden role="dialog" aria-modal="true" aria-label="Meniu">
   <div class="mdlg__scroll">
-    <div class="mdlg__tabs" role="tablist"><button type="button" role="tab" class="mdlg__tab" id="mtab-tasting" aria-controls="mpanel-tasting" aria-selected="true" data-menu-tab="tasting">Degustacinis meniu</button><button type="button" role="tab" class="mdlg__tab" id="mtab-week" aria-controls="mpanel-week" aria-selected="false" data-menu-tab="week">Gastronomijos savaitė</button></div>
-    <section class="mdlg__card" role="tabpanel" id="mpanel-tasting" aria-labelledby="mtab-tasting" data-menu-panel="tasting">
+    <section class="mdlg__card" id="mpanel-tasting" data-menu-panel="tasting">
       <img class="mdlg__logo" src="/assets/logo.png" alt="" width="70" height="86">
-      <h2 class="mdlg__title">Degustacinis meniu</h2>
+      <h2 class="mdlg__title">Kalėdinis degustacinis meniu</h2>
       <ul class="mdlg__list">
-        <li class="mdlg__item mdlg__item--dish"><h3>Duona pasitikimui</h3><p>Salyklinė raugo duona, kefyro sviestas</p></li>
-        <li class="mdlg__item mdlg__item--dish"><h3>Sardinių crudo</h3><p>Sūdytos Baltijos sardinės, pankoliai, šaltalankiai, grikių krepšelis</p></li>
+        <li class="mdlg__item mdlg__item--dish"><h3>„14 Horses“ duona</h3><p>Salyklinė raugo duona, naminis kefyro sviestas</p></li>
         <li class="mdlg__item mdlg__item--dish"><h3>Jautienos tartaras</h3><p>Sviestinė bandelė, lietuviška jautiena, lazdynų riešutai, kriaušė, „Gammel Knas“ sūris</p></li>
         <li class="mdlg__item mdlg__item--dish"><h3>Ant žarijų keptas ungurys</h3><p>Rūkytas ir ant žarijų keptas ungurys, marinuoti sezoniniai burokėliai, žolelių jogurto kremas, dumplainiai</p></li>
-        <li class="mdlg__item mdlg__item--dish"><h3>Voveraičių kroketas</h3><p>Sūdytų sezoninių agurkų pagardas, rūkytas sūris, kaliaropė</p></li>
+        <li class="mdlg__item mdlg__item--dish"><h3>Jaučio uodegos sriuba</h3><p>Keptos jaučio uodegos, konfit česnakų ir grietinės užtepėlė, raugo duona, sezoninės daržovės</p></li>
         <li class="mdlg__item mdlg__item--dish"><h3>Obuolių ir čiobrelių šerbetas</h3><p>Ūkio obuolių šerbetas, vanilė</p></li>
-        <li class="mdlg__item mdlg__item--dish"><h3>Balandėlis</h3><p>Savojinis kopūstas, lėtai troškintas kiaulės žandas, grietinėlės ir žolelių padažas</p></li>
+        <li class="mdlg__item mdlg__item--dish"><h3>Kiaulė ir duona</h3><p>Ekologiška kiaulienos sprandinė, šiaurietiškas duonos paplotėlis, marinuotos cukinijos</p></li>
         <li class="mdlg__or">arba</li>
-        <li class="mdlg__item mdlg__item--dish"><h3>Bulvių virtinis su grybais</h3><p>Topinambai, bulvių ir baravykų puta, degintas poras, juodieji trimitėliai</p></li>
+        <li class="mdlg__item mdlg__item--dish"><h3>Bulvių virtinis</h3><p>Ūkio bulvės, topinambai, baravykų puta, lazdynų riešutų aliejus</p></li>
         <li class="mdlg__item mdlg__item--dish"><h3>Morkos ir šaltalankiai</h3><p>Migdolų putėsiai, vanilinis biskvitas, šaltalankiai</p></li>
       </ul>
       <p class="mdlg__price">65 €</p>
       <div class="mdlg__notes"><p>Apie mitybos pageidavimus prašome informuoti personalą prieš užsakant.</p><p>Prie sąskaitos pridedamas 10 % aptarnavimo mokestis.</p></div>
-    </section>
-    <section class="mdlg__card" role="tabpanel" id="mpanel-week" aria-labelledby="mtab-week" data-menu-panel="week" hidden>
-      <img class="mdlg__logo" src="/assets/logo.png" alt="" width="70" height="86">
-      <h2 class="mdlg__title">Gastronomijos savaitės meniu</h2>
-      <ul class="mdlg__list">
-        <li class="mdlg__item mdlg__item--course"><h3>Duona</h3><p>Juoda alaus duona, plaktas kefyro sviestas</p></li>
-        <li class="mdlg__item mdlg__item--course"><h3>Užkandis</h3><p>Rūkytas ungurys, „Farmers Circle“ ūkio burokėliai, dumplainiai, rūkytas karvės pieno sūris</p></li>
-        <li class="mdlg__item mdlg__item--course"><h3>Pagrindinis patiekalas</h3><p>Lėtai troškinta jaučio kulninė, grilyje kepta jaučio širdis, sezoninės „Farmers Circle“ ūkio daržovės</p></li>
-        <li class="mdlg__item mdlg__item--course"><h3>Desertas</h3><p>Ryžiai, migdolai, Madagaskaro vanilė, vyšnių uogienė</p></li>
-      </ul>
-      <p class="mdlg__price">60 €</p>
-      <div class="mdlg__notes"><p>Apie mitybos pageidavimus prašome informuoti personalą prieš užsakant.</p></div>
     </section>
   </div>
   <button type="button" class="soon__close mdlg__close" data-menu-close aria-label="Uždaryti"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 5l14 14M19 5L5 19"/></svg></button>

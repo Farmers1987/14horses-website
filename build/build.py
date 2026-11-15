@@ -75,7 +75,7 @@ EN = {
         "!At our table, this language becomes flavour - bold, distinctive and memorable.",
     ],
     "menu_h2": "Menu",
-    "menus": ["Tasting menu", "Dining week", "À la carte"],
+    "menus": ["Christmas tasting menu", "À la carte"],
     "soon": "Coming soon", "close": "Close",
     "prev": "Previous photos", "next": "Next photos",
     "menu_intro": "Seasonal, local produce meets unexpected combinations, adventurous techniques and bold flavours. The menu follows what the season brings to Farmers Circle.",
@@ -183,7 +183,7 @@ LT = {
         "!Prie mūsų stalo ši kalba įgauna skonį - ryškų, savitą, įsimenantį.",
     ],
     "menu_h2": "Meniu",
-    "menus": ["Degustacinis meniu", "Gastronomijos savaitė", "À la carte"],
+    "menus": ["Kalėdinis degustacinis meniu", "À la carte"],
     "soon": "Jau netrukus", "close": "Uždaryti",
     "prev": "Ankstesnės nuotraukos", "next": "Kitos nuotraukos",
     "menu_intro": "Sezoniškumas ir vietiniai produktai susitinka su netikėtais deriniais, drąsiomis technikomis ir ryškiais skoniais. Meniu seka tai, ką sezonas atneša į „Farmers Circle“ ūkį.",
@@ -275,77 +275,53 @@ ARROW_R = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="curre
 CLOSE_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 5l14 14M19 5L5 19"/></svg>'
 
 
-# Menus, copied word for word from the restaurant's print PDFs (Oct 2026).
+# Menus, copied word for word from the restaurant's print PDFs (Christmas tasting menu, Nov 2026).
 # Each item: ("dish", name, description) | ("course", label, description) | ("or",)
 MENUS = {
     "en": {
         "tasting": {
-            "title": "Tasting Menu",
+            "title": "Christmas Tasting Menu",
             "items": [
-                ("dish", "Welcome Bread", "Malted sourdough bread, kefir butter"),
-                ("dish", "Sardine Crudo", "Cured Baltic sardines, fennel, sea buckthorn, buckwheat croustade"),
+                ("dish", "14 Horses Bread", "Malted sourdough bread, homemade cultured butter"),
                 ("dish", "Beef Tartare", "Brioche, Lithuanian beef, hazelnuts, pear, Gammel Knas cheese"),
                 ("dish", "Chargrilled Eel", "Smoked and grilled eel, pickled seasonal beetroot, herb yoghurt cream, tomatillo"),
-                ("dish", "Chanterelle Croquette", "Salted seasonal cucumber relish, smoked cheese, kohlrabi"),
+                ("dish", "Oxtail Soup", "Roasted oxtail, confit garlic and sour cream spread, sourdough, seasonal vegetables"),
                 ("dish", "Apple &amp; Thyme Sorbet", "Farm-grown apple sorbet, vanilla"),
-                ("dish", "Balandėlis", "Savoy cabbage, slow-cooked pork cheek, creamy herb sauce"),
+                ("dish", "Pork &amp; Flatbread", "Organic pork neck, polar flatbread, pickled courgette"),
                 ("or", "or"),
-                ("dish", "Potato &amp; Mushroom Dumpling", "Jerusalem artichoke, potato and porcini espuma, charred leek, black trumpet mushrooms"),
+                ("dish", "Potato Dumpling", "Roasted potato, Jerusalem artichoke, porcini espuma, hazelnut oil"),
                 ("dish", "Carrot &amp; Sea Buckthorn", "Almond mousse, vanilla sponge, sea buckthorn"),
             ],
             "price": "65 €",
             "notes": ["Please inform our staff of any dietary preferences before ordering.", "A 10% service charge is added to the bill."],
         },
-        "week": {
-            "title": "Gastronomy Week Menu",
-            "items": [
-                ("course", "Bread", "Dark beer bread, whipped kefir butter"),
-                ("course", "Starter", "Smoked eel, Farmers Circle beetroot, tomatillo, smoked cow’s milk cheese"),
-                ("course", "Main course", "Slow-braised beef ossobuco, grilled beef heart, seasonal Farmers Circle vegetables"),
-                ("course", "Dessert", "Rice, almonds, Madagascar vanilla, cherry jam"),
-            ],
-            "price": "60 €",
-            "notes": ["Please inform our staff of any dietary preferences before ordering."],
-        },
     },
     "lt": {
         "tasting": {
-            "title": "Degustacinis meniu",
+            "title": "Kalėdinis degustacinis meniu",
             "items": [
-                ("dish", "Duona pasitikimui", "Salyklinė raugo duona, kefyro sviestas"),
-                ("dish", "Sardinių crudo", "Sūdytos Baltijos sardinės, pankoliai, šaltalankiai, grikių krepšelis"),
+                ("dish", "„14 Horses“ duona", "Salyklinė raugo duona, naminis kefyro sviestas"),
                 ("dish", "Jautienos tartaras", "Sviestinė bandelė, lietuviška jautiena, lazdynų riešutai, kriaušė, „Gammel Knas“ sūris"),
                 ("dish", "Ant žarijų keptas ungurys", "Rūkytas ir ant žarijų keptas ungurys, marinuoti sezoniniai burokėliai, žolelių jogurto kremas, dumplainiai"),
-                ("dish", "Voveraičių kroketas", "Sūdytų sezoninių agurkų pagardas, rūkytas sūris, kaliaropė"),
+                ("dish", "Jaučio uodegos sriuba", "Keptos jaučio uodegos, konfit česnakų ir grietinės užtepėlė, raugo duona, sezoninės daržovės"),
                 ("dish", "Obuolių ir čiobrelių šerbetas", "Ūkio obuolių šerbetas, vanilė"),
-                ("dish", "Balandėlis", "Savojinis kopūstas, lėtai troškintas kiaulės žandas, grietinėlės ir žolelių padažas"),
+                ("dish", "Kiaulė ir duona", "Ekologiška kiaulienos sprandinė, šiaurietiškas duonos paplotėlis, marinuotos cukinijos"),
                 ("or", "arba"),
-                ("dish", "Bulvių virtinis su grybais", "Topinambai, bulvių ir baravykų puta, degintas poras, juodieji trimitėliai"),
+                ("dish", "Bulvių virtinis", "Ūkio bulvės, topinambai, baravykų puta, lazdynų riešutų aliejus"),
                 ("dish", "Morkos ir šaltalankiai", "Migdolų putėsiai, vanilinis biskvitas, šaltalankiai"),
             ],
             "price": "65 €",
             "notes": ["Apie mitybos pageidavimus prašome informuoti personalą prieš užsakant.", "Prie sąskaitos pridedamas 10 % aptarnavimo mokestis."],
         },
-        "week": {
-            "title": "Gastronomijos savaitės meniu",
-            "items": [
-                ("course", "Duona", "Juoda alaus duona, plaktas kefyro sviestas"),
-                ("course", "Užkandis", "Rūkytas ungurys, „Farmers Circle“ ūkio burokėliai, dumplainiai, rūkytas karvės pieno sūris"),
-                ("course", "Pagrindinis patiekalas", "Lėtai troškinta jaučio kulninė, grilyje kepta jaučio širdis, sezoninės „Farmers Circle“ ūkio daržovės"),
-                ("course", "Desertas", "Ryžiai, migdolai, Madagaskaro vanilė, vyšnių uogienė"),
-            ],
-            "price": "60 €",
-            "notes": ["Apie mitybos pageidavimus prašome informuoti personalą prieš užsakant."],
-        },
     },
 }
-MENU_KEYS = ["tasting", "week", None]  # order matches t["menus"]; None = à la carte (coming soon)
+MENU_KEYS = ["tasting", None]  # order matches t["menus"]; None = à la carte (coming soon)
 
 
 def menu_dialog(t: dict) -> str:
     m = MENUS[t["lang"]]
     tabs, panels = [], []
-    for k, key in enumerate(MENU_KEYS[:2]):
+    for k, key in enumerate(k for k in MENU_KEYS if k):
         d = m[key]
         sel = "true" if k == 0 else "false"
         tabs.append(f'<button type="button" role="tab" class="mdlg__tab" id="mtab-{key}" aria-controls="mpanel-{key}" aria-selected="{sel}" data-menu-tab="{key}">{t["menus"][k]}</button>')
@@ -358,7 +334,7 @@ def menu_dialog(t: dict) -> str:
                 rows.append(f'        <li class="mdlg__item mdlg__item--{kind}"><h3>{name}</h3><p>{desc}</p></li>')
         notes = "".join(f"<p>{n}</p>" for n in d["notes"])
         panels.append(
-            f'    <section class="mdlg__card" role="tabpanel" id="mpanel-{key}" aria-labelledby="mtab-{key}" data-menu-panel="{key}"{"" if k == 0 else " hidden"}>\n'
+            f'    <section class="mdlg__card"{' role="tabpanel" aria-labelledby="mtab-' + key + '"' if len([x for x in MENU_KEYS if x]) > 1 else ''} id="mpanel-{key}" data-menu-panel="{key}"{"" if k == 0 else " hidden"}>\n'
             f'      <img class="mdlg__logo" src="/assets/logo.png" alt="" width="70" height="86">\n'
             f'      <h2 class="mdlg__title">{d["title"]}</h2>\n'
             f'      <ul class="mdlg__list">\n' + "\n".join(rows) + '\n      </ul>\n'
@@ -367,7 +343,7 @@ def menu_dialog(t: dict) -> str:
             f'    </section>')
     return (f'<div class="mdlg" data-menu-dialog hidden role="dialog" aria-modal="true" aria-label="{t["menu_h2"]}">\n'
             f'  <div class="mdlg__scroll">\n'
-            f'    <div class="mdlg__tabs" role="tablist">{"".join(tabs)}</div>\n'
+            + (f'    <div class="mdlg__tabs" role="tablist">{"".join(tabs)}</div>\n' if len(tabs) > 1 else '')
             + "\n".join(panels) +
             f'\n  </div>\n'
             f'  <button type="button" class="soon__close mdlg__close" data-menu-close aria-label="{t["close"]}">{CLOSE_SVG}</button>\n'
